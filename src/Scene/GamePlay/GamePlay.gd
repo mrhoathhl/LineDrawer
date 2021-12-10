@@ -5,16 +5,18 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-const preload_level = preload("res://src/Map/untitled.tmx")
+const preload_level = preload("res://src/Map/level1.tscn")
+const preload_Brick = preload("res://src/Object/EmptyBrick.tscn")
 func _init():
 	print("Constructed!")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node("Button")
-	var container = get_node("Area2D/Container")
+	var container = get_node("Control")
 	var level = preload_level.instance()
-	container.add_child(level)
-	print("Constructsed!" , level.get_children())
+	add_child(level)
+	#print("Container", container.get_child(1))
+	print()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

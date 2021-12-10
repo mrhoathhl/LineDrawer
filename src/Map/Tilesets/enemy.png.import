@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Layer 80 (1).png-509a8a4934342b788aa9d7e1cb3f0f84.stex"
+path="res://.import/enemy.png-a6948542ec845287fb099c3f6da5246d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Map/Tilesets/Layer 80 (1).png"
-dest_files=[ "res://.import/Layer 80 (1).png-509a8a4934342b788aa9d7e1cb3f0f84.stex" ]
+source_file="res://src/Map/Tilesets/enemy.png"
+dest_files=[ "res://.import/enemy.png-a6948542ec845287fb099c3f6da5246d.stex" ]
 
 [params]
 
