@@ -6,7 +6,6 @@ extends Node2D
 # var b = "text"
 
 const preload_level = preload("res://src/Map/level1.tscn")
-const preload_Brick = preload("res://src/Object/EmptyBrick.tscn")
 func _init():
 	print("Constructed!")
 # Called when the node enters the scene tree for the first time.
@@ -15,8 +14,6 @@ func _ready():
 	var container = get_node("Control")
 	var level = preload_level.instance()
 	add_child(level)
-	#print("Container", container.get_child(1))
-	print()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
