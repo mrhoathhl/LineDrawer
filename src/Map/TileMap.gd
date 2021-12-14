@@ -8,7 +8,7 @@ extends TileMap
 var walkable = [0]
 var grid = {}
 var cursor = Vector2()
-
+var is_win = false
 #reference
 var start_point
 var suggest_line
@@ -39,8 +39,13 @@ func _ready():
 	suggest_line = get_tree().get_nodes_in_group('Suggest')[0]
 	path_finder = get_tree().get_nodes_in_group('PathFinder')[0]
 	
-	path_finder.locked.append(start_point.position)
+	print(start_point.position)
 	
+	path_finder.pos_check.append(start_point.position + Vector2(0, 15))
+	path_finder.pos_line.append(start_point.position + Vector2(0, 15))
+	
+	var path = [start_point.position + Vector2(0, 15)]
+	suggest_line.path = path
 	suggest_line.grid = grid 
 	set_process(true) #cursor and player interactions
 	set_process_input(true) #also cursor and player interactions
@@ -51,7 +56,6 @@ func _process(delta):
 	#get map tile pos relative to mouse
 	var tgt_cell = world_to_map( get_global_mouse_position() )
 	
-	
 	#if tgt_cell is a valid cell (!= -1), sets it to cursor
 	if get_cell(tgt_cell.x, tgt_cell.y) != -1:
 		#get world position and centralize offset tile 
@@ -61,20 +65,20 @@ func _process(delta):
 	
 	#parse cursor target to be drawn
 	suggest_line.cursor = cursor
-	var path = path_finder.searchs(start_point.position , cursor)
-	suggest_line.path = path
 	#print(path)
 
 #features
 func _input(event):
-
-	#teleport player
-	if event.is_action_pressed("mouse_act_left"):
-		print("press")
-
-	#generate path
-	if event.is_action_released("mouse_act_left"):
-		print("press")
+	if !is_win:
+		if event is InputEventMouseMotion:
+			if grid.has(cursor):
+				var path = path_finder.search_point(start_point.position , cursor)
+				print(path.size(), " path")
+				suggest_line.path = path
+				if path.size() == grid.size() - 3:
+					is_win = true
+					print(" draw")
+				
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

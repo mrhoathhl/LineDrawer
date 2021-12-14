@@ -24,19 +24,11 @@ func _physics_process(delta):
 func _draw():
 	
 	var color = Color(.5,0,1)
-	var size = Vector2(60,60)
+	var size = Vector2(20,20)
 	
 	#draw route
 	if path.size() >= 1:
-		
-		for pos in path:
-			#var level = preload_Brick.instance()
-			#level.position = pos
-			#add_child(level)
-			draw_style_box(StyleBoxFlat.new(), Rect2(pos + Vector2(0,10), size))
-			#draw_circle(pos, size, color)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+		draw_rect(Rect2(path[0] + Vector2(22 ,7), size), color, false, 20, true)
+		for i in range(0, path.size() - 1, 1):
+			draw_rect(Rect2(path[i+1] +  Vector2(22 ,7), size), color, false, 20, true)
+			draw_line(path[i] + Vector2(32,16), path[i + 1] + Vector2(33,16), color, 10 * 2, true)
