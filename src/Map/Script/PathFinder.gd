@@ -15,9 +15,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-func search_point(start_pos, target_pos):
-	print(start_pos, " start")
-	print(target_pos, " target")
+func search_point(target_pos):
 	if grid.has(target_pos) && !pos_check.has(target_pos):
 		if(check_valid_move(pos_check[pos_check.size() - 1], target_pos)):
 			pos_check.append(target_pos)
@@ -26,10 +24,9 @@ func search_point(start_pos, target_pos):
 	return pos_check
 
 func check_valid_move(lastest_pos, target_pos):
-	var next = Vector2(64, 64) 
+	var next = Vector2(86, 86) 
 	
 	var step = target_pos - lastest_pos
-	print(step, " neighbor")
 	if abs(step.x) == abs(next.x) or abs(step.y) == abs(next.y):
 		if lastest_pos.x == target_pos.x or lastest_pos.y == target_pos.y:
 			return true

@@ -5,18 +5,22 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-const preload_level = preload("res://src/Map/level1.tscn")
+#const preload_level = preload("res://src/Map/Level/level1.tscn")
+
+var preload_level = preload("res://src/Map/Level/level1.tscn")
+var preload_level_back_up = preload("res://src/Map/Level/level1.tscn")
+var level
+var container
+
 func _init():
+	preload_level = load("res://src/Map/Level/level" + str(GameInstance.level) + ".tscn")
 	print("Constructed!")
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var level = preload_level.instance()
-	add_child(level)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-func _on_Button_pressed():
-	get_node("Label").text = "HELLO!"
+	container = get_node("Control")
+	if preload_level != null:
+		level = preload_level.instance()
+	else:
+		level = preload_level_back_up.instance()
+	container.add_child(level)

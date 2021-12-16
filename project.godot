@@ -11,18 +11,24 @@ config_version=4
 [application]
 
 config/name="Draw Liner"
-run/main_scene="res://src/Scene/GamePlay/GamePlay.tscn"
+run/main_scene="res://src/Scene/Level/SelectLevel.tscn"
+boot_splash/bg_color=Color( 0.12549, 0.145098, 0.192157, 1 )
 config/icon="res://icon.png"
+
+[autoload]
+
+GameInstance="*res://src/Global/Global.gd"
 
 [display]
 
-window/size/width=600
-window/size/height=1024
-window/size/resizable=false
+window/size/width=1080
+window/size/height=1920
+window/size/test_width=600
+window/size/test_height=1024
 window/dpi/allow_hidpi=true
 window/handheld/orientation="portrait"
-window/stretch/mode="viewport"
-window/stretch/aspect="keep"
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
