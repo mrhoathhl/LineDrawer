@@ -8,16 +8,31 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "AdMob",
+"language": "GDScript",
+"path": "res://admob-lib/admob.gd"
+} ]
+_global_script_class_icons={
+"AdMob": "res://admob-lib/icon.png"
+}
+
+[NativeLib]
+
+Python="C:/Users/mrhoa/AppData/Local/Programs/Python/Python310/python.exe"
+
 [application]
 
 config/name="Draw Liner"
-run/main_scene="res://src/Scene/Level/SelectLevel.tscn"
+run/main_scene="res://src/Scene/Splash/SplashScene.tscn"
 boot_splash/bg_color=Color( 0.12549, 0.145098, 0.192157, 1 )
 config/icon="res://icon.png"
 
 [autoload]
 
 GameInstance="*res://src/Global/Global.gd"
+SceneManager="*res://src/Global/SceneManager.tscn"
 
 [display]
 
@@ -32,7 +47,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/gdformat/plugin.cfg", "res://addons/vnen.tiled_importer/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/NativeLib/plugin.cfg" )
 
 [input_devices]
 

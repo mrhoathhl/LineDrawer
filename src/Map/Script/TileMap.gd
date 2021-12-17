@@ -52,7 +52,7 @@ func _ready():
 	suggest_line.grid = grid 
 	set_process(true) #cursor and player interactions
 	set_process_input(true) #also cursor and player interactions
-	next_level = preload("res://src/Scene/Popup/NextLevel.tscn")
+	next_level = preload("res://src/Scene/Popup/NextLevel.tscn").instance()
 	
 
 func _process(delta):
@@ -80,8 +80,7 @@ func _input(event):
 					is_win = true
 					yield(get_tree().create_timer(2.0), "timeout")
 					suggest_line.is_win = true
-					var next = next_level.instance()
-					add_child(next)
+					add_child(next_level)
 				
 
 

@@ -1,19 +1,21 @@
 extends Node
-var level = 1
+var current_level = 1
+var last_level = 1;
 var game_file = "user://gamedata.dat"
+var diffcult = "Easy"
 
 func _init():
-	load_level()
-	#save_level(1)
+	load_current_level()
+	#save_current_level(1)
 
-func load_level():
+func load_current_level():
 	var file = File.new()
 	if file.file_exists(game_file):
 		file.open(game_file, File.READ)
-		level = file.get_var()
+		current_level = file.get_var()
 		file.close()
 
-func save_level(level):
+func save_current_level(current_level):
 	var file = File.new()
 	file.open(game_file, File.WRITE)
 	file.store_var(33)
