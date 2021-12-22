@@ -19,3 +19,8 @@ func _ready():
 
 func _on_Transition_transitioned():
 	pass # Replace with function body.
+
+
+func _on_Button_pressed():
+	print("ckci")
+	pass # Replace with function body.

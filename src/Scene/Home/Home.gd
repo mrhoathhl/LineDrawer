@@ -21,7 +21,7 @@ func _on_Help_pressed():
 
 
 func _on_Play_pressed():
-	$Label.text = "cl;cickc"
+	print("Help")
 	pass # Replace with function body.
 
 

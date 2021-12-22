@@ -5,7 +5,7 @@ extends Control
 # var a = 2
 # var b = "text"
 
-onready var admob = Admobs
+#onready var admob = Admobs
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,25 +20,25 @@ func _ready():
 
 
 func _on_Medium_pressed():
-	GameInstance.diffcult = "Medium"
+	#GameInstance.diffcult = "Medium"
 	SceneManager.transition(SceneManager.game_play_scene)
 	print("Medium")
 
 
 func _on_Hard_pressed():
-	GameInstance.diffcult = "Hard"
+	#GameInstance.diffcult = "Hard"
 	SceneManager.transition(SceneManager.game_play_scene)
 	print("Hard")
 
 
 func _on_Expert_pressed():
-	GameInstance.diffcult = "Expert"
+	#GameInstance.diffcult = "Expert"
 	SceneManager.transition(SceneManager.game_play_scene)
 	print("Expert")
 
 
 func _on_Professor_pressed():
-	GameInstance.diffcult = "Professor"
+	#GameInstance.diffcult = "Professor"
 	SceneManager.transition(SceneManager.game_play_scene)
 	print("Professor")
 
