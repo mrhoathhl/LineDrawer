@@ -6,19 +6,19 @@ extends Node2D
 # var b = "text"
 
 #const preload_level = preload("res://src/Map/Level/level1.tscn")
-
 var level
-var level_back_up = load("res://src/Map/Level/" + GameInstance.diffcult + "/level1.tscn")
+#var level_back_up = preload("res://src/Map/Level/Easy/Easy1.tscn")
 var container
 var rng = RandomNumberGenerator.new()
 func _init():
+	level = load("res://src/Map/Level/Easy/Easy1.tscn").instance()
+	#var load_level = load("res://src/Map/Level/" + GameInstance.diffcult + "/" + GameInstance.diffcult +  str(get_level()) + ".tscn")
+	#print(level)
+	#if load_level != null:
+	#	level = load_level.instance()
+	#else:
+	#	level = level_back_up
 	
-	
-	level = load("res://src/Map/Level/level" + str(GameInstance.current_level) + ".tscn")
-	if level != null:
-		level.instance()
-	else:
-		level = level_back_up.instance()
 	print(GameInstance.diffcult)
 	print("Constructed!")
 	
@@ -31,6 +31,7 @@ func get_level() -> int:
 	rng.randomize()
 	var my_random_number = rng.randi_range(-10.0, 10.0)
 	if my_random_number != GameInstance.last_level:
+		GameInstance.last_level = my_random_number
 		return my_random_number
 	else:
 		get_level()

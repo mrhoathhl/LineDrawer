@@ -15,7 +15,9 @@ var suggest_line
 var path_finder
 var next_level
 var brick_default = preload("res://src/Object/Brick/Brick.tscn")
+var brick_fading_tscn = preload("res://src/Object/FadingBrick/FadingBrick.tscn")
 var brick
+var is_touch
 var tween_scale_value = [1.4, 1.7]
 
 # Called when the node enters the scene tree for the first time.
@@ -45,7 +47,7 @@ func _ready():
 	path_finder.pos_check.append(start_point.position + Vector2(0, 15))
 	path_finder.pos_line.append(start_point.position + Vector2(0, 15))
 	
-	var path = [start_point.position + Vector2(0, 15)]
+	var path = [start_point.position]
 	brick.transform.origin.x = start_point.position.x
 	brick.transform.origin.y = start_point.position.y
 	suggest_line.path = path
@@ -69,7 +71,11 @@ func _process(delta):
 
 #features
 func _input(event):
-	if !is_win:
+	if !suggest_line.is_win:
+		if event.is_action_pressed("click") and grid.has(cursor):
+			suggest_line.is_touch = true
+		elif event.is_action_released("click"):
+			suggest_line.is_touch = false
 		if event is InputEventMouseMotion:
 			if grid.has(cursor):
 				var path = path_finder.search_point(cursor)
@@ -77,12 +83,22 @@ func _input(event):
 				brick.transform.origin.x = path[path.size() - 1].x
 				brick.transform.origin.y = path[path.size() - 1].y - 15
 				if path.size() == grid.size():
-					is_win = true
-					yield(get_tree().create_timer(2.0), "timeout")
 					suggest_line.is_win = true
-					add_child(next_level)
-				
+					brick.queue_free()
+					clear_map()
 
+func clear_map():
+	for i in range(0, suggest_line.path.size(), 1):
+		var brick_fading = brick_fading_tscn.instance()
+		brick_fading.transform.origin.x = suggest_line.path[i].x
+		brick_fading.transform.origin.y = suggest_line.path[i].y
+		add_child(brick_fading)
+		yield(get_tree().create_timer(0.05), "timeout")
+		var tile = world_to_map(suggest_line.path[i])
+		set_cell(tile.x, tile.y, -1)
+	yield(get_tree().create_timer(.5), "timeout")
+	add_child(next_level)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -5,8 +5,9 @@ var game_file = "user://gamedata.dat"
 var diffcult = "Easy"
 
 func _init():
-	load_current_level()
+	#load_current_level()
 	#save_current_level(1)
+	pass
 
 func load_current_level():
 	var file = File.new()

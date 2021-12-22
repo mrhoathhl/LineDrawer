@@ -1,0 +1,234 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://src/Scene/MainMenu/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://src/Assets/Fonts/ARCO FOR OSX.OTF" type="DynamicFontData" id=2]
+[ext_resource path="res://src/Assets/Textures/Button/normal.png" type="Texture" id=3]
+[ext_resource path="res://src/Assets/Textures/Button/professor.png" type="Texture" id=4]
+[ext_resource path="res://src/Assets/Textures/Text/logo.png" type="Texture" id=5]
+[ext_resource path="res://src/Assets/Textures/Background/bg.png" type="Texture" id=6]
+[ext_resource path="res://src/Assets/Textures/Button/easy.png" type="Texture" id=7]
+[ext_resource path="res://src/Assets/Textures/Button/hard.png" type="Texture" id=8]
+[ext_resource path="res://src/Assets/Textures/Button/expert.png" type="Texture" id=9]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 242, 204 )
+margin_left = 81.7926
+margin_right = 84.5662
+margin_top = 84.7718
+margin_bottom = 96.9959
+
+[sub_resource type="DynamicFont" id=6]
+size = 75
+outline_size = 5
+outline_color = Color( 0.333333, 0.592157, 0.141176, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 242, 204 )
+margin_left = 93.3081
+margin_right = 92.1417
+margin_top = 83.9773
+margin_bottom = 92.1417
+
+[sub_resource type="DynamicFont" id=7]
+size = 75
+outline_size = 5
+outline_color = Color( 0.266667, 0.356863, 0.639216, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 242, 204 )
+margin_left = 84.1187
+margin_right = 80.032
+margin_top = 81.7348
+margin_bottom = 96.3789
+
+[sub_resource type="DynamicFont" id=8]
+size = 75
+outline_size = 5
+outline_color = Color( 0.407843, 0.172549, 0.52549, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 242, 204 )
+margin_left = 83.4376
+margin_right = 84.4593
+margin_top = 83.097
+margin_bottom = 96.7195
+
+[sub_resource type="DynamicFont" id=9]
+size = 75
+outline_size = 5
+outline_color = Color( 0.541176, 0.309804, 0.145098, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 242, 204 )
+margin_left = 78.0378
+margin_right = 80.4336
+margin_top = 82.8295
+margin_bottom = 94.1245
+
+[sub_resource type="DynamicFont" id=10]
+size = 75
+outline_size = 5
+outline_color = Color( 0.486275, 0.196078, 0.184314, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="MainMenu" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -960.0
+margin_right = 540.0
+margin_bottom = 960.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 170, 111 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -275.0
+margin_top = -245.0
+margin_right = 275.0
+margin_bottom = 771.0
+custom_constants/vseparation = 14
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ease" type="Button" parent="GridContainer2"]
+margin_right = 550.0
+margin_bottom = 195.768
+rect_min_size = Vector2( 550, 0 )
+custom_styles/normal = SubResource( 2 )
+keep_pressed_outside = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer2/Ease"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -25.7677
+custom_fonts/font = SubResource( 6 )
+text = "Easy"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Medium" type="Button" parent="GridContainer2"]
+margin_top = 209.0
+margin_right = 550.0
+margin_bottom = 399.119
+custom_styles/normal = SubResource( 1 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer2/Medium"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -20.119
+custom_fonts/font = SubResource( 7 )
+text = "Medium"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hard" type="Button" parent="GridContainer2"]
+margin_top = 413.0
+margin_right = 550.0
+margin_bottom = 605.114
+custom_styles/normal = SubResource( 3 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer2/Hard"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -22.1137
+custom_fonts/font = SubResource( 8 )
+text = "Hard"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Expert" type="Button" parent="GridContainer2"]
+margin_top = 619.0
+margin_right = 550.0
+margin_bottom = 812.817
+custom_styles/normal = SubResource( 4 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer2/Expert"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -23.8165
+custom_fonts/font = SubResource( 9 )
+text = "Expert"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Profession" type="Button" parent="GridContainer2"]
+margin_top = 826.0
+margin_right = 550.0
+margin_bottom = 1016.95
+custom_styles/normal = SubResource( 5 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GridContainer2/Profession"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -20.954
+custom_fonts/font = SubResource( 10 )
+text = "Professor"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

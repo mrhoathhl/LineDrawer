@@ -19,18 +19,18 @@ func search_point(target_pos):
 	if grid.has(target_pos) && !pos_check.has(target_pos):
 		if(check_valid_move(pos_check[pos_check.size() - 1], target_pos)):
 			pos_check.append(target_pos)
+			print("shouwn")
 	elif pos_check.has(target_pos):
 		pos_check.resize(pos_check.find(target_pos) + 1)
 	return pos_check
 
 func check_valid_move(lastest_pos, target_pos):
-	var next = Vector2(86, 86) 
+	var next = Vector2(216, 216) 
 	
 	var step = target_pos - lastest_pos
 	if abs(step.x) == abs(next.x) or abs(step.y) == abs(next.y):
 		if lastest_pos.x == target_pos.x or lastest_pos.y == target_pos.y:
 			return true
-		
 	#return array
 	return false;
 # Called every frame. 'delta' is the elapsed time since the previous frame.
