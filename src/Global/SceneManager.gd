@@ -6,6 +6,7 @@ extends Node2D
 # var b = "text"
 
 var home_scene = "res://src/Scene/Home/Home.tscn"
+var main_menu_scene = "res://src/Scene/MainMenu/MainMenu.tscn"
 var game_play_scene = "res://src/Scene/GamePlay/GamePlay.tscn"
 
 var current_scene = null

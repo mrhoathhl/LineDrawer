@@ -73,9 +73,6 @@
                 <category android:name="com.oculus.intent.category.VR" />
             </intent-filter>
         </activity>
-        <meta-data
-                    android:name="com.google.android.gms.ads.APPLICATION_ID"
-                    android:value="ca-app-pub-3940256099942544~3347511713"/>
 
 <!-- Custom application XML added by add-ons. -->
 <!--CHUNK_APPLICATION_BEGIN-->

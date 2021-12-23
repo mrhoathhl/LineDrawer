@@ -17,12 +17,11 @@ func _ready():
 
 
 func _on_Help_pressed():
-	print("Help")
+	SceneManager.transition(SceneManager.main_menu_scene)
 
 
 func _on_Play_pressed():
-	print("Help")
-	pass # Replace with function body.
+	SceneManager.transition(SceneManager.main_menu_scene)
 
 
 func _on_Button_pressed():

@@ -28,7 +28,7 @@ func _ready():
 	#get cell world pos, centralize and append to grid array
 	for pos in tiles:
 		var idx = get_cell(pos.x, pos.y)
-		if walkable.has(idx):
+		if !walkable.has(idx):
 			continue
 			
 		#else
@@ -44,17 +44,16 @@ func _ready():
 	suggest_line = get_tree().get_nodes_in_group('Suggest')[0]
 	path_finder = get_tree().get_nodes_in_group('PathFinder')[0]
 	
-	path_finder.pos_check.append(start_point.position + Vector2(0, 15))
-	path_finder.pos_line.append(start_point.position + Vector2(0, 15))
-	
-	var path = [start_point.position]
+	path_finder.pos_check.append(start_point.position + Vector2(0, 0))
+	print(start_point.position)
+	var path = [start_point.position + Vector2(0, 0)]
 	brick.transform.origin.x = start_point.position.x
 	brick.transform.origin.y = start_point.position.y
 	suggest_line.path = path
 	suggest_line.grid = grid 
 	set_process(true) #cursor and player interactions
 	set_process_input(true) #also cursor and player interactions
-	next_level = preload("res://src/Scene/Popup/NextLevel.tscn").instance()
+	#next_level = preload("res://src/Scene/Popup/NextLevel.tscn").instance()
 	
 
 func _process(delta):
@@ -65,7 +64,7 @@ func _process(delta):
 	#if tgt_cell is a valid cell (!= -1), sets it to cursor
 	if get_cell(tgt_cell.x, tgt_cell.y) != -1:
 		#get world position and centralize offset tile 
-		cursor =  map_to_world(tgt_cell) + Vector2(0,15)
+		cursor =  map_to_world(tgt_cell) + Vector2(0, 15)
 	else:
 		cursor = Vector2() #unable it
 

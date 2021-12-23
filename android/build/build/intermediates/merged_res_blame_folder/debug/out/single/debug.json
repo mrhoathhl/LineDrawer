@@ -20,12 +20,12 @@
         "source": "E:\\Project\\DrawLiner\\android\\build\\res\\mipmap-xxhdpi-v4\\icon_foreground.png"
     },
     {
-        "merged": "E:\\Project\\DrawLiner\\android\\build\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi-v4_icon.png.flat",
-        "source": "E:\\Project\\DrawLiner\\android\\build\\res\\mipmap-hdpi-v4\\icon.png"
-    },
-    {
         "merged": "E:\\Project\\DrawLiner\\android\\build\\build\\intermediates\\merged_res\\debug\\mipmap_icon_foreground.png.flat",
         "source": "E:\\Project\\DrawLiner\\android\\build\\res\\mipmap\\icon_foreground.png"
+    },
+    {
+        "merged": "E:\\Project\\DrawLiner\\android\\build\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi-v4_icon.png.flat",
+        "source": "E:\\Project\\DrawLiner\\android\\build\\res\\mipmap-hdpi-v4\\icon.png"
     },
     {
         "merged": "E:\\Project\\DrawLiner\\android\\build\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi-v4_icon.png.flat",

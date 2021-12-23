@@ -1,144 +1,228 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://src/Scene/GamePlay/Texture/wp2646216.jpg" type="Texture" id=1]
+[ext_resource path="res://src/Assets/Textures/Background/bg.png" type="Texture" id=1]
 [ext_resource path="res://src/Scene/GamePlay/GamePlay.gd" type="Script" id=2]
-[ext_resource path="res://src/Scene/GamePlay/Texture/black-settings-button.png" type="Texture" id=3]
-[ext_resource path="res://src/Assets/Fonts/ARIAL.TTF" type="DynamicFontData" id=4]
-[ext_resource path="res://src/Scene/Home/Texture/next_level.png" type="Texture" id=5]
-[ext_resource path="res://src/Scene/GamePlay/Texture/go-back-arrow.png" type="Texture" id=6]
+[ext_resource path="res://src/Assets/Fonts/ARCO FOR OSX.OTF" type="DynamicFontData" id=3]
+[ext_resource path="res://src/Assets/Textures/Button/setting.png" type="Texture" id=4]
+[ext_resource path="res://src/Assets/Textures/Button/easy.png" type="Texture" id=5]
+[ext_resource path="res://src/Assets/Textures/Background/popup.png" type="Texture" id=6]
+[ext_resource path="res://src/Assets/Textures/Button/btn_close.png" type="Texture" id=7]
+[ext_resource path="res://src/Assets/Textures/Button/normal.png" type="Texture" id=8]
+[ext_resource path="res://src/Assets/Textures/Button/back.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 4 )
+outline_size = 5
+outline_color = Color( 0.372549, 0.254902, 0.203922, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0.929268, -16.2873, 240.338, 218.995 )
+margin_left = 90.5534
+margin_right = 86.9208
+margin_top = 99.9133
+margin_bottom = 96.1573
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 214, 214 )
+margin_left = 36.5859
+margin_right = 43.4458
+margin_top = 40.5875
+margin_bottom = 54.8789
+
+[sub_resource type="DynamicFont" id=5]
 size = 50
-font_data = ExtResource( 4 )
+outline_size = 3
+outline_color = Color( 0.784314, 0.623529, 0.470588, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
 
-[sub_resource type="CanvasItemMaterial" id=3]
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 242, 204 )
+margin_left = 78.8153
+margin_right = 78.0394
+margin_top = 79.466
+margin_bottom = 96.1361
 
-[sub_resource type="Animation" id=4]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "fade_out"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-
-[node name="GamePlayScene" type="Node2D"]
+[node name="GamePlayScene" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -960.0
+margin_right = 540.0
+margin_bottom = 960.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0.956863, 0.921569, 0.847059, 1 )
+[node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
 
-[node name="Control" type="Control" parent="."]
-modulate = Color( 0.580392, 0.101961, 0.101961, 1 )
-self_modulate = Color( 0.219608, 0.00392157, 0.00392157, 1 )
-margin_right = 1080.0
-margin_bottom = 1920.0
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -76.0
+margin_top = -918.0
+margin_right = 76.0
+margin_bottom = -852.0
+custom_fonts/font = SubResource( 2 )
+text = "Level"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Setting" type="TouchScreenButton" parent="."]
-position = Vector2( 954, 24 )
-scale = Vector2( 1.625, 1.625 )
-normal = ExtResource( 3 )
-
-[node name="Back" type="TouchScreenButton" parent="."]
-position = Vector2( 13, 24 )
-scale = Vector2( 0.695313, 0.695313 )
-normal = ExtResource( 6 )
-
-[node name="Label" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-margin_left = 446.0
-margin_top = 236.0
-margin_right = 598.0
-margin_bottom = 302.0
-custom_fonts/font = SubResource( 2 )
-text = "Level 9"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Hint" type="TouchScreenButton" parent="."]
-position = Vector2( 356, 1504 )
-scale = Vector2( 0.632653, 0.632653 )
-normal = ExtResource( 5 )
-
-[node name="Label" type="Label" parent="Hint"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_fonts/font = SubResource( 1 )
-text = "Show Hint by key or reward"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+position = Vector2( 20, 20 )
+normal = ExtResource( 4 )
 
 [node name="Tween" type="Tween" parent="."]
 repeat = true
 playback/repeat = true
 
-[node name="Panel" type="Panel" parent="."]
-margin_top = 1762.0
-margin_right = 1080.0
-margin_bottom = 1921.0
+[node name="Hint" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -217.0
+margin_top = -420.0
+margin_right = 217.0
+margin_bottom = -209.929
+custom_styles/normal = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="LevelContainer" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 1 )
-text = "banner ads"
-align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource( 3 )
-use_parent_material = true
-margin_top = 320.0
-margin_right = 1080.0
-margin_bottom = 1432.0
-color = Color( 1, 1, 1, 0 )
+[node name="SettingPopup" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -960.0
+margin_right = 540.0
+margin_bottom = 960.0
+
+[node name="Panel2" type="Panel" parent="SettingPopup"]
+modulate = Color( 0.258824, 0.258824, 0.258824, 0.443137 )
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
-anims/RESET = SubResource( 4 )
-anims/fade_out = SubResource( 5 )
+[node name="Panel" type="Panel" parent="SettingPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -438.0
+margin_top = -281.0
+margin_right = 439.0
+margin_bottom = 200.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="SettingPopup/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -438.5
+margin_top = -305.0
+margin_right = 438.5
+margin_bottom = 305.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SettingPopup/Panel/Control"]
+self_modulate = Color( 0.647059, 0.517647, 0.396078, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -119.0
+margin_top = 110.0
+margin_right = 119.0
+margin_bottom = 164.0
+custom_fonts/font = SubResource( 5 )
+text = "Setting"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="SettingPopup/Panel/Control"]
+position = Vector2( 765, 90 )
+normal = ExtResource( 7 )
+
+[node name="GridContainer" type="GridContainer" parent="SettingPopup/Panel/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -350.0
+margin_top = -65.0
+margin_right = 350.0
+margin_bottom = 124.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 80
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="SettingPopup/Panel/Control/GridContainer"]
+margin_right = 180.0
+margin_bottom = 189.602
+rect_min_size = Vector2( 180, 0 )
+custom_styles/normal = SubResource( 6 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="SettingPopup/Panel/Control/GridContainer/Back"]
+position = Vector2( 36, 37 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="Replay" type="Button" parent="SettingPopup/Panel/Control/GridContainer"]
+margin_left = 260.0
+margin_right = 440.0
+margin_bottom = 189.602
+rect_min_size = Vector2( 180, 0 )
+custom_styles/normal = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="Button" parent="SettingPopup/Panel/Control/GridContainer"]
+margin_left = 520.0
+margin_right = 700.0
+margin_bottom = 189.602
+rect_min_size = Vector2( 180, 0 )
+custom_styles/normal = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
