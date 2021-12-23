@@ -1,29 +1,51 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Scene/Popup/NextLevel.gd" type="Script" id=1]
-[ext_resource path="res://src/Scene/Popup/Texture/next_level.png" type="Texture" id=2]
-[ext_resource path="res://src/Scene/Popup/Texture/next_level_pressed.png" type="Texture" id=3]
-[ext_resource path="res://src/Map/Tilesets/enemy.png" type="Texture" id=4]
-[ext_resource path="res://src/Colors/0.tres" type="Gradient" id=6]
-
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 669, 217 )
-
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 648, 196 )
-
-[sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 669, 217 )
+[ext_resource path="res://src/Assets/Textures/Text/levelPass.png" type="Texture" id=2]
+[ext_resource path="res://src/Assets/Textures/Button/easy.png" type="Texture" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://src/Assets/Textures/Button/easy 2.png" type="Texture" id=5]
+[ext_resource path="res://src/Assets/Fonts/ARCO FOR OSX.OTF" type="DynamicFontData" id=6]
 
 [sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 669, 217 )
+region_rect = Rect2( 0, 0, 242, 204 )
+margin_left = 84.2158
+margin_right = 86.982
+margin_top = 89.7482
+margin_bottom = 98.0468
 
-[node name="NextLevel" type="Node2D"]
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 242, 210 )
+margin_left = 98.9064
+margin_right = 90.9621
+margin_top = 77.0596
+margin_bottom = 122.342
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 55
+outline_size = 5
+outline_color = Color( 0.333333, 0.592157, 0.141176, 1 )
+use_filter = true
+extra_spacing_bottom = 25
+font_data = ExtResource( 6 )
+
+[node name="NextLevel" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -960.0
+margin_right = 540.0
+margin_bottom = 960.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 modulate = Color( 1, 1, 1, 0.894118 )
@@ -36,12 +58,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="LevelPass" type="Sprite" parent="."]
+position = Vector2( 248, 212 )
+texture = ExtResource( 2 )
+centered = false
+
 [node name="Button" type="Button" parent="."]
-margin_left = 208.0
-margin_top = 741.0
-margin_right = 403.0
-margin_bottom = 805.0
-custom_styles/hover = SubResource( 3 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -244.5
+margin_top = 540.0
+margin_right = 244.5
+margin_bottom = 741.795
+custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 1 )
 custom_styles/focus = SubResource( 4 )
 custom_styles/normal = SubResource( 2 )
@@ -49,41 +80,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label" type="Label" parent="Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 5 )
+text = "Next level"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 307, 478 )
+position = Vector2( 509, 944 )
 texture = ExtResource( 4 )
 
 [node name="Tween" type="Tween" parent="."]
-
-[node name="CPUParticles2DRight" type="CPUParticles2D" parent="."]
-position = Vector2( 61, 721 )
-amount = 300
-lifetime = 2.0
-explosiveness = 0.95
-spread = 180.0
-initial_velocity = 200.0
-initial_velocity_random = 0.95
-damping = 50.0
-scale_amount = 3.0
-scale_amount_random = 1.0
-color_ramp = ExtResource( 6 )
-hue_variation = 0.15
-hue_variation_random = 0.5
-
-[node name="CPUParticles2DLeft" type="CPUParticles2D" parent="."]
-position = Vector2( 1039, 293 )
-amount = 300
-lifetime = 2.0
-explosiveness = 0.95
-spread = 180.0
-initial_velocity = 200.0
-initial_velocity_random = 0.95
-damping = 50.0
-scale_amount = 3.0
-scale_amount_random = 1.0
-color_ramp = ExtResource( 6 )
-hue_variation = 0.15
-hue_variation_random = 0.5
 
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

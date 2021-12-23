@@ -14,6 +14,7 @@ var start_point
 var suggest_line
 var path_finder
 var next_level
+var next_level_tscn = preload("res://src/Scene/Popup/NextLevel.tscn")
 var brick_default = preload("res://src/Object/Brick/Brick.tscn")
 var brick_fading_tscn = preload("res://src/Object/FadingBrick/FadingBrick.tscn")
 var brick
@@ -24,6 +25,7 @@ var tween_scale_value = [1.4, 1.7]
 func _ready():
 	var tiles = get_used_cells()
 	brick = brick_default.instance()
+	next_level = next_level_tscn.instance()
 	add_child(brick)
 	#get cell world pos, centralize and append to grid array
 	for pos in tiles:
@@ -53,9 +55,7 @@ func _ready():
 	suggest_line.grid = grid 
 	set_process(true) #cursor and player interactions
 	set_process_input(true) #also cursor and player interactions
-	#next_level = preload("res://src/Scene/Popup/NextLevel.tscn").instance()
 	
-
 func _process(delta):
 	
 	#get map tile pos relative to mouse
@@ -70,7 +70,7 @@ func _process(delta):
 
 #features
 func _input(event):
-	if !suggest_line.is_win:
+	if !suggest_line.is_win && GameInstance.is_play:
 		if event.is_action_pressed("click") and grid.has(cursor):
 			suggest_line.is_touch = true
 		elif event.is_action_released("click"):

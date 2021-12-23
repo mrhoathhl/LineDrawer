@@ -19,7 +19,8 @@ func _ready():
 	
 func transition(scene_path):
 	next_scene = scene_path
-	$AnimationPlayer.play("fade_in")
+	goto_scene(next_scene)
+	#$AnimationPlayer.play("fade_in")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
