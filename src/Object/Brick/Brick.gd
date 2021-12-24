@@ -6,7 +6,7 @@ extends Node2D
 # var b = "text"
 onready var tween = get_node("Tween")
 onready var sprite = get_node("Sprite")
-var tween_step = [Vector2(0.8, 0.8), Vector2(1, 1)]
+var tween_step = [Vector2(1.3, 1.3), Vector2(1.7, 1.7)]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start_tween(tween_step[0], tween_step[1])

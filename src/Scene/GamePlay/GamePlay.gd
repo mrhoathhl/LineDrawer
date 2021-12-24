@@ -8,23 +8,46 @@ var rng = RandomNumberGenerator.new()
 onready var sound_on = $SettingPopup/Panel/Control/GridContainer/Sound/SoundOn
 onready var sound_off = $SettingPopup/Panel/Control/GridContainer/Sound/SoundOff
 func _init():
-	level = level_back_up.instance()
+	GameInstance.is_play = true;
+	var next_level = load("res://src/Map/Level/" + GameInstance.diffcult + "/" + GameInstance.diffcult + str(get_level()) + ".tscn")
+	print(next_level)
+	if next_level != null:
+		level = next_level.instance()
+	else:
+		level = level_back_up.instance()
 	
-# Called when the node enters the scene tree for the first time.
+	
 func _ready():
+	$LevelNumber.text = "Level " + str(GameInstance.display_level)
 	$LevelContainer.add_child(level)
 	
 func get_level() -> int:
 	rng.randomize()
-	var my_random_number = rng.randi_range(-10.0, 10.0)
-	if my_random_number != GameInstance.last_level:
-		GameInstance.last_level = my_random_number
-		return my_random_number
+	var my_random_number = rng.randi_range(1, GameInstance.total_level)
+	if !GameInstance.is_reload:
+		GameInstance.is_reload = false
+		if my_random_number != GameInstance.last_level:
+			GameInstance.current_level = my_random_number
+			return my_random_number
+		else:
+			var level = GameInstance.current_level + 1
+			if level > GameInstance.total_level:
+				return 1
+			else:
+				return level
 	else:
-		get_level()
+		print("net")
+		return GameInstance.current_level
 	return 1
 	
 
+
+func _on_Next_pressed():
+	GameInstance.is_reload = false
+	GameInstance.is_play = true
+	GameInstance.display_level += 1
+	get_tree().reload_current_scene()
+	$WinPopup.visible = false
 
 func _on_Setting_pressed():
 	GameInstance.is_play = false;
@@ -47,7 +70,9 @@ func _on_Sound_pressed():
 
 
 func _on_Replay_pressed():
-	pass
+	GameInstance.is_reload = true
+	GameInstance.is_play = true
+	get_tree().reload_current_scene()
 
 
 func _on_Back_pressed():

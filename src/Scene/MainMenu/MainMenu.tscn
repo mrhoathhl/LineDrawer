@@ -140,7 +140,7 @@ outline_color = Color( 0.486275, 0.196078, 0.184314, 1 )
 use_filter = true
 font_data = ExtResource( 2 )
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" groups=["MainMenu"]]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -307,5 +307,5 @@ __meta__ = {
 [connection signal="pressed" from="GridContainer2/Medium" to="." method="_on_Medium_pressed"]
 [connection signal="pressed" from="GridContainer2/Hard" to="." method="_on_Hard_pressed"]
 [connection signal="pressed" from="GridContainer2/Expert" to="." method="_on_Expert_pressed"]
-[connection signal="pressed" from="GridContainer2/Professor" to="." method="_on_Profession_pressed"]
 [connection signal="pressed" from="GridContainer2/Professor" to="." method="_on_Professor_pressed"]
+[connection signal="pressed" from="GridContainer2/Professor" to="." method="_on_Profession_pressed"]

@@ -13,20 +13,18 @@ var is_win = false
 var start_point
 var suggest_line
 var path_finder
-var next_level
-var next_level_tscn = preload("res://src/Scene/Popup/NextLevel.tscn")
 var brick_default = preload("res://src/Object/Brick/Brick.tscn")
 var brick_fading_tscn = preload("res://src/Object/FadingBrick/FadingBrick.tscn")
 var brick
 var is_touch
+var origin_array = []
 var tween_scale_value = [1.4, 1.7]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var tiles = get_used_cells()
-	brick = brick_default.instance()
-	next_level = next_level_tscn.instance()
-	add_child(brick)
+	#brick = brick_default.instance()
+	#add_child(brick)
 	#get cell world pos, centralize and append to grid array
 	for pos in tiles:
 		var idx = get_cell(pos.x, pos.y)
@@ -36,11 +34,10 @@ func _ready():
 		#else
 		var new_pos = map_to_world(pos, false) #get world post
 		new_pos = Vector2(new_pos.x, new_pos.y + 15) #centralize offset tile
-		
+		origin_array.append(new_pos)
 		#grid is dictionary, make data array for each cell
 		grid[new_pos] = ["empty", null]
 		
-	
 	#define reference with group
 	start_point = get_tree().get_nodes_in_group('StartPoint')[0]
 	suggest_line = get_tree().get_nodes_in_group('Suggest')[0]
@@ -49,8 +46,7 @@ func _ready():
 	path_finder.pos_check.append(start_point.position + Vector2(0, 0))
 	print(start_point.position)
 	var path = [start_point.position + Vector2(0, 0)]
-	brick.transform.origin.x = start_point.position.x
-	brick.transform.origin.y = start_point.position.y
+	#brick.transform.origin = start_point.position + Vector2(107, 90)
 	suggest_line.path = path
 	suggest_line.grid = grid 
 	set_process(true) #cursor and player interactions
@@ -67,7 +63,6 @@ func _process(delta):
 		cursor =  map_to_world(tgt_cell) + Vector2(0, 15)
 	else:
 		cursor = Vector2() #unable it
-
 #features
 func _input(event):
 	if !suggest_line.is_win && GameInstance.is_play:
@@ -79,24 +74,28 @@ func _input(event):
 			if grid.has(cursor):
 				var path = path_finder.search_point(cursor)
 				suggest_line.path = path
-				brick.transform.origin.x = path[path.size() - 1].x
-				brick.transform.origin.y = path[path.size() - 1].y - 15
+				#brick.transform.origin = path[path.size() - 1] + Vector2(107, 90)
 				if path.size() == grid.size():
-					suggest_line.is_win = true
-					brick.queue_free()
+					GameInstance.is_play = false
+					#brick.queue_free()
+					yield(get_tree().create_timer(.5), "timeout")
 					clear_map()
 
 func clear_map():
-	for i in range(0, suggest_line.path.size(), 1):
-		var brick_fading = brick_fading_tscn.instance()
-		brick_fading.transform.origin.x = suggest_line.path[i].x
-		brick_fading.transform.origin.y = suggest_line.path[i].y
-		add_child(brick_fading)
-		yield(get_tree().create_timer(0.05), "timeout")
-		var tile = world_to_map(suggest_line.path[i])
+	for i in range(0, origin_array.size(), 1):
+		var tile = world_to_map(origin_array[i])
 		set_cell(tile.x, tile.y, -1)
-	yield(get_tree().create_timer(.5), "timeout")
-	add_child(next_level)
+		
+		var brick_fading = brick_fading_tscn.instance()
+		brick_fading.transform.origin = origin_array[i] + Vector2(107, 90)
+		add_child(brick_fading)
+		
+		suggest_line.path.erase(origin_array[i])
+		yield(get_tree().create_timer(0.07), "timeout")
+	yield(get_tree().create_timer(0.5), "timeout")
+	suggest_line.is_win = true
+	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
+	
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -19,11 +19,11 @@ margin_bottom = 96.9959
 
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 242, 200 )
+region_rect = Rect2( 0, 0, 242, 210 )
 margin_left = 79.3591
 margin_right = 85.6177
 margin_top = 81.269
-margin_bottom = 78.7637
+margin_bottom = 118.865
 
 [sub_resource type="StyleBoxEmpty" id=8]
 

@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -9,18 +9,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	yield(get_tree().create_timer(1.0), "timeout")
-	SceneManager.transition(SceneManager.home_scene)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_Transition_transitioned():
-	pass # Replace with function body.
-
-
-func _on_Button_pressed():
-	print("ckci")
-	pass # Replace with function body.
+	#SceneManager.transition(SceneManager.home_scene)
+	
+func _on_Timer_timeout():
+	print("clcick")
+	$ProgressBar.value += 1
