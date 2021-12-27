@@ -22,16 +22,8 @@
 0/z_index = 0
 
 [node name="Level2" type="Control"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -540.0
-margin_top = -960.0
-margin_right = 540.0
-margin_bottom = 960.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="TileMap" type="TileMap" parent="." groups=["Tilemap"]]
@@ -43,8 +35,9 @@ tile_data = PoolIntArray( 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 2, 0
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="TileMap" groups=["StartPoint"]]
-position = Vector2( 756, 540 )
+position = Vector2( 648, 432 )
 texture = ExtResource( 2 )
+centered = false
 
 [node name="Suggest" type="Node2D" parent="." groups=["Suggest"]]
 script = ExtResource( 4 )

@@ -15,8 +15,8 @@ onready var base_size = Vector2(1080, 1920)
 
 func _ready():
 	# Use whichever you would like by default
-	set_fullscreen()
-	#set_windowed()
+	#set_fullscreen()
+	set_windowed()
 
 func _init():
 	rng.randomize()
@@ -41,7 +41,7 @@ func save_current_level(current_levels):
 
 func set_fullscreen():
 	var window_size = OS.get_screen_size()
-	
+	print(window_size)
 	if OS.get_name() == 'Windows' && window_size == base_size:
 				# Not sure if this works outside of Windows / native resolution.
 				#  - Mac didn't like it, nor smaller resolutions.

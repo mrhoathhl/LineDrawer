@@ -16,6 +16,10 @@ func _init():
 	
 	
 func _ready():
+	applovin_max.showBanner("1e5566a719a445cf")
+	print("banner")
+	applovin_max.showInterstitial("f20db4009e262ded")
+	print("inter")
 	$LevelNumber.text = "Level " + str(GameInstance.display_level)
 	$LevelContainer.add_child(level)
 	if Global.is_sound_on:

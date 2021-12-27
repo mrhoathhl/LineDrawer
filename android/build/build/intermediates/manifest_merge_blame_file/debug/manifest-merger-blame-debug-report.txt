@@ -1,132 +1,165 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="org.godotengine.drawliner"
+3    package="com.godot.game"
 4    android:installLocation="auto"
 5    android:versionCode="1"
-6    android:versionName="1.0" > <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
-7    <uses-sdk
-8        android:minSdkVersion="19"
-9        android:targetSdkVersion="30" />
-10
-11    <supports-screens
-11-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:12:5-16:40
-12        android:largeScreens="true"
-12-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:15:9-36
-13        android:normalScreens="true"
-13-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:14:9-37
-14        android:smallScreens="true"
-14-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:13:9-36
-15        android:xlargeScreens="true" />
-15-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:16:9-37
-16
-17    <uses-feature
-17-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:10:5-78
-18        android:glEsVersion="0x00030000"
-18-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:10:19-51
-19        android:required="true" />
-19-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:10:52-75
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="19"
+9-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml
+10        android:targetSdkVersion="30" />
+10-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml
+11
+12    <!-- Adding custom text to the manifest is fine, but do it outside the custom USER and APPLICATION BEGIN/END comments, -->
+13    <!-- as that gets rewritten. -->
+14
+15    <supports-screens
+15-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:12:5-16:40
+16        android:largeScreens="true"
+16-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:15:9-36
+17        android:normalScreens="true"
+17-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:14:9-37
+18        android:smallScreens="true"
+18-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:13:9-36
+19        android:xlargeScreens="true" />
+19-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:16:9-37
 20
-21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-21-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:11:5-79
-21-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:11:22-76
-22    <uses-permission android:name="android.permission.INTERNET" />
-22-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:12:5-67
-22-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:12:22-64
-23    <uses-permission
-23-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:13:5-107
-24        android:name="android.permission.READ_EXTERNAL_STORAGE"
-24-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:13:22-77
-25        android:maxSdkVersion="29" />
-25-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:13:78-104
-26    <uses-permission android:name="android.permission.WAKE_LOCK" />
-26-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:14:5-68
-26-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:14:22-65
-27    <uses-permission
-27-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:15:5-108
-28        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-28-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:15:22-78
-29        android:maxSdkVersion="29" />
-29-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:15:79-105
-30
-31    <instrumentation
-31-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:16:5-21:60
-32        android:name=".GodotInstrumentation"
-32-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:18:9-45
-33        android:icon="@mipmap/icon"
-33-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:19:9-36
-34        android:label="@string/godot_project_name_string"
-34-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:20:9-58
-35        android:targetPackage="org.godotengine.$genname" />
-35-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:21:9-57
-36
+21    <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
+22    <uses-feature
+22-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:19:5-21:35
+23        android:glEsVersion="0x00020000"
+23-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:20:9-41
+24        android:required="true" />
+24-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:21:9-32
+25
+26    <instrumentation
+26-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:10:5-14:57
+27        android:name=".GodotInstrumentation"
+27-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:11:9-45
+28        android:icon="@mipmap/icon"
+28-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:12:9-36
+29        android:label="@string/godot_project_name_string"
+29-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:13:9-58
+30        android:targetPackage="org.godotengine.godot" /> <!-- Custom user permissions XML added by add-ons. It's recommended to add them from the export preset, though. -->
+30-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:14:9-54
+31    <!-- CHUNK_USER_PERMISSIONS_BEGIN -->
+32    <!-- CHUNK_USER_PERMISSIONS_END -->
+33    <!-- Any tag in this line after android:icon will be erased when doing custom builds. -->
+34    <!-- If you want to add tags manually, do before it. -->
+35    <!-- WARNING: This should stay on a single line until the parsing code is improved. See GH-32414. -->
+36    <!-- TODO: Remove the 'requestLegacyExternalStorage' attribute when https://github.com/godotengine/godot/issues/38913 is resolved -->
 37    <application
-37-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:5-81:19
+37-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:5-81:19
 38        android:allowBackup="false"
-38-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:68-95
+38-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:68-95
 39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-39-->[androidx.core:core:1.2.0] C:\Users\mrhoa\.gradle\caches\transforms-3\c5eaa7d939abb2d757f863a6b5340cdd\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
+39-->[androidx.core:core:1.2.0] C:\Users\Celestial\.gradle\caches\transforms-3\c5eaa7d939abb2d757f863a6b5340cdd\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
 40        android:debuggable="true"
 41        android:hasFragileUserData="false"
-41-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:118-152
+41-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:118-152
 42        android:icon="@mipmap/icon"
-42-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:238-265
+42-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:238-265
 43        android:isGame="true"
-43-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:96-117
+43-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:96-117
 44        android:label="@string/godot_project_name_string"
-44-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:18-67
-45        android:requestLegacyExternalStorage="true" >
-45-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:153-197
-46        <activity
-46-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:53:9-75:20
-47            android:name="com.godot.game.GodotApp"
-47-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:54:13-37
-48            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
-48-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:60:13-141
-49            android:excludeFromRecents="false"
-49-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:58:13-47
-50            android:label="@string/godot_project_name_string"
-50-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:13-62
-51            android:launchMode="singleTask"
-51-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:57:13-44
-52            android:resizeableActivity="false"
-52-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:61:13-47
-53            android:screenOrientation="portrait"
-53-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:59:13-50
-54            android:theme="@style/GodotAppSplashTheme" >
-54-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:56:13-55
-55            <intent-filter>
-55-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:67:13-74:29
-56                <action android:name="android.intent.action.MAIN" />
-56-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:68:17-69
-56-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:68:25-66
-57
-58                <category android:name="android.intent.category.LAUNCHER" />
-58-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:69:17-77
-58-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:69:27-74
-59
-60                <!--
-61                Enable access to OpenXR on Oculus mobile devices, no-op on other Android
-62                platforms.
-63                -->
-64                <category android:name="com.oculus.intent.category.VR" />
-64-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:73:17-74
-64-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:73:27-71
-65            </intent-filter>
-66        </activity>
-67        <!-- Records the version of the Godot editor used for building -->
-68        <meta-data
-69            android:name="org.godotengine.editor.version"
-70            android:value="3.4.2.stable" /> <!-- Records the version of the Godot library -->
-71        <meta-data
-71-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:19:9-21:44
-72            android:name="org.godotengine.library.version"
-72-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:20:13-59
-73            android:value="3.4.2.stable" />
-73-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:21:13-41
-74
-75        <service android:name="org.godotengine.godot.GodotDownloaderService" />
-75-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:9-80
-75-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:18-77
-76    </application>
-77
-78</manifest>
+44-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:18-67
+45        android:requestLegacyExternalStorage="false"
+45-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:153-197
+46        android:testOnly="true" >
+47
+48        <!-- Records the version of the Godot editor used for building -->
+49        <meta-data
+50            android:name="org.godotengine.editor.version"
+50-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:35:13-58
+51            android:value="custom_build" />
+51-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:36:13-50
+52
+53        <!-- The following metadata values are replaced when Godot exports, modifying them here has no effect. -->
+54        <!-- Do these changes in the export preset. Adding new ones is fine. -->
+55
+56
+57        <!-- XR mode metadata. This is modified by the exporter based on the selected xr mode. DO NOT CHANGE the values here. -->
+58        <meta-data
+58-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:42:9-44:54
+59            android:name="xr_mode_metadata_name"
+59-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:43:13-49
+60            android:value="xr_mode_metadata_value" />
+60-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:44:13-51
+61
+62        <!-- XR hand tracking metadata -->
+63        <!-- This is modified by the exporter based on the selected xr mode. DO NOT CHANGE the values here. -->
+64        <!-- Removed at export time if the xr mode is not VR or hand tracking is disabled. -->
+65        <meta-data
+65-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:49:9-51:62
+66            android:name="xr_hand_tracking_metadata_name"
+66-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:50:13-58
+67            android:value="xr_hand_tracking_metadata_value" />
+67-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:51:13-60
+68
+69        <activity
+69-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:53:9-75:20
+70            android:name="com.godot.game.GodotApp"
+70-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:54:13-37
+71            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+71-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:60:13-141
+72            android:excludeFromRecents="false"
+72-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:58:13-47
+73            android:label="@string/godot_project_name_string"
+73-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:55:13-62
+74            android:launchMode="singleTask"
+74-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:57:13-44
+75            android:resizeableActivity="false"
+75-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:61:13-47
+76            android:screenOrientation="landscape"
+76-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:59:13-50
+77            android:theme="@style/GodotAppSplashTheme" >
+77-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:56:13-55
+78
+79            <!-- Focus awareness metadata is removed at export time if the xr mode is not VR. -->
+80            <meta-data
+80-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:65:13-87
+81                android:name="com.oculus.vr.focusaware"
+81-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:65:24-63
+82                android:value="true" />
+82-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:65:64-84
+83
+84            <intent-filter>
+84-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:67:13-74:29
+85                <action android:name="android.intent.action.MAIN" />
+85-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:68:17-69
+85-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:68:25-66
+86
+87                <category android:name="android.intent.category.LAUNCHER" />
+87-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:69:17-77
+87-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:69:27-74
+88
+89                <!--
+90                Enable access to OpenXR on Oculus mobile devices, no-op on other Android
+91                platforms.
+92                -->
+93                <category android:name="com.oculus.intent.category.VR" />
+93-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:73:17-74
+93-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:73:27-71
+94            </intent-filter>
+95        </activity>
+96
+97        <!-- Custom application XML added by add-ons. -->
+98        <!-- CHUNK_APPLICATION_BEGIN -->
+99        <!-- CHUNK_APPLICATION_END -->
+100
+101
+102        <!-- Records the version of the Godot library -->
+103        <meta-data
+103-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:19:9-21:44
+104            android:name="org.godotengine.library.version"
+104-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:20:13-59
+105            android:value="3.4.2.stable" />
+105-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:21:13-41
+106
+107        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+107-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:9-80
+107-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:18-77
+108    </application>
+109
+110</manifest>
