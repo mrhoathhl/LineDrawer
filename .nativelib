@@ -1,0 +1,25 @@
+{
+    "id": "1364a6c5-abae-4d47-a232-94f41dbaf7e0",
+    "platforms": [
+        "all",
+        "android"
+    ],
+    "packages": {
+        "applovinmax": {
+            "version": "0.1.2",
+            "platforms": [
+                "all",
+                "android"
+            ],
+            "dependencies": [],
+            "variables": {
+                "AppLovin/SdkKey": {
+                    "info": "Set your SDK key here"
+                }
+            },
+            "autoload": {
+                "applovin_max": "*res://scripts/applovin_max.gd"
+            }
+        }
+    }
+}

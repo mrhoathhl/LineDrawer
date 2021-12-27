@@ -141,22 +141,29 @@ use_filter = true
 font_data = ExtResource( 2 )
 
 [node name="MainMenu" type="Control" groups=["MainMenu"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -540.0
-margin_top = -960.0
+margin_top = -1285.5
 margin_right = 540.0
-margin_bottom = 960.0
-script = ExtResource( 1 )
+margin_bottom = 1285.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 540, 1285.5 )
 texture = ExtResource( 6 )
-centered = false
 
 [node name="Logo" type="Sprite" parent="."]
 position = Vector2( 170, 111 )
@@ -308,4 +315,3 @@ __meta__ = {
 [connection signal="pressed" from="GridContainer2/Hard" to="." method="_on_Hard_pressed"]
 [connection signal="pressed" from="GridContainer2/Expert" to="." method="_on_Expert_pressed"]
 [connection signal="pressed" from="GridContainer2/Professor" to="." method="_on_Professor_pressed"]
-[connection signal="pressed" from="GridContainer2/Professor" to="." method="_on_Profession_pressed"]

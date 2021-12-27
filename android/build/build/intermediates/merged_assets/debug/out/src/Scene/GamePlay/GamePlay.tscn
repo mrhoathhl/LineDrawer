@@ -19,7 +19,7 @@
 [ext_resource path="res://src/Assets/Textures/Background/icon.png" type="Texture" id=17]
 
 [sub_resource type="DynamicFont" id=2]
-size = 40
+size = 46
 outline_size = 5
 outline_color = Color( 0.372549, 0.254902, 0.203922, 1 )
 use_filter = true
@@ -34,8 +34,7 @@ margin_top = 40.5875
 margin_bottom = 54.8789
 
 [sub_resource type="DynamicFont" id=5]
-size = 50
-outline_size = 3
+size = 55
 outline_color = Color( 0.784314, 0.623529, 0.470588, 1 )
 use_filter = true
 font_data = ExtResource( 3 )
@@ -124,9 +123,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="Sprite" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -1285.5
+margin_right = 540.0
+margin_bottom = 1285.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 540, 1285.5 )
 texture = ExtResource( 1 )
-centered = false
 
 [node name="LevelNumber" type="Label" parent="."]
 anchor_left = 0.5
@@ -165,14 +177,8 @@ __meta__ = {
 
 [node name="SettingPopup" type="Control" parent="."]
 visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -540.0
-margin_top = -960.0
-margin_right = 540.0
-margin_bottom = 960.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="BlurBackground" type="Panel" parent="SettingPopup"]
 modulate = Color( 0.258824, 0.258824, 0.258824, 0.443137 )
@@ -190,7 +196,7 @@ anchor_bottom = 0.5
 margin_left = -438.0
 margin_top = -281.0
 margin_right = 439.0
-margin_bottom = 200.0
+margin_bottom = 269.0
 custom_styles/panel = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -213,10 +219,10 @@ __meta__ = {
 self_modulate = Color( 0.647059, 0.517647, 0.396078, 1 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -119.0
-margin_top = 110.0
-margin_right = 119.0
-margin_bottom = 164.0
+margin_left = -131.0
+margin_top = 90.0
+margin_right = 131.0
+margin_bottom = 149.0
 custom_fonts/font = SubResource( 5 )
 text = "Setting"
 __meta__ = {
@@ -224,7 +230,7 @@ __meta__ = {
 }
 
 [node name="ClosePopup" type="TouchScreenButton" parent="SettingPopup/Panel/Control"]
-position = Vector2( 765, 90 )
+position = Vector2( 750, 70 )
 normal = ExtResource( 7 )
 
 [node name="GridContainer" type="GridContainer" parent="SettingPopup/Panel/Control"]
@@ -233,9 +239,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -350.0
-margin_top = -65.0
+margin_top = -35.0
 margin_right = 350.0
-margin_bottom = 124.0
+margin_bottom = 154.0
 custom_constants/vseparation = 0
 custom_constants/hseparation = 80
 columns = 3
@@ -302,14 +308,8 @@ texture = ExtResource( 13 )
 
 [node name="WinPopup" type="Control" parent="."]
 visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -540.0
-margin_top = -960.0
-margin_right = 540.0
-margin_bottom = 960.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -21,9 +21,11 @@ config/icon="res://icon.png"
 
 [autoload]
 
-GameInstance="*res://src/Global/Global.gd"
 SceneManager="*res://src/Global/SceneManager.tscn"
 Global="*res://src/Global/Global.tscn"
+GameInstance="*res://src/Global/Global.gd"
+SoundController="*res://src/Global/SoundController.tscn"
+applovin_max="*res://scripts/applovin_max.gd"
 
 [display]
 
@@ -31,13 +33,14 @@ window/size/width=1080
 window/size/height=1920
 window/size/test_width=600
 window/size/test_height=1024
+window/dpi/allow_hidpi=true
 window/handheld/orientation="portrait"
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "res://addons/NativeLib/plugin.cfg" )
 
 [input]
 

@@ -268,13 +268,13 @@ margin_top = 4.0
 margin_right = 638.0
 margin_bottom = 620.0
 popup_exclusive = true
-window_title = "Open a File"
+window_title = "Открыть файл"
 resizable = true
 dialog_text = "Select python executable"
 mode = 0
 access = 2
-current_dir = "/Project/DrawLiner"
-current_path = "/Project/DrawLiner/"
+current_dir = "/Users/vasya/projects/trawler.io"
+current_path = "/Users/vasya/projects/trawler.io/"
 
 [connection signal="toggled" from="view/project/AndroidButton" to="." method="_on_AndroidButton_toggled"]
 [connection signal="toggled" from="view/project/iOSButton" to="." method="_on_iOSButton_toggled"]

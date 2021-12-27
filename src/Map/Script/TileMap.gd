@@ -15,7 +15,7 @@ var suggest_line
 var path_finder
 var brick_default = preload("res://src/Object/Brick/Brick.tscn")
 var brick_fading_tscn = preload("res://src/Object/FadingBrick/FadingBrick.tscn")
-var brick
+var brick_pos
 var is_touch
 var origin_array = []
 var tween_scale_value = [1.4, 1.7]
@@ -23,8 +23,7 @@ var tween_scale_value = [1.4, 1.7]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var tiles = get_used_cells()
-	#brick = brick_default.instance()
-	#add_child(brick)
+	brick_pos = get_brick_pos()
 	#get cell world pos, centralize and append to grid array
 	for pos in tiles:
 		var idx = get_cell(pos.x, pos.y)
@@ -43,10 +42,10 @@ func _ready():
 	suggest_line = get_tree().get_nodes_in_group('Suggest')[0]
 	path_finder = get_tree().get_nodes_in_group('PathFinder')[0]
 	
-	path_finder.pos_check.append(start_point.position + Vector2(0, 0))
+	start_point.modulate = Color(1, 1, 1, 0)
+	path_finder.pos_check.append(start_point.position + Vector2(0, 15))
 	print(start_point.position)
-	var path = [start_point.position + Vector2(0, 0)]
-	#brick.transform.origin = start_point.position + Vector2(107, 90)
+	var path = [start_point.position + Vector2(0, 15)]
 	suggest_line.path = path
 	suggest_line.grid = grid 
 	set_process(true) #cursor and player interactions
@@ -74,11 +73,10 @@ func _input(event):
 			if grid.has(cursor):
 				var path = path_finder.search_point(cursor)
 				suggest_line.path = path
-				#brick.transform.origin = path[path.size() - 1] + Vector2(107, 90)
 				if path.size() == grid.size():
 					GameInstance.is_play = false
-					#brick.queue_free()
-					yield(get_tree().create_timer(.5), "timeout")
+					yield(get_tree().create_timer(.2), "timeout")
+					SoundController.next_sound()
 					clear_map()
 
 func clear_map():
@@ -87,17 +85,25 @@ func clear_map():
 		set_cell(tile.x, tile.y, -1)
 		
 		var brick_fading = brick_fading_tscn.instance()
-		brick_fading.transform.origin = origin_array[i] + Vector2(107, 90)
+		brick_fading.transform.origin = origin_array[i] + brick_pos
 		add_child(brick_fading)
 		
 		suggest_line.path.erase(origin_array[i])
-		yield(get_tree().create_timer(0.07), "timeout")
+		print(2.0 / origin_array.size())
+		yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
 	yield(get_tree().create_timer(0.5), "timeout")
+	Global.save_current_level(GameInstance.display_level)
 	suggest_line.is_win = true
 	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
 	
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func get_brick_pos() -> Vector2:
+	if GameInstance.diffcult == "Easy":
+		return Vector2(107, 90)
+	elif GameInstance.diffcult == "Medium":
+		return Vector2(89, 68)
+	elif GameInstance.diffcult == "Hard":
+		return Vector2(76, 57)
+	elif GameInstance.diffcult == "Expert":
+		return Vector2(68, 47)
+	else:
+		return Vector2(60, 40)

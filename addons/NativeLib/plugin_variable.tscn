@@ -22,5 +22,4 @@ margin_left = 260.0
 margin_right = 516.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
-
 [connection signal="text_changed" from="var_value" to="." method="_on_var_value_text_changed"]

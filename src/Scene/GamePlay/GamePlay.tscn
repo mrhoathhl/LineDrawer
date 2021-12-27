@@ -123,9 +123,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="Sprite" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -1285.5
+margin_right = 540.0
+margin_bottom = 1285.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 540, 1285.5 )
 texture = ExtResource( 1 )
-centered = false
 
 [node name="LevelNumber" type="Label" parent="."]
 anchor_left = 0.5
@@ -164,14 +177,8 @@ __meta__ = {
 
 [node name="SettingPopup" type="Control" parent="."]
 visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -540.0
-margin_top = -960.0
-margin_right = 540.0
-margin_bottom = 960.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="BlurBackground" type="Panel" parent="SettingPopup"]
 modulate = Color( 0.258824, 0.258824, 0.258824, 0.443137 )
@@ -301,14 +308,8 @@ texture = ExtResource( 13 )
 
 [node name="WinPopup" type="Control" parent="."]
 visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -540.0
-margin_top = -960.0
-margin_right = 540.0
-margin_bottom = 960.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

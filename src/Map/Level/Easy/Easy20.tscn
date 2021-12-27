@@ -44,7 +44,7 @@ script = ExtResource( 3 )
 
 [node name="Start" type="Sprite" parent="TileMap" groups=["StartPoint"]]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 216, 447 )
+position = Vector2( 216, 432 )
 texture = ExtResource( 2 )
 centered = false
 __meta__ = {

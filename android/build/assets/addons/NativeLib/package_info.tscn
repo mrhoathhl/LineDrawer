@@ -27,14 +27,14 @@ __meta__ = {
 }
 
 [node name="box" type="HBoxContainer" parent="."]
-margin_right = 1080.0
+margin_right = 1024.0
 margin_bottom = 123.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 4
 
 [node name="left" type="VBoxContainer" parent="box"]
-margin_right = 248.0
+margin_right = 235.0
 margin_bottom = 123.0
 rect_min_size = Vector2( 200, 100 )
 size_flags_horizontal = 3
@@ -43,13 +43,13 @@ size_flags_stretch_ratio = 0.3
 custom_constants/separation = 2
 
 [node name="plugin" type="HBoxContainer" parent="box/left"]
-margin_right = 248.0
+margin_right = 235.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 0, 32 )
 size_flags_horizontal = 3
 
 [node name="name" type="Label" parent="box/left/plugin"]
-margin_right = 97.0
+margin_right = 84.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -61,8 +61,8 @@ __meta__ = {
 }
 
 [node name="version" type="Label" parent="box/left/plugin"]
-margin_left = 101.0
-margin_right = 133.0
+margin_left = 88.0
+margin_right = 120.0
 margin_bottom = 32.0
 size_flags_vertical = 3
 text = "0.0.0"
@@ -73,40 +73,40 @@ __meta__ = {
 }
 
 [node name="universal" type="TextureRect" parent="box/left/plugin"]
-margin_left = 137.0
-margin_right = 153.0
+margin_left = 124.0
+margin_right = 140.0
 margin_bottom = 32.0
 hint_tooltip = "Platform independent"
 texture = ExtResource( 7 )
 stretch_mode = 4
 
 [node name="android" type="TextureRect" parent="box/left/plugin"]
-margin_left = 157.0
-margin_right = 171.0
+margin_left = 144.0
+margin_right = 158.0
 margin_bottom = 32.0
 hint_tooltip = "Android"
 texture = ExtResource( 2 )
 stretch_mode = 4
 
 [node name="ios" type="TextureRect" parent="box/left/plugin"]
-margin_left = 175.0
-margin_right = 189.0
+margin_left = 162.0
+margin_right = 176.0
 margin_bottom = 32.0
 hint_tooltip = "iOS"
 texture = ExtResource( 3 )
 stretch_mode = 4
 
 [node name="osx" type="TextureRect" parent="box/left/plugin"]
-margin_left = 193.0
-margin_right = 211.0
+margin_left = 180.0
+margin_right = 198.0
 margin_bottom = 32.0
 hint_tooltip = "MacOS"
 texture = ExtResource( 10 )
 stretch_mode = 4
 
 [node name="tvos" type="TextureRect" parent="box/left/plugin"]
-margin_left = 215.0
-margin_right = 248.0
+margin_left = 202.0
+margin_right = 235.0
 margin_bottom = 32.0
 hint_tooltip = "AppleTV"
 texture = ExtResource( 11 )
@@ -114,7 +114,7 @@ stretch_mode = 4
 
 [node name="license" type="Label" parent="box/left"]
 margin_top = 34.0
-margin_right = 248.0
+margin_right = 235.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -126,7 +126,7 @@ __meta__ = {
 
 [node name="author" type="HBoxContainer" parent="box/left"]
 margin_top = 50.0
-margin_right = 248.0
+margin_right = 235.0
 margin_bottom = 71.0
 
 [node name="Label" type="Label" parent="box/left/author"]
@@ -139,15 +139,15 @@ text = "Author:"
 modulate = Color( 0.447059, 0.913725, 1, 1 )
 margin_left = 51.0
 margin_top = 3.0
-margin_right = 163.0
+margin_right = 150.0
 margin_bottom = 17.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 text = "Name"
 
 [node name="DonateButton" type="Button" parent="box/left/author"]
-margin_left = 167.0
-margin_right = 248.0
+margin_left = 154.0
+margin_right = 235.0
 margin_bottom = 21.0
 size_flags_vertical = 4
 text = "Sponsor"
@@ -169,7 +169,7 @@ __meta__ = {
 
 [node name="godot" type="Label" parent="box/left"]
 margin_top = 73.0
-margin_right = 248.0
+margin_right = 235.0
 margin_bottom = 87.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -181,7 +181,7 @@ __meta__ = {
 
 [node name="updated" type="Label" parent="box/left"]
 margin_top = 89.0
-margin_right = 248.0
+margin_right = 235.0
 margin_bottom = 103.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -193,13 +193,13 @@ __meta__ = {
 
 [node name="installed" type="HBoxContainer" parent="box/left"]
 margin_top = 105.0
-margin_right = 248.0
+margin_right = 235.0
 margin_bottom = 123.0
 size_flags_horizontal = 3
 custom_constants/separation = 4
 
 [node name="version" type="Label" parent="box/left/installed"]
-margin_right = 133.0
+margin_right = 120.0
 margin_bottom = 18.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -212,8 +212,8 @@ __meta__ = {
 
 [node name="universal" type="TextureRect" parent="box/left/installed"]
 modulate = Color( 0.572549, 1, 0.498039, 1 )
-margin_left = 137.0
-margin_right = 153.0
+margin_left = 124.0
+margin_right = 140.0
 margin_bottom = 18.0
 hint_tooltip = "Platform independent"
 texture = ExtResource( 7 )
@@ -221,8 +221,8 @@ stretch_mode = 4
 
 [node name="android" type="TextureRect" parent="box/left/installed"]
 modulate = Color( 0.572549, 1, 0.498039, 1 )
-margin_left = 157.0
-margin_right = 171.0
+margin_left = 144.0
+margin_right = 158.0
 margin_bottom = 18.0
 hint_tooltip = "Android"
 texture = ExtResource( 2 )
@@ -230,8 +230,8 @@ stretch_mode = 4
 
 [node name="ios" type="TextureRect" parent="box/left/installed"]
 modulate = Color( 0.572549, 1, 0.498039, 1 )
-margin_left = 175.0
-margin_right = 189.0
+margin_left = 162.0
+margin_right = 176.0
 margin_bottom = 18.0
 hint_tooltip = "iOS"
 texture = ExtResource( 3 )
@@ -239,8 +239,8 @@ stretch_mode = 4
 
 [node name="osx" type="TextureRect" parent="box/left/installed"]
 modulate = Color( 0.572549, 1, 0.498039, 1 )
-margin_left = 193.0
-margin_right = 211.0
+margin_left = 180.0
+margin_right = 198.0
 margin_bottom = 18.0
 hint_tooltip = "MacOS"
 texture = ExtResource( 10 )
@@ -248,23 +248,23 @@ stretch_mode = 4
 
 [node name="tvos" type="TextureRect" parent="box/left/installed"]
 modulate = Color( 0.572549, 1, 0.498039, 1 )
-margin_left = 215.0
-margin_right = 248.0
+margin_left = 202.0
+margin_right = 235.0
 margin_bottom = 18.0
 hint_tooltip = "AppleTV"
 texture = ExtResource( 11 )
 stretch_mode = 4
 
 [node name="right" type="VBoxContainer" parent="box"]
-margin_left = 252.0
-margin_right = 1080.0
+margin_left = 239.0
+margin_right = 1024.0
 margin_bottom = 123.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 4
 
 [node name="description" type="Label" parent="box/right"]
-margin_right = 828.0
+margin_right = 785.0
 margin_bottom = 89.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -286,7 +286,7 @@ align = 1
 
 [node name="controls" type="HBoxContainer" parent="box/right"]
 margin_top = 93.0
-margin_right = 828.0
+margin_right = 785.0
 margin_bottom = 123.0
 rect_min_size = Vector2( 0, 30 )
 size_flags_horizontal = 3
@@ -295,37 +295,37 @@ alignment = 2
 
 [node name="deps" type="Label" parent="box/right/controls"]
 margin_top = 8.0
-margin_right = 525.0
+margin_right = 482.0
 margin_bottom = 22.0
 size_flags_horizontal = 3
 clip_text = true
 
 [node name="InstallButton" type="Button" parent="box/right/controls"]
 modulate = Color( 0.772549, 1, 0.741176, 1 )
-margin_left = 529.0
-margin_right = 600.0
+margin_left = 486.0
+margin_right = 557.0
 margin_bottom = 30.0
 text = "Install"
 icon = ExtResource( 4 )
 
 [node name="UninstallButton" type="Button" parent="box/right/controls"]
 modulate = Color( 1, 0.729412, 0.729412, 1 )
-margin_left = 604.0
-margin_right = 690.0
+margin_left = 561.0
+margin_right = 647.0
 margin_bottom = 30.0
 text = "Uninstall"
 icon = ExtResource( 6 )
 
 [node name="UpdateButton" type="Button" parent="box/right/controls"]
-margin_left = 694.0
-margin_right = 770.0
+margin_left = 651.0
+margin_right = 727.0
 margin_bottom = 30.0
 text = "Update"
 icon = ExtResource( 5 )
 
 [node name="InfoButton" type="Button" parent="box/right/controls"]
-margin_left = 774.0
-margin_right = 828.0
+margin_left = 731.0
+margin_right = 785.0
 margin_bottom = 30.0
 text = "Link"
 icon = ExtResource( 8 )

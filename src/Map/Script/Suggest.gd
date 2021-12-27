@@ -11,6 +11,9 @@ var path = [] #pathfinder generated route
 var is_win = false
 var is_touch = false
 var image_texture = ImageTexture.new()
+var size_line = 30
+var size_circle = 35
+var line_pos = Vector2(107, 90)
 
 # Called when the node enters the scene tree for the first time.
 func _ready(): 
@@ -31,25 +34,42 @@ func _draw():
 		#draw route
 		if path.size() >= 1:
 			draw_texture(image_texture, path[0] + Vector2(0, -17))
-			draw_circle(path[0] + Vector2(107, 90), 35, color)	
+			if GameInstance.is_play:
+				draw_circle(path[0] + line_pos, size_circle, color)	
 			for i in range(0, path.size() - 1, 1):
 				draw_texture(image_texture, path[i+1] +  Vector2(0, -17))
-				draw_circle(path[i + 1] + Vector2(107, 90), 35, color)
-				if path.size() >= 2:
-					draw_line(path[i] + Vector2(107, 90), path[i + 1] + Vector2(107, 90), color, 15 * 2, true)
+				if GameInstance.is_play:
+					draw_circle(path[i + 1] + line_pos, size_circle, color)
+					if path.size() >= 2:
+						draw_line(path[i] + line_pos, path[i + 1] + line_pos, color, size_line, true)
 			if is_touch and GameInstance.is_play:
-				var array = PoolVector2Array( [ path[path.size() - 1] + Vector2(107, 90), get_global_mouse_position() ] )
-				draw_polyline(array, color , 15 * 2, true)
+				var array = PoolVector2Array( [ path[path.size() - 1] + line_pos, get_global_mouse_position() ] )
+				draw_polyline(array, color , size_line, true)
 
 func get_cell_texture() -> String:
 	if GameInstance.diffcult == "Easy":
+		size_circle = 35
+		size_line = 30
+		line_pos = Vector2(107, 90)
 		return "res://src/Assets/Textures/Tilesets/dot2_216.png"
 	elif GameInstance.diffcult == "Medium":
+		size_circle = 30
+		size_line = 25
+		line_pos = Vector2(89, 68)
 		return "res://src/Assets/Textures/Tilesets/dot2_180.png"
 	elif GameInstance.diffcult == "Hard":
+		size_circle = 25
+		size_line = 20
+		line_pos = Vector2(76, 57)
 		return "res://src/Assets/Textures/Tilesets/dot2_154.png"
 	elif GameInstance.diffcult == "Expert":
+		size_circle = 22
+		size_line = 17
+		line_pos = Vector2(68, 47)
 		return "res://src/Assets/Textures/Tilesets/dot2_135.png"
 	else:
+		size_circle = 20
+		size_line = 15
+		line_pos = Vector2(60, 40)
 		return "res://src/Assets/Textures/Tilesets/dot2_120.png"
 	

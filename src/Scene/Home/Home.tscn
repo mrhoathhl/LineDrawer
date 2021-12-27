@@ -74,24 +74,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="Sprite" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -1285.5
+margin_right = 540.0
+margin_bottom = 1285.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 540, 1285.5 )
 texture = ExtResource( 1 )
-centered = false
 
 [node name="Logo" type="Sprite" parent="."]
-position = Vector2( 170, 111 )
+position = Vector2( 170, 195 )
 texture = ExtResource( 8 )
 centered = false
 
 [node name="GridContainer2" type="GridContainer" parent="."]
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 margin_left = -275.0
-margin_top = -820.0
+margin_top = 40.0
 margin_right = 275.0
-margin_bottom = -420.0
+margin_bottom = 429.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -104,7 +117,6 @@ custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 6 )
 custom_styles/focus = SubResource( 8 )
 custom_styles/normal = SubResource( 1 )
-action_mode = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
