@@ -19,11 +19,9 @@ margin_bottom = 96.9959
 
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 242, 210 )
-margin_left = 79.3591
-margin_right = 85.6177
-margin_top = 81.269
-margin_bottom = 118.865
+region_rect = Rect2( 1, 1, 240, 169 )
+margin_left = 82.0
+margin_right = 85.0
 
 [sub_resource type="StyleBoxEmpty" id=8]
 
@@ -128,6 +126,7 @@ __meta__ = {
 }
 
 [node name="Help" type="Button" parent="GridContainer2"]
+visible = false
 margin_top = 199.0
 margin_right = 550.0
 margin_bottom = 389.119

@@ -4,8 +4,10 @@ extends Control
 var level
 var level_back_up = load("res://src/Map/Level/"+ GameInstance.diffcult + "/" + GameInstance.diffcult + "1.tscn")
 var container
+var type
 onready var sound_on = $SettingPopup/Panel/Control/GridContainer/Sound/SoundOn
 onready var sound_off = $SettingPopup/Panel/Control/GridContainer/Sound/SoundOff
+
 func _init():
 	GameInstance.is_play = true;
 	var next_level = load("res://src/Map/Level/" + GameInstance.diffcult + "/" + GameInstance.diffcult + str(get_level()) + ".tscn")
@@ -15,11 +17,8 @@ func _init():
 		level = level_back_up.instance()
 	
 	
+	
 func _ready():
-	applovin_max.showBanner("1e5566a719a445cf")
-	print("banner")
-	applovin_max.showInterstitial("f20db4009e262ded")
-	print("inter")
 	$LevelNumber.text = "Level " + str(GameInstance.display_level)
 	$LevelContainer.add_child(level)
 	if Global.is_sound_on:
@@ -29,6 +28,8 @@ func _ready():
 		sound_on.visible = false
 		sound_off.visible = true
 		
+	AdManager.connect("on_interstitial_close", self, "_on_inter_close")
+	AdManager.connect("on_interstitial_fail", self, "_on_inter_fail")
 	
 func get_level() -> int:
 	if !GameInstance.is_reload:
@@ -53,8 +54,12 @@ func _on_Next_pressed():
 	GameInstance.is_play = true
 	GameInstance.display_level += 1
 	SoundController.touch_sound()
-	get_tree().reload_current_scene()
-	$WinPopup.visible = false
+	type = "next"
+	if AdManager.is_inter_ready:
+		AdManager.show_inter(AdManager.inter_id)
+	else:
+		$WinPopup.visible = false
+		get_tree().reload_current_scene()
 
 func _on_Setting_pressed():
 	SoundController.touch_sound()
@@ -87,4 +92,23 @@ func _on_Replay_pressed():
 
 
 func _on_Back_pressed():
-	SceneManager.transition(SceneManager.main_menu_scene)
+	type = "back"
+	if AdManager.is_inter_ready:
+		AdManager.show_inter(AdManager.inter_id)
+	else:
+		SceneManager.transition(SceneManager.main_menu_scene)
+	
+func _on_inter_close():
+	if type == "next":
+		$WinPopup.visible = false
+		get_tree().reload_current_scene()
+	else:
+		SceneManager.transition(SceneManager.main_menu_scene)
+	
+func _on_inter_fail(id, error):
+	if type == "next":
+		$WinPopup.visible = false
+		get_tree().reload_current_scene()
+	else:
+		SceneManager.transition(SceneManager.main_menu_scene)
+	

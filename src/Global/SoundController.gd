@@ -1,8 +1,15 @@
 extends Node
 
+onready var tap_sound_pre = preload("res://src/Assets/Sounds/Tap_dot.ogg")
+
 func tap_sound():
 	if Global.is_sound_on:
-		$Tap.play()
+		var tap = AudioStreamPlayer.new()
+		add_child(tap)
+		tap.stream = tap_sound_pre
+		tap.play()
+		yield(tap, "finished")
+		remove_child(tap)
 	
 func win_sound():
 	if Global.is_sound_on:

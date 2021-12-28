@@ -1,27 +1,61 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\git\\Android\\LineDrawer\\android\\build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
+            "outputFile": "E:\\Project\\DrawLiner\\android\\build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
             "map": [
                 {
-                    "source": "D:\\git\\Android\\LineDrawer\\android\\build\\res\\values-ca\\godot_project_name_string.xml",
+                    "source": "C:\\Users\\mrhoa\\.gradle\\caches\\transforms-3\\0cb324993efa6f927fe7c2ccb9375428\\transformed\\jetified-play-services-basement-16.0.1\\res\\values-ca\\values.xml",
                     "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "116",
-                        "endColumns": "75",
-                        "endOffsets": "187"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "193",
+                        "endOffsets": "440"
                     },
                     "to": {
-                        "startLines": "2",
+                        "startLines": "29",
                         "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "75",
-                        "endOffsets": "126"
+                        "startOffsets": "2834",
+                        "endColumns": "193",
+                        "endOffsets": "3023"
                     }
                 },
                 {
-                    "source": "C:\\Users\\Celestial\\.gradle\\caches\\transforms-3\\c5eaa7d939abb2d757f863a6b5340cdd\\transformed\\core-1.2.0\\res\\values-ca\\values-ca.xml",
+                    "source": "E:\\Project\\DrawLiner\\android\\build\\res\\values-ca\\godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "61",
+                        "endOffsets": "172"
+                    },
+                    "to": {
+                        "startLines": "30",
+                        "startColumns": "4",
+                        "startOffsets": "3028",
+                        "endColumns": "64",
+                        "endOffsets": "3088"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\mrhoa\\.gradle\\caches\\transforms-3\\7d401dac5412717797e861f3fd774565\\transformed\\appcompat-1.0.0\\res\\values-ca\\values-ca.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,223,329,436,519,627,753,837,918,1009,1102,1196,1291,1390,1483,1576,1670,1761,1852,1935,2046,2155,2253,2363,2467,2575,2735,2834",
+                        "endColumns": "117,105,106,82,107,125,83,80,90,92,93,94,98,92,92,93,90,90,82,110,108,97,109,103,107,159,98,80",
+                        "endOffsets": "218,324,431,514,622,748,832,913,1004,1097,1191,1286,1385,1478,1571,1665,1756,1847,1930,2041,2150,2248,2358,2462,2570,2730,2829,2910"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,31",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,223,329,436,519,627,753,837,918,1009,1102,1196,1291,1390,1483,1576,1670,1761,1852,1935,2046,2155,2253,2363,2467,2575,2735,3093",
+                        "endColumns": "117,105,106,82,107,125,83,80,90,92,93,94,98,92,92,93,90,90,82,110,108,97,109,103,107,159,98,80",
+                        "endOffsets": "218,324,431,514,622,748,832,913,1004,1097,1191,1286,1385,1478,1571,1665,1756,1847,1930,2041,2150,2248,2358,2462,2570,2730,2829,3169"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\mrhoa\\.gradle\\caches\\transforms-3\\c5eaa7d939abb2d757f863a6b5340cdd\\transformed\\core-1.2.0\\res\\values-ca\\values-ca.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,11 +64,11 @@
                         "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "3",
+                        "startLines": "32",
                         "startColumns": "4",
-                        "startOffsets": "131",
+                        "startOffsets": "3174",
                         "endColumns": "100",
-                        "endOffsets": "227"
+                        "endOffsets": "3270"
                     }
                 }
             ]

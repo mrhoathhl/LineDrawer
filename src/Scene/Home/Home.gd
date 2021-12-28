@@ -8,6 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	applovin_max.showBanner("4c218bb397c21994")
 	pass # Replace with function body.
 
 

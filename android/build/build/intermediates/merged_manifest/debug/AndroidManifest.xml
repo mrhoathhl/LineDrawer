@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.godot.game"
+    package="com.minigame.drawliner"
     android:installLocation="auto"
     android:versionCode="1"
-    android:versionName="1.0" >
-
+    android:versionName="1.0" > <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
     <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="30" />
-
-    <!-- Adding custom text to the manifest is fine, but do it outside the custom USER and APPLICATION BEGIN/END comments, -->
-    <!-- as that gets rewritten. -->
 
     <supports-screens
         android:largeScreens="true"
@@ -18,54 +14,42 @@
         android:smallScreens="true"
         android:xlargeScreens="true" />
 
-    <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
     <uses-feature
-        android:glEsVersion="0x00020000"
+        android:glEsVersion="0x00030000"
         android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
 
     <instrumentation
         android:name=".GodotInstrumentation"
         android:icon="@mipmap/icon"
         android:label="@string/godot_project_name_string"
-        android:targetPackage="org.godotengine.godot" /> <!-- Custom user permissions XML added by add-ons. It's recommended to add them from the export preset, though. -->
-    <!-- CHUNK_USER_PERMISSIONS_BEGIN -->
-    <!-- CHUNK_USER_PERMISSIONS_END -->
-    <!-- Any tag in this line after android:icon will be erased when doing custom builds. -->
-    <!-- If you want to add tags manually, do before it. -->
-    <!-- WARNING: This should stay on a single line until the parsing code is improved. See GH-32414. -->
-    <!-- TODO: Remove the 'requestLegacyExternalStorage' attribute when https://github.com/godotengine/godot/issues/38913 is resolved -->
+        android:targetPackage="com.minigame.drawliner" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.network" />
+
     <application
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
+        android:hardwareAccelerated="true"
         android:hasFragileUserData="false"
         android:icon="@mipmap/icon"
         android:isGame="true"
         android:label="@string/godot_project_name_string"
-        android:requestLegacyExternalStorage="false"
-        android:testOnly="true" >
-
-        <!-- Records the version of the Godot editor used for building -->
-        <meta-data
-            android:name="org.godotengine.editor.version"
-            android:value="custom_build" />
-
-        <!-- The following metadata values are replaced when Godot exports, modifying them here has no effect. -->
-        <!-- Do these changes in the export preset. Adding new ones is fine. -->
-
-
-        <!-- XR mode metadata. This is modified by the exporter based on the selected xr mode. DO NOT CHANGE the values here. -->
-        <meta-data
-            android:name="xr_mode_metadata_name"
-            android:value="xr_mode_metadata_value" />
-
-        <!-- XR hand tracking metadata -->
-        <!-- This is modified by the exporter based on the selected xr mode. DO NOT CHANGE the values here. -->
-        <!-- Removed at export time if the xr mode is not VR or hand tracking is disabled. -->
-        <meta-data
-            android:name="xr_hand_tracking_metadata_name"
-            android:value="xr_hand_tracking_metadata_value" />
-
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true" >
         <activity
             android:name="com.godot.game.GodotApp"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
@@ -73,14 +57,8 @@
             android:label="@string/godot_project_name_string"
             android:launchMode="singleTask"
             android:resizeableActivity="false"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:theme="@style/GodotAppSplashTheme" >
-
-            <!-- Focus awareness metadata is removed at export time if the xr mode is not VR. -->
-            <meta-data
-                android:name="com.oculus.vr.focusaware"
-                android:value="true" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -93,18 +71,79 @@
                 <category android:name="com.oculus.intent.category.VR" />
             </intent-filter>
         </activity>
-
-        <!-- Custom application XML added by add-ons. -->
-        <!-- CHUNK_APPLICATION_BEGIN -->
-        <!-- CHUNK_APPLICATION_END -->
-
-
-        <!-- Records the version of the Godot library -->
+        <!-- Records the version of the Godot editor used for building -->
+        <meta-data
+            android:name="org.godotengine.editor.version"
+            android:value="3.4.2.stable" /> <!-- Records the version of the Godot library -->
         <meta-data
             android:name="org.godotengine.library.version"
             android:value="3.4.2.stable" />
 
         <service android:name="org.godotengine.godot.GodotDownloaderService" />
+        <!--
+    Plugin metadata:
+    - In the `android:name` attribute, the `org.godotengine.plugin.v1` prefix
+    is required so Godot can recognize the project as a valid Godot
+    Android plugin. The plugin name following the prefix should match the value
+    of the plugin name returned by the plugin initializer.
+    - The `android:value` attribute should be the classpath to the plugin
+    initializer.
+        -->
+        <meta-data
+            android:name="org.godotengine.plugin.v1.AppLovinMax"
+            android:value="ru.mobilap.applovinmax.AppLovinMax" />
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <activity
+            android:name="com.applovin.adview.AppLovinInterstitialActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.applovin.adview.AppLovinFullscreenActivity"
+            android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.applovin.sdk.AppLovinWebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|uiMode" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+        <activity
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+
+        <service
+            android:name="com.applovin.impl.sdk.utils.AppKilledService"
+            android:exported="false"
+            android:stopWithTask="false" />
+        <service
+            android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+            android:exported="false"
+            android:stopWithTask="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

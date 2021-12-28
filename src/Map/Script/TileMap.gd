@@ -19,6 +19,7 @@ var brick_pos
 var is_touch
 var origin_array = []
 var tween_scale_value = [1.4, 1.7]
+var size_pos;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -44,7 +45,6 @@ func _ready():
 	
 	start_point.modulate = Color(1, 1, 1, 0)
 	path_finder.pos_check.append(start_point.position + Vector2(0, 15))
-	print(start_point.position)
 	var path = [start_point.position + Vector2(0, 15)]
 	suggest_line.path = path
 	suggest_line.grid = grid 
@@ -65,13 +65,17 @@ func _process(delta):
 #features
 func _input(event):
 	if !suggest_line.is_win && GameInstance.is_play:
-		if event.is_action_pressed("click") and grid.has(cursor):
-			suggest_line.is_touch = true
-		elif event.is_action_released("click"):
-			suggest_line.is_touch = false
-		if event is InputEventMouseMotion:
+		#if event.is_action_pressed("click") and grid.has(cursor):
+			#suggest_line.is_touch = true
+		#elif event.is_action_released("click"):
+			#suggest_line.is_touch = false
+		if event is InputEventMouseMotion or event is InputEvent:
 			if grid.has(cursor):
 				var path = path_finder.search_point(cursor)
+				if size_pos != path.size():
+					SoundController.tap_sound()
+					Input.vibrate_handheld(50)
+					size_pos = path.size()
 				suggest_line.path = path
 				if path.size() == grid.size():
 					GameInstance.is_play = false
@@ -89,7 +93,6 @@ func clear_map():
 		add_child(brick_fading)
 		
 		suggest_line.path.erase(origin_array[i])
-		print(2.0 / origin_array.size())
 		yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
 	yield(get_tree().create_timer(0.5), "timeout")
 	Global.save_current_level(GameInstance.display_level)

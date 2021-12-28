@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.godot.game",
+  "applicationId": "com.minigame.drawliner",
   "variantName": "debug",
   "elements": [
     {

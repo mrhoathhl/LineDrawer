@@ -1,165 +1,263 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.godot.game"
+3    package="com.minigame.drawliner"
 4    android:installLocation="auto"
 5    android:versionCode="1"
-6    android:versionName="1.0" >
-7
-8    <uses-sdk
-9        android:minSdkVersion="19"
-9-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml
-10        android:targetSdkVersion="30" />
-10-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml
-11
-12    <!-- Adding custom text to the manifest is fine, but do it outside the custom USER and APPLICATION BEGIN/END comments, -->
-13    <!-- as that gets rewritten. -->
-14
-15    <supports-screens
-15-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:12:5-16:40
-16        android:largeScreens="true"
-16-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:15:9-36
-17        android:normalScreens="true"
-17-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:14:9-37
-18        android:smallScreens="true"
-18-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:13:9-36
-19        android:xlargeScreens="true" />
-19-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:16:9-37
+6    android:versionName="1.0" > <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
+7    <uses-sdk
+8        android:minSdkVersion="19"
+9        android:targetSdkVersion="30" />
+10
+11    <supports-screens
+11-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:12:5-16:40
+12        android:largeScreens="true"
+12-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:15:9-36
+13        android:normalScreens="true"
+13-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:14:9-37
+14        android:smallScreens="true"
+14-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:13:9-36
+15        android:xlargeScreens="true" />
+15-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:16:9-37
+16
+17    <uses-feature
+17-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:10:5-78
+18        android:glEsVersion="0x00030000"
+18-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:10:19-51
+19        android:required="true" />
+19-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:10:52-75
 20
-21    <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
-22    <uses-feature
-22-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:19:5-21:35
-23        android:glEsVersion="0x00020000"
-23-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:20:9-41
-24        android:required="true" />
-24-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:21:9-32
-25
-26    <instrumentation
-26-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:10:5-14:57
-27        android:name=".GodotInstrumentation"
-27-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:11:9-45
-28        android:icon="@mipmap/icon"
-28-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:12:9-36
-29        android:label="@string/godot_project_name_string"
-29-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:13:9-58
-30        android:targetPackage="org.godotengine.godot" /> <!-- Custom user permissions XML added by add-ons. It's recommended to add them from the export preset, though. -->
-30-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:14:9-54
-31    <!-- CHUNK_USER_PERMISSIONS_BEGIN -->
-32    <!-- CHUNK_USER_PERMISSIONS_END -->
-33    <!-- Any tag in this line after android:icon will be erased when doing custom builds. -->
-34    <!-- If you want to add tags manually, do before it. -->
-35    <!-- WARNING: This should stay on a single line until the parsing code is improved. See GH-32414. -->
-36    <!-- TODO: Remove the 'requestLegacyExternalStorage' attribute when https://github.com/godotengine/godot/issues/38913 is resolved -->
-37    <application
-37-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:5-81:19
-38        android:allowBackup="false"
-38-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:68-95
-39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-39-->[androidx.core:core:1.2.0] C:\Users\Celestial\.gradle\caches\transforms-3\c5eaa7d939abb2d757f863a6b5340cdd\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
-40        android:debuggable="true"
-41        android:hasFragileUserData="false"
-41-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:118-152
-42        android:icon="@mipmap/icon"
-42-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:238-265
-43        android:isGame="true"
-43-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:96-117
-44        android:label="@string/godot_project_name_string"
-44-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:18-67
-45        android:requestLegacyExternalStorage="false"
-45-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:31:153-197
-46        android:testOnly="true" >
-47
-48        <!-- Records the version of the Godot editor used for building -->
-49        <meta-data
-50            android:name="org.godotengine.editor.version"
-50-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:35:13-58
-51            android:value="custom_build" />
-51-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:36:13-50
-52
-53        <!-- The following metadata values are replaced when Godot exports, modifying them here has no effect. -->
-54        <!-- Do these changes in the export preset. Adding new ones is fine. -->
-55
-56
-57        <!-- XR mode metadata. This is modified by the exporter based on the selected xr mode. DO NOT CHANGE the values here. -->
-58        <meta-data
-58-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:42:9-44:54
-59            android:name="xr_mode_metadata_name"
-59-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:43:13-49
-60            android:value="xr_mode_metadata_value" />
-60-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:44:13-51
-61
-62        <!-- XR hand tracking metadata -->
-63        <!-- This is modified by the exporter based on the selected xr mode. DO NOT CHANGE the values here. -->
-64        <!-- Removed at export time if the xr mode is not VR or hand tracking is disabled. -->
-65        <meta-data
-65-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:49:9-51:62
-66            android:name="xr_hand_tracking_metadata_name"
-66-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:50:13-58
-67            android:value="xr_hand_tracking_metadata_value" />
-67-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:51:13-60
-68
-69        <activity
-69-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:53:9-75:20
-70            android:name="com.godot.game.GodotApp"
-70-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:54:13-37
-71            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
-71-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:60:13-141
-72            android:excludeFromRecents="false"
-72-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:58:13-47
-73            android:label="@string/godot_project_name_string"
-73-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:55:13-62
-74            android:launchMode="singleTask"
-74-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:57:13-44
-75            android:resizeableActivity="false"
-75-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:61:13-47
-76            android:screenOrientation="landscape"
-76-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:59:13-50
-77            android:theme="@style/GodotAppSplashTheme" >
-77-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:56:13-55
-78
-79            <!-- Focus awareness metadata is removed at export time if the xr mode is not VR. -->
-80            <meta-data
-80-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:65:13-87
-81                android:name="com.oculus.vr.focusaware"
-81-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:65:24-63
-82                android:value="true" />
-82-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:65:64-84
-83
-84            <intent-filter>
-84-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:67:13-74:29
-85                <action android:name="android.intent.action.MAIN" />
-85-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:68:17-69
-85-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:68:25-66
-86
-87                <category android:name="android.intent.category.LAUNCHER" />
-87-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:69:17-77
-87-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:69:27-74
-88
-89                <!--
-90                Enable access to OpenXR on Oculus mobile devices, no-op on other Android
-91                platforms.
-92                -->
-93                <category android:name="com.oculus.intent.category.VR" />
-93-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:73:17-74
-93-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:73:27-71
-94            </intent-filter>
-95        </activity>
-96
-97        <!-- Custom application XML added by add-ons. -->
-98        <!-- CHUNK_APPLICATION_BEGIN -->
-99        <!-- CHUNK_APPLICATION_END -->
-100
-101
-102        <!-- Records the version of the Godot library -->
-103        <meta-data
-103-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:19:9-21:44
-104            android:name="org.godotengine.library.version"
-104-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:20:13-59
-105            android:value="3.4.2.stable" />
-105-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:21:13-41
-106
-107        <service android:name="org.godotengine.godot.GodotDownloaderService" />
-107-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:9-80
-107-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:18-77
-108    </application>
-109
-110</manifest>
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:11:5-79
+21-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:11:22-76
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:12:5-67
+22-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:12:22-64
+23    <uses-permission
+23-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:13:5-107
+24        android:name="android.permission.READ_EXTERNAL_STORAGE"
+24-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:13:22-77
+25        android:maxSdkVersion="29" />
+25-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:13:78-104
+26    <uses-permission android:name="android.permission.VIBRATE" />
+26-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:14:5-66
+26-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:14:22-63
+27    <uses-permission android:name="android.permission.WAKE_LOCK" />
+27-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:15:5-68
+27-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:15:22-65
+28    <uses-permission
+28-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:16:5-108
+29        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+29-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:16:22-78
+30        android:maxSdkVersion="29" />
+30-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:16:79-105
+31
+32    <instrumentation
+32-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:17:5-22:58
+33        android:name=".GodotInstrumentation"
+33-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:19:9-45
+34        android:icon="@mipmap/icon"
+34-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:20:9-36
+35        android:label="@string/godot_project_name_string"
+35-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:21:9-58
+36        android:targetPackage="com.minigame.drawliner" />
+36-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:22:9-55
+37
+38    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+38-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:13:5-81
+38-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:13:22-78
+39
+40    <uses-feature android:name="android.hardware.location.network" />
+40-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:15:5-70
+40-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:15:19-67
+41
+42    <application
+42-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:5-81:19
+43        android:allowBackup="false"
+43-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:68-95
+44        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+44-->[androidx.core:core:1.2.0] C:\Users\mrhoa\.gradle\caches\transforms-3\c5eaa7d939abb2d757f863a6b5340cdd\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
+45        android:debuggable="true"
+46        android:hardwareAccelerated="true"
+46-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:18:9-43
+47        android:hasFragileUserData="false"
+47-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:118-152
+48        android:icon="@mipmap/icon"
+48-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:238-265
+49        android:isGame="true"
+49-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:96-117
+50        android:label="@string/godot_project_name_string"
+50-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:18-67
+51        android:networkSecurityConfig="@xml/network_security_config"
+51-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:19:9-69
+52        android:requestLegacyExternalStorage="true" >
+52-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:31:153-197
+53        <activity
+53-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:53:9-75:20
+54            android:name="com.godot.game.GodotApp"
+54-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:54:13-37
+55            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+55-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:60:13-141
+56            android:excludeFromRecents="false"
+56-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:58:13-47
+57            android:label="@string/godot_project_name_string"
+57-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:13-62
+58            android:launchMode="singleTask"
+58-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:57:13-44
+59            android:resizeableActivity="false"
+59-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:61:13-47
+60            android:screenOrientation="portrait"
+60-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:59:13-50
+61            android:theme="@style/GodotAppSplashTheme" >
+61-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:56:13-55
+62            <intent-filter>
+62-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:67:13-74:29
+63                <action android:name="android.intent.action.MAIN" />
+63-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:68:17-69
+63-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:68:25-66
+64
+65                <category android:name="android.intent.category.LAUNCHER" />
+65-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:69:17-77
+65-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:69:27-74
+66
+67                <!--
+68                Enable access to OpenXR on Oculus mobile devices, no-op on other Android
+69                platforms.
+70                -->
+71                <category android:name="com.oculus.intent.category.VR" />
+71-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:73:17-74
+71-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:73:27-71
+72            </intent-filter>
+73        </activity>
+74        <!-- Records the version of the Godot editor used for building -->
+75        <meta-data
+76            android:name="org.godotengine.editor.version"
+77            android:value="3.4.2.stable" /> <!-- Records the version of the Godot library -->
+78        <meta-data
+78-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:19:9-21:44
+79            android:name="org.godotengine.library.version"
+79-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:20:13-59
+80            android:value="3.4.2.stable" />
+80-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:21:13-41
+81
+82        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+82-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:9-80
+82-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\7d496d812684c77fc04000caf95fd2e1\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:18-77
+83        <!--
+84    Plugin metadata:
+85    - In the `android:name` attribute, the `org.godotengine.plugin.v1` prefix
+86    is required so Godot can recognize the project as a valid Godot
+87    Android plugin. The plugin name following the prefix should match the value
+88    of the plugin name returned by the plugin initializer.
+89    - The `android:value` attribute should be the classpath to the plugin
+90    initializer.
+91        -->
+92        <meta-data
+92-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:30:9-32:66
+93            android:name="org.godotengine.plugin.v1.AppLovinMax"
+93-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:31:13-65
+94            android:value="ru.mobilap.applovinmax.AppLovinMax" />
+94-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:32:13-63
+95        <meta-data
+95-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:33:9-35:36
+96            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+96-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:34:13-69
+97            android:value="true" />
+97-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\46f44e19646494ce83bc358df0a2e8a0\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:35:13-33
+98
+99        <activity
+99-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:15:9-19:50
+100            android:name="com.applovin.adview.AppLovinInterstitialActivity"
+100-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:16:13-76
+101            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
+101-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:17:13-98
+102            android:hardwareAccelerated="true"
+102-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:18:13-47
+103            android:screenOrientation="behind" />
+103-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:19:13-47
+104        <activity
+104-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:20:9-26:50
+105            android:name="com.applovin.adview.AppLovinFullscreenActivity"
+105-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:21:13-74
+106            android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+106-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:22:13-129
+107            android:exported="false"
+107-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:23:13-37
+108            android:hardwareAccelerated="true"
+108-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:24:13-47
+109            android:launchMode="singleTop"
+109-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:25:13-43
+110            android:screenOrientation="behind" />
+110-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:26:13-47
+111        <activity
+111-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:27:9-29:84
+112            android:name="com.applovin.sdk.AppLovinWebViewActivity"
+112-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:28:13-68
+113            android:configChanges="keyboardHidden|orientation|screenSize|uiMode" />
+113-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:29:13-81
+114        <activity
+114-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:30:9-33:87
+115            android:name="com.applovin.mediation.MaxDebuggerActivity"
+115-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:31:13-70
+116            android:configChanges="keyboardHidden|orientation|screenSize"
+116-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:32:13-74
+117            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+117-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:33:13-84
+118        <activity
+118-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:34:9-37:87
+119            android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+119-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:35:13-76
+120            android:configChanges="keyboardHidden|orientation|screenSize"
+120-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:36:13-74
+121            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+121-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:37:13-84
+122        <activity
+122-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:38:9-41:87
+123            android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+123-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:39:13-77
+124            android:configChanges="keyboardHidden|orientation|screenSize"
+124-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:40:13-74
+125            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+125-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:41:13-84
+126        <activity
+126-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:42:9-45:87
+127            android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
+127-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:43:13-81
+128            android:configChanges="keyboardHidden|orientation|screenSize"
+128-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:44:13-74
+129            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+129-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:45:13-84
+130        <activity
+130-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:46:9-49:87
+131            android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
+131-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:47:13-82
+132            android:configChanges="keyboardHidden|orientation|screenSize"
+132-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:48:13-74
+133            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+133-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:49:13-84
+134
+135        <service
+135-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:51:9-54:44
+136            android:name="com.applovin.impl.sdk.utils.AppKilledService"
+136-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:52:13-72
+137            android:exported="false"
+137-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:53:13-37
+138            android:stopWithTask="false" />
+138-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:54:13-41
+139        <service
+139-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:55:9-58:44
+140            android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+140-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:56:13-81
+141            android:exported="false"
+141-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:57:13-37
+142            android:stopWithTask="false" />
+142-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0490cea8d24cd3fba7ef78ee7da4c897\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:58:13-41
+143
+144        <meta-data
+144-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0cb324993efa6f927fe7c2ccb9375428\transformed\jetified-play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
+145            android:name="com.google.android.gms.version"
+145-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0cb324993efa6f927fe7c2ccb9375428\transformed\jetified-play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
+146            android:value="@integer/google_play_services_version" />
+146-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0cb324993efa6f927fe7c2ccb9375428\transformed\jetified-play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
+147    </application>
+148
+149</manifest>
