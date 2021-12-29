@@ -13,8 +13,8 @@ var is_win = false
 var start_point
 var suggest_line
 var path_finder
-var brick_default = preload("res://src/Object/Brick/Brick.tscn")
 var brick_fading_tscn = preload("res://src/Object/FadingBrick/FadingBrick.tscn")
+var glow_ring_tscn = preload("res://src/Object/Ring/Ring.tscn")
 var brick_pos
 var is_touch
 var origin_array = []
@@ -84,6 +84,12 @@ func _input(event):
 					clear_map()
 
 func clear_map():
+	for i in range(0, origin_array.size(), 1):
+		var ring = glow_ring_tscn.instance()
+		ring.transform.origin = origin_array[i] + brick_pos
+		add_child(ring)
+	yield(get_tree().create_timer(1.5), "timeout")
+	
 	for i in range(0, origin_array.size(), 1):
 		var tile = world_to_map(origin_array[i])
 		set_cell(tile.x, tile.y, -1)

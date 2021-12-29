@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://src/Assets/Textures/Background/bg.png" type="Texture" id=1]
 [ext_resource path="res://src/Scene/GamePlay/GamePlay.gd" type="Script" id=2]
@@ -83,9 +83,6 @@ margin_bottom = 120.943
 [sub_resource type="ShaderMaterial" id=14]
 render_priority = 5
 shader = SubResource( 13 )
-
-[sub_resource type="Animation" id=20]
-resource_name = "spin"
 
 [sub_resource type="StyleBoxTexture" id=15]
 texture = ExtResource( 16 )
@@ -338,14 +335,13 @@ __meta__ = {
 position = Vector2( 542, 385 )
 texture = ExtResource( 14 )
 
-[node name="Ray" type="Sprite" parent="WinPopup"]
-position = Vector2( 188, 620 )
+[node name="CPUParticles2D" type="CPUParticles2D" parent="WinPopup"]
+position = Vector2( 541, 969 )
 scale = Vector2( 0.782222, 0.782222 )
+amount = 1
 texture = ExtResource( 18 )
-centered = false
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="WinPopup/Ray"]
-anims/spin = SubResource( 20 )
+gravity = Vector2( 0, 0 )
+angular_velocity = 100.0
 
 [node name="Icon" type="Sprite" parent="WinPopup"]
 position = Vector2( 356, 780 )

@@ -20,7 +20,7 @@ func search_point(target_pos):
 	if grid.has(target_pos) && !pos_check.has(target_pos):
 		if(check_valid_move(pos_check[pos_check.size() - 1], target_pos)):
 			pos_check.append(target_pos)
-			SoundController.tap_sound()
+			#SoundController.tap_sound()
 	elif pos_check.has(target_pos):
 		pos_check.resize(pos_check.find(target_pos) + 1)
 	return pos_check
