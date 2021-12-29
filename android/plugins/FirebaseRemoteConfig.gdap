@@ -1,0 +1,11 @@
+[config]
+
+name="FirebaseRemoteConfig"
+binary_type="local"
+binary="FirebaseRemoteConfig.release.aar"
+
+[dependencies]
+
+local=[]
+remote=["com.google.firebase:firebase-config:19.1.1"]
+custom_maven_repos=["https://dl.bintray.com/mobilap/maven/"]

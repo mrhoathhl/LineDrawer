@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "AdMob",
+"language": "GDScript",
+"path": "res://admob-lib/admob.gd"
+} ]
+_global_script_class_icons={
+"AdMob": "res://admob-lib/icon.png"
+}
+
 [AppLovin]
 
 SdkKey="iVth1Xns1vXaWlDJGqmE995884znPLc6rUpt1ai2TFc--qHFe2ToBZwKeu53DiA2C-vDTcF0ss_rfH5JJZ5V80"
@@ -31,6 +41,8 @@ GameInstance="*res://src/Global/Global.gd"
 SoundController="*res://src/Global/SoundController.tscn"
 applovin_max="*res://scripts/applovin_max.gd"
 AdManager="*res://src/Global/AdManager.tscn"
+remote_config="*res://scripts/remote_config.gd"
+fba="*res://scripts/fba.gd"
 
 [display]
 

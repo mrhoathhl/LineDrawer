@@ -20,6 +20,56 @@
             "autoload": {
                 "applovin_max": "*res://scripts/applovin_max.gd"
             }
+        },
+        "firebase-core": {
+            "version": "0.1.1",
+            "platforms": [
+                "android"
+            ],
+            "dependencies": []
+        },
+        "firebase-crashlytics": {
+            "version": "0.1.1",
+            "platforms": [
+                "android"
+            ],
+            "dependencies": [
+                "firebase-core@0.1.1"
+            ]
+        },
+        "firebase-remoteconfig": {
+            "version": "0.1.2",
+            "platforms": [
+                "all",
+                "android"
+            ],
+            "dependencies": [
+                "firebase-core@0.1.1"
+            ],
+            "autoload": {
+                "remote_config": "*res://scripts/remote_config.gd"
+            }
+        },
+        "nativelib-export": {
+            "version": "0.2.0",
+            "platforms": [
+                "all"
+            ],
+            "dependencies": []
+        },
+        "firebase-analytics": {
+            "version": "0.2.2",
+            "platforms": [
+                "all",
+                "android"
+            ],
+            "dependencies": [
+                "firebase-core@0.1.1",
+                "nativelib-export@0.2.0"
+            ],
+            "autoload": {
+                "fba": "*res://scripts/fba.gd"
+            }
         }
     }
 }

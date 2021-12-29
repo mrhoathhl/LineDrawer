@@ -23,13 +23,18 @@ func load_inter():
 	applovin_max.loadInterstitial(inter_id, self.get_instance_id())
 	
 func show_inter(id):
-	if is_inter_ready:
+	print(abs(OS.get_ticks_msec() - Global.ad_time_last_show))
+	if abs(OS.get_ticks_msec() - Global.ad_time_last_show) >= Global.time_interval and is_inter_ready:
 		applovin_max.showInterstitial(id)
+	else:
+		emit_signal("on_interstitial_close")
+		_on_Node_on_interstitial_close()
 		
 func _on_interstitial_loaded(id):
 	is_inter_ready = true
 
 func _on_interstitial_close(id):
+	Global.ad_time_last_show = OS.get_ticks_msec()
 	emit_signal("on_interstitial_close")
 	_on_Node_on_interstitial_close()
 	is_inter_ready = false

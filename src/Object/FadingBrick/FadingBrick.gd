@@ -12,21 +12,22 @@ extends Node2D
 onready var tween = get_node("Tween")
 onready var particel = get_node("CPUParticles2D")
 var sprite
-var tween_step = [Vector2(1, 1), Vector2(0, 0)]
+var tween_up_step = [Vector2(1, 1), Vector2(1.1, 1.1)]
+var tween_down_step = [Vector2(1.1, 1.1), Vector2(0, 0)]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_fading_block()
-	start_tween(tween_step[0], tween_step[1])
+	start_tween()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
-func start_tween(vec1, vec2):
-	tween.interpolate_property(sprite, 'scale', vec1, vec2, .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, 0)
+func start_tween():
+	tween.interpolate_property(sprite, 'scale', tween_up_step[0], tween_up_step[1], .2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 	yield(tween, "tween_completed")
-	tween.interpolate_property(particel, 'scale', vec1, vec2, .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, 0.1)
+	tween.interpolate_property(sprite, 'scale', tween_down_step[0], tween_down_step[1], .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 	
 func get_fading_block():

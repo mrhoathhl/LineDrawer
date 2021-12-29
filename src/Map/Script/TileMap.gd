@@ -1,10 +1,5 @@
 extends TileMap
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var walkable = [0]
 var grid = {}
 var cursor = Vector2()
@@ -65,10 +60,6 @@ func _process(delta):
 #features
 func _input(event):
 	if !suggest_line.is_win && GameInstance.is_play:
-		#if event.is_action_pressed("click") and grid.has(cursor):
-			#suggest_line.is_touch = true
-		#elif event.is_action_released("click"):
-			#suggest_line.is_touch = false
 		if event is InputEventMouseMotion or event is InputEvent:
 			if grid.has(cursor):
 				var path = path_finder.search_point(cursor)
@@ -85,12 +76,6 @@ func _input(event):
 
 func clear_map():
 	for i in range(0, origin_array.size(), 1):
-		var ring = glow_ring_tscn.instance()
-		ring.transform.origin = origin_array[i] + brick_pos
-		add_child(ring)
-	yield(get_tree().create_timer(1.5), "timeout")
-	
-	for i in range(0, origin_array.size(), 1):
 		var tile = world_to_map(origin_array[i])
 		set_cell(tile.x, tile.y, -1)
 		
@@ -100,7 +85,7 @@ func clear_map():
 		
 		suggest_line.path.erase(origin_array[i])
 		yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
-	yield(get_tree().create_timer(0.5), "timeout")
+	yield(get_tree().create_timer(0.7), "timeout")
 	Global.save_current_level(GameInstance.display_level)
 	suggest_line.is_win = true
 	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true

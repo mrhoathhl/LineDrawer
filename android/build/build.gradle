@@ -11,12 +11,17 @@ buildscript {
         google()
         mavenCentral()
 //CHUNK_BUILDSCRIPT_REPOSITORIES_BEGIN
+google()
+google()
 //CHUNK_BUILDSCRIPT_REPOSITORIES_END
     }
     dependencies {
         classpath libraries.androidGradlePlugin
         classpath libraries.kotlinGradlePlugin
 //CHUNK_BUILDSCRIPT_DEPENDENCIES_BEGIN
+classpath 'com.google.gms:google-services:4.3.3'
+classpath 'com.google.gms:google-services:4.3.3'
+classpath 'com.google.firebase:firebase-crashlytics-gradle:2.2.0'
 //CHUNK_BUILDSCRIPT_DEPENDENCIES_END
     }
 }
@@ -28,6 +33,8 @@ allprojects {
         google()
         mavenCentral()
 //CHUNK_ALLPROJECTS_REPOSITORIES_BEGIN
+google()
+google()
 //CHUNK_ALLPROJECTS_REPOSITORIES_END
 
         // Godot user plugins custom maven repos
@@ -72,6 +79,8 @@ dependencies {
     }
 
 //CHUNK_DEPENDENCIES_BEGIN
+implementation 'androidx.appcompat:appcompat:1.1.0'
+implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
 //CHUNK_DEPENDENCIES_END
 }
 
@@ -178,6 +187,7 @@ android {
             java.srcDirs = [
                 'src'
 //DIR_SRC_BEGIN
+,'E:/Project/DrawLiner/android/check-connection/src'
 //DIR_SRC_END
             ]
             res.srcDirs = [
@@ -240,4 +250,6 @@ task copyAndRenameReleaseAab(type: Copy) {
 }
 
 //CHUNK_GLOBAL_BEGIN
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 //CHUNK_GLOBAL_END

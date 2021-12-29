@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "401411990857",
+    "project_id": "one-liner-800f5",
+    "storage_bucket": "one-liner-800f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401411990857:android:965d65818d0c3845f62698",
+        "android_client_info": {
+          "package_name": "com.minigame.drawliner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401411990857-h14dfc9g616isllsph29bk67efhpuoev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXziWxLQ9b0nf1CzsRkqj3qoyDmvQmGfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401411990857-h14dfc9g616isllsph29bk67efhpuoev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
