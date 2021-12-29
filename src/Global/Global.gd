@@ -19,7 +19,7 @@ onready var base_size = Vector2(1080, 1920)
 func _ready():
 	if Engine.has_singleton("CheckConnection"):
 		check_connection = Engine.get_singleton("CheckConnection")
-	print(check_connection.isConnected())
+	#print(check_connection.isConnected())
 	pass
 
 func _init():
