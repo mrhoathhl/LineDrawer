@@ -23,13 +23,10 @@
 
 [node name="Level1" type="Control"]
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
 margin_left = -540.0
-margin_top = -960.0
 margin_right = 540.0
-margin_bottom = 960.0
+margin_bottom = 1920.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -38,11 +35,11 @@ __meta__ = {
 tile_set = SubResource( 1 )
 cell_size = Vector2( 180, 180 )
 format = 1
-tile_data = PoolIntArray( 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 196610, 0, 0, 196612, 0, 0, 262146, 0, 0, 262148, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 524291, 0, 0, 524292, 0, 0 )
+tile_data = PoolIntArray( 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 196612, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 393217, 0, 0, 393219, 0, 0, 393220, 0, 0, 458753, 0, 0, 458756, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0 )
 script = ExtResource( 4 )
 
 [node name="Start" type="Sprite" parent="TileMap" groups=["StartPoint"]]
-position = Vector2( 360, 1260 )
+position = Vector2( 180, 360 )
 texture = ExtResource( 1 )
 centered = false
 __meta__ = {

@@ -36,11 +36,11 @@ tile_set = SubResource( 1 )
 cell_size = Vector2( 216, 216 )
 cell_custom_transform = Transform2D( 216, 216, 216, 216, 216, 216 )
 format = 1
-tile_data = PoolIntArray( 131077, 2, 0, 524289, 2, 0 )
+tile_data = PoolIntArray( 131073, 0, 0, 131074, 0, 0, 131077, 2, 0, 196610, 0, 0, 196611, 0, 0, 262147, 0, 0, 327682, 0, 0, 327683, 0, 0, 393217, 0, 0, 393218, 0, 0, 524289, 2, 0 )
 script = ExtResource( 3 )
 
 [node name="Start" type="Sprite" parent="TileMap" groups=["StartPoint"]]
-position = Vector2( 216, 447 )
+position = Vector2( 216, 432 )
 texture = ExtResource( 2 )
 centered = false
 __meta__ = {

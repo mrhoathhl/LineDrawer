@@ -156,6 +156,7 @@ position = Vector2( 30, 40 )
 normal = ExtResource( 4 )
 
 [node name="Hint" type="TouchScreenButton" parent="."]
+visible = false
 position = Vector2( 924, 40 )
 normal = ExtResource( 5 )
 

@@ -79,7 +79,6 @@ dependencies {
     }
 
 //CHUNK_DEPENDENCIES_BEGIN
-implementation 'androidx.appcompat:appcompat:1.1.0'
 implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
 //CHUNK_DEPENDENCIES_END
 }
@@ -187,7 +186,6 @@ android {
             java.srcDirs = [
                 'src'
 //DIR_SRC_BEGIN
-,'E:/Project/DrawLiner/android/check-connection/src'
 //DIR_SRC_END
             ]
             res.srcDirs = [

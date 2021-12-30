@@ -168,9 +168,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -275.0
-margin_top = -245.0
+margin_top = -60.0
 margin_right = 275.0
-margin_bottom = 771.0
+margin_bottom = 956.0
 custom_constants/vseparation = 14
 __meta__ = {
 "_edit_use_anchors_": false
@@ -252,6 +252,7 @@ __meta__ = {
 }
 
 [node name="Expert" type="Button" parent="GridContainer2"]
+visible = false
 margin_top = 619.0
 margin_right = 550.0
 margin_bottom = 812.817
@@ -277,9 +278,10 @@ __meta__ = {
 }
 
 [node name="Professor" type="Button" parent="GridContainer2"]
-margin_top = 826.0
+visible = false
+margin_top = 619.0
 margin_right = 550.0
-margin_bottom = 1016.95
+margin_bottom = 809.954
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 15 )
 custom_styles/focus = SubResource( 20 )

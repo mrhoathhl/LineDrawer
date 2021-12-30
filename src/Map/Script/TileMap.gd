@@ -76,6 +76,11 @@ func _input(event):
 
 func clear_map():
 	for i in range(0, origin_array.size(), 1):
+		var ring = glow_ring_tscn.instance()
+		ring.transform.origin = origin_array[i] + brick_pos
+		add_child(ring)
+		yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
+	for i in range(0, origin_array.size(), 1):
 		var tile = world_to_map(origin_array[i])
 		set_cell(tile.x, tile.y, -1)
 		
