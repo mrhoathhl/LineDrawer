@@ -4,11 +4,11 @@ INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:36:9-38:53
 	android:value
 		INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml
 manifest
-ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-85:12
-INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-85:12
-MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-85:12
+ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-86:12
+INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-86:12
+INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-86:12
+INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-86:12
+MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:2:1-86:12
 MERGED from [godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:2:1-26:12
 MERGED from [AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:2:1-38:12
 MERGED from [FirebaseAnalytics.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a8d04e2a1906fab9b59499a68fc16e1b\transformed\jetified-FirebaseAnalytics.release\AndroidManifest.xml:2:1-29:12
@@ -153,9 +153,9 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Us
 	android:name
 		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:25:18-60
 application
-ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:5-83:19
-MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:5-83:19
-MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:5-83:19
+ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:5-84:19
+MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:5-84:19
+MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:5-84:19
 MERGED from [godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:16:5-24:19
 MERGED from [godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:16:5-24:19
 MERGED from [AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:17:5-36:19
@@ -257,9 +257,9 @@ REJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:51:9-53:62
 	android:name
 		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:52:13-58
 activity#com.godot.game.GodotApp
-ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:9-77:20
-MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:9-77:20
-MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:9-77:20
+ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:9-78:20
+MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:9-78:20
+MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:9-78:20
 	android:screenOrientation
 		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:61:13-50
 		REJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:61:13-50
@@ -273,14 +273,17 @@ MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:9-77:20
 		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:59:13-44
 		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:59:13-44
 	android:resizeableActivity
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:63:13-47
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:63:13-47
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:64:13-47
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:64:13-47
 	tools:ignore
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:64:13-43
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:64:13-43
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:65:13-43
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:65:13-43
 	android:configChanges
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:62:13-141
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:62:13-141
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:63:13-141
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:63:13-141
+	android:icon
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:62:13-40
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:62:13-40
 	android:theme
 		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:58:13-55
 		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:58:13-55
@@ -289,28 +292,28 @@ MERGED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:9-77:20
 	android:name
 		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:56:13-37
 meta-data#com.oculus.vr.focusaware
-ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:67:13-87
-REJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:67:13-87
+ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:68:13-87
+REJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:68:13-87
 	tools:node
 		ADDED from E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:35:24-43
 	android:value
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:67:64-84
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:68:64-84
 	android:name
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:67:24-63
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:68:24-63
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:com.oculus.intent.category.VR
-ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:69:13-76:29
+ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:70:13-77:29
 action#android.intent.action.MAIN
-ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:70:17-69
+ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:71:17-69
 	android:name
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:70:25-66
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:71:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:71:17-77
+ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:72:17-77
 	android:name
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:71:27-74
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:72:27-74
 category#com.oculus.intent.category.VR
-ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:75:17-74
+ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:76:17-74
 	android:name
-		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:75:27-71
+		ADDED from E:\Project\DrawLiner\android\build\AndroidManifest.xml:76:27-71
 uses-sdk
 INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Project\DrawLiner\android\build\AndroidManifest.xml

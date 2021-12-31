@@ -20,6 +20,7 @@ func _init():
 	
 func _ready():
 	$LevelNumber.text = "Level " + str(GameInstance.display_level)
+	$Actual.text = "Level " + str(GameInstance.current_level)
 	$LevelContainer.add_child(level)
 	if Global.is_sound_on:
 		sound_on.visible = true
@@ -35,7 +36,6 @@ func get_level() -> int:
 	if !GameInstance.is_reload:
 		GameInstance.is_reload = false
 		var next_level = GameInstance.current_level + 1
-		print(next_level)
 		if next_level >= GameInstance.total_level:
 			GameInstance.current_level = 1
 			return  1

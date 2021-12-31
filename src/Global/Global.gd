@@ -1,7 +1,11 @@
 extends Node2D
 var current_level = 1
-var total_level = 20
-var display_level = 1
+var total_level = 50
+var display_level_easy = 1
+var display_level_medium = 1
+var display_level_hard = 1
+var display_level_expert = 1
+var display_level_pro = 1
 var game_file = "user://gamedata.dat"
 var diffcult = "Easy"
 var ad_time_last_show = 0

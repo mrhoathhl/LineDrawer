@@ -57,6 +57,7 @@
             android:name="com.godot.game.GodotApp"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
             android:excludeFromRecents="false"
+            android:icon="@mipmap/icon"
             android:label="@string/godot_project_name_string"
             android:launchMode="singleTask"
             android:resizeableActivity="false"
