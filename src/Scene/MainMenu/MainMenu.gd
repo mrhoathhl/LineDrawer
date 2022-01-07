@@ -10,7 +10,6 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	AdManager.connect("on_interstitial_close", self, "_on_inter_close")
-	AdManager.connect("on_interstitial_fail", self, "_on_inter_fail")
 	pass
 
 
@@ -23,14 +22,11 @@ func _ready():
 func _on_Ease_pressed():
 	change_scene("Easy")
 
-
 func _on_Medium_pressed():
 	change_scene("Medium")
 
-
 func _on_Hard_pressed():
 	change_scene("Hard")
-
 
 func _on_Expert_pressed():
 	change_scene("Expert")
@@ -46,7 +42,4 @@ func change_scene(diff):
 		SceneManager.transition(SceneManager.game_play_scene)
 
 func _on_inter_close():
-	SceneManager.transition(SceneManager.game_play_scene)
-	
-func _on_inter_fail(id, error):
 	SceneManager.transition(SceneManager.game_play_scene)

@@ -6,8 +6,11 @@ extends Node
 # var b = "text"
 
 signal on_interstitial_close
+signal on_reward_close
+signal on_reward_rewarded
 
 var is_inter_ready = false;
+var is_reward_ready = false;
 var scene_path = ""
 var inter_id = "a4743e6b23399810"
 var banner_id = "4c218bb397c21994"
@@ -22,13 +25,22 @@ func _ready():
 func load_inter():
 	applovin_max.loadInterstitial(inter_id, self.get_instance_id())
 	
+func load_reward():
+	applovin_max.loadRewardedVideo(reward_id, self.get_instance_id())
+	
 func show_inter(id):
-	print(abs(OS.get_ticks_msec() - Global.ad_time_last_show))
 	if abs(OS.get_ticks_msec() - Global.ad_time_last_show) >= Global.time_interval and is_inter_ready:
 		applovin_max.showInterstitial(id)
 	else:
 		emit_signal("on_interstitial_close")
 		_on_Node_on_interstitial_close()
+		
+func show_reward(id):
+	if is_reward_ready:
+		applovin_max.showRewardedVideo(id)
+	else:
+		emit_signal("on_reward_failed")
+		_on_Node_on_reward_close()
 		
 func _on_interstitial_loaded(id):
 	is_inter_ready = true
@@ -44,14 +56,31 @@ func _on_interstitial_failed_to_load(id, error):
 	is_inter_ready = false
 	load_inter()
 	
-func _on_reward_loaded(id):
-	pass
+func _on_rewarded_video_ad_loaded(id):
+	is_reward_ready = true
 	
-func _on_reward_failed(id):
-	pass
+func _on_rewarded_video_ad_failed_to_load(id):
+	is_reward_ready = false
+	load_reward()
 	
-func _on_reward_close(id):
-	pass
+func _on_rewarded_video_ad_closed(id):
+	emit_signal("on_reward_close")
+	_on_Node_on_reward_close()
+	is_reward_ready = false
+	load_reward()
+	
+func _on_rewarded_video_completed(id: String):
+	emit_signal("on_reward_rewarded")
+	_on_Node_on_reward_rewarded()
+
 
 func _on_Node_on_interstitial_close():
 	pass
+
+
+func _on_Node_on_reward_close():
+	pass # Replace with function body.
+
+
+func _on_Node_on_reward_rewarded():
+	pass # Replace with function body.

@@ -36,15 +36,10 @@ func _draw():
 			draw_texture(image_texture, path[0] + Vector2(0, -17))
 			if GameInstance.is_play:
 				draw_circle(path[0] + line_pos, size_circle, color)	
-			for i in range(0, path.size() - 1, 1):
-				draw_texture(image_texture, path[i+1] +  Vector2(0, -17))
-				if GameInstance.is_play:
+				for i in range(0, path.size() - 1, 1):
+					draw_texture(image_texture, path[i+1] +  Vector2(0, -17))
+					draw_line(path[i] + line_pos, path[i + 1] + line_pos, color, size_line, true)
 					draw_circle(path[i + 1] + line_pos, size_circle, color)
-					if path.size() >= 2:
-						draw_line(path[i] + line_pos, path[i + 1] + line_pos, color, size_line, true)
-			if is_touch and GameInstance.is_play:
-				var array = PoolVector2Array( [ path[path.size() - 1] + line_pos, get_global_mouse_position() ] )
-				draw_polyline(array, color , size_line, true)
 
 func get_cell_texture() -> String:
 	if GameInstance.diffcult == "Easy":

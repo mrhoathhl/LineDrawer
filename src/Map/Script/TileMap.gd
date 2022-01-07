@@ -8,10 +8,10 @@ var is_win = false
 var start_point
 var suggest_line
 var path_finder
+var game_play
 var brick_fading_tscn = preload("res://src/Object/FadingBrick/FadingBrick.tscn")
 var glow_ring_tscn = preload("res://src/Object/Ring/Ring.tscn")
 var brick_pos
-var is_touch
 var origin_array = []
 var tween_scale_value = [1.4, 1.7]
 var size_pos;
@@ -37,7 +37,9 @@ func _ready():
 	start_point = get_tree().get_nodes_in_group('StartPoint')[0]
 	suggest_line = get_tree().get_nodes_in_group('Suggest')[0]
 	path_finder = get_tree().get_nodes_in_group('PathFinder')[0]
+	game_play = get_tree().get_nodes_in_group('GamePlay')[0]
 	
+	game_play.connect("on_hint_click", self, "_on_hint_click")
 	start_point.modulate = Color(1, 1, 1, 0)
 	path_finder.pos_check.append(start_point.position + Vector2(0, 15))
 	var path = [start_point.position + Vector2(0, 15)]
@@ -94,6 +96,14 @@ func clear_map():
 	Global.save_current_level(GameInstance.display_level)
 	suggest_line.is_win = true
 	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
+	
+func _on_hint_click():
+	var tile_left = origin_array.size() - suggest_line.path.size()
+	if tile_left > 0:
+		for i in range(0, tile_left, 1):
+			var path = path_finder.search_point(cursor)
+			yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
+	pass
 	
 func get_brick_pos() -> Vector2:
 	if GameInstance.diffcult == "Easy":

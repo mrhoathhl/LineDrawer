@@ -3,10 +3,10 @@ extends Control
 
 var level
 var level_back_up = load("res://src/Map/Level/"+ GameInstance.diffcult + "/" + GameInstance.diffcult + "1.tscn")
-var container
 var type
 onready var sound_on = $SettingPopup/Panel/Control/GridContainer/Sound/SoundOn
 onready var sound_off = $SettingPopup/Panel/Control/GridContainer/Sound/SoundOff
+signal on_hint_click
 
 func _init():
 	GameInstance.is_play = true;
@@ -20,8 +20,7 @@ func _init():
 	
 func _ready():
 	$LevelNumber.text = "Level " + str(GameInstance.display_level)
-	$Actual.text = "Level " + str(GameInstance.current_level)
-	$LevelContainer.add_child(level)
+	add_child(level)
 	if Global.is_sound_on:
 		sound_on.visible = true
 		sound_off.visible = false
@@ -30,12 +29,14 @@ func _ready():
 		sound_off.visible = true
 		
 	AdManager.connect("on_interstitial_close", self, "_on_inter_close")
-	AdManager.connect("on_interstitial_fail", self, "_on_inter_fail")
+	AdManager.connect("on_reward_close", self, "_on_reward_close")
+	AdManager.connect("on_reward_rewarded", self, "_on_reward_rewarded")
 	
 func get_level() -> int:
 	if !GameInstance.is_reload:
 		GameInstance.is_reload = false
 		var next_level = GameInstance.current_level + 1
+		print(next_level)
 		if next_level >= GameInstance.total_level:
 			GameInstance.current_level = 1
 			return  1
@@ -47,6 +48,21 @@ func get_level() -> int:
 		return GameInstance.current_level
 	return 1
 	
+func _on_GamePlayScene_on_hint_click():
+	pass
+
+func _on_Hint_pressed():
+	if AdManager.is_reward_ready:
+		type = "hint"
+		AdManager.show_reward(AdManager.reward_id)
+	pass
+	
+
+func _on_Skip_pressed():
+	if AdManager.is_reward_ready:
+		type = "skip"
+		AdManager.show_reward(AdManager.reward_id)
+	pass
 
 
 func _on_Next_pressed():
@@ -105,10 +121,13 @@ func _on_inter_close():
 	else:
 		SceneManager.transition(SceneManager.main_menu_scene)
 	
-func _on_inter_fail(id, error):
-	if type == "next":
-		$WinPopup.visible = false
+func _on_reward_close():
+	pass
+
+func _on_reward_rewarded():
+	print("reward close")
+	if type == "hint":
+		emit_signal("on_hint_click")
+		_on_GamePlayScene_on_hint_click()
+	elif type == "skip":
 		get_tree().reload_current_scene()
-	else:
-		SceneManager.transition(SceneManager.main_menu_scene)
-	

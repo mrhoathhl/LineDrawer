@@ -6,3 +6,5 @@
 script = ExtResource( 1 )
 
 [connection signal="on_interstitial_close" from="." to="." method="_on_Node_on_interstitial_close"]
+[connection signal="on_reward_close" from="." to="." method="_on_Node_on_reward_close"]
+[connection signal="on_reward_rewarded" from="." to="." method="_on_Node_on_reward_rewarded"]

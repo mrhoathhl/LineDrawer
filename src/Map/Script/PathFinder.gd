@@ -27,6 +27,8 @@ func search_point(target_pos):
 
 func check_valid_move(lastest_pos, target_pos):
 	var step = target_pos - lastest_pos
+	print("target ", target_pos)
+	print("lastest ", lastest_pos)
 	print(step)
 	if abs(step.x) == abs(next.x) or abs(step.y) == abs(next.y):
 		if lastest_pos.x == target_pos.x or lastest_pos.y == target_pos.y:
