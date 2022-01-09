@@ -20,7 +20,7 @@ func _init():
 	
 func _ready():
 	$LevelNumber.text = "Level " + str(GameInstance.display_level)
-	add_child(level)
+	#add_child(level)
 	if Global.is_sound_on:
 		sound_on.visible = true
 		sound_off.visible = false
@@ -52,6 +52,7 @@ func _on_GamePlayScene_on_hint_click():
 	pass
 
 func _on_Hint_pressed():
+	SoundController.touch_sound()
 	if AdManager.is_reward_ready:
 		type = "hint"
 		AdManager.show_reward(AdManager.reward_id)
@@ -59,6 +60,7 @@ func _on_Hint_pressed():
 	
 
 func _on_Skip_pressed():
+	SoundController.touch_sound()
 	if AdManager.is_reward_ready:
 		type = "skip"
 		AdManager.show_reward(AdManager.reward_id)
@@ -66,10 +68,10 @@ func _on_Skip_pressed():
 
 
 func _on_Next_pressed():
+	SoundController.touch_sound()
 	GameInstance.is_reload = false
 	GameInstance.is_play = true
 	GameInstance.display_level += 1
-	SoundController.touch_sound()
 	type = "next"
 	if AdManager.is_inter_ready:
 		AdManager.show_inter(AdManager.inter_id)
@@ -82,11 +84,22 @@ func _on_Setting_pressed():
 	GameInstance.is_play = false;
 	$SettingPopup.visible = true
 
+func _on_Theme_pressed():
+	SoundController.touch_sound()
+	GameInstance.is_play = false;
+	$ThemePopup.visible = true
+
+
+func _on_Select_pressed():
+	SoundController.touch_sound()
+	GameInstance.is_play = false;
+	$ThemePopup.visible = true
+
 
 func _on_ClosePopup_pressed():
 	SoundController.touch_sound()
 	GameInstance.is_play = true;
-	$SettingPopup.visible = false
+	$ThemePopup.visible = false
 
 
 func _on_Sound_pressed():
@@ -108,6 +121,7 @@ func _on_Replay_pressed():
 
 
 func _on_Back_pressed():
+	SoundController.touch_sound()
 	type = "back"
 	if AdManager.is_inter_ready:
 		AdManager.show_inter(AdManager.inter_id)

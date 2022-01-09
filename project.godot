@@ -31,6 +31,7 @@ Python="C:/Users/mrhoa/AppData/Local/Programs/Python/Python310/python.exe"
 config/name="Draw Liner"
 run/main_scene="res://src/Scene/MainMenu/MainMenu.tscn"
 boot_splash/image="res://icon.png"
+boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0.137255, 0.192157, 0.243137, 1 )
 
 [autoload]
