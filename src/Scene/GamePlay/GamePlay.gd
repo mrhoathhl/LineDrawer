@@ -4,8 +4,6 @@ extends Control
 var level
 var level_back_up = load("res://src/Map/Level/"+ GameInstance.diffcult + "/" + GameInstance.diffcult + "1.tscn")
 var type
-onready var sound_on = $SettingPopup/Panel/Control/GridContainer/Sound/SoundOn
-onready var sound_off = $SettingPopup/Panel/Control/GridContainer/Sound/SoundOff
 signal on_hint_click
 
 func _init():
@@ -21,12 +19,6 @@ func _init():
 func _ready():
 	$LevelNumber.text = "Level " + str(GameInstance.display_level)
 	#add_child(level)
-	if Global.is_sound_on:
-		sound_on.visible = true
-		sound_off.visible = false
-	else:
-		sound_on.visible = false
-		sound_off.visible = true
 		
 	AdManager.connect("on_interstitial_close", self, "_on_inter_close")
 	AdManager.connect("on_reward_close", self, "_on_reward_close")
@@ -66,68 +58,20 @@ func _on_Skip_pressed():
 		AdManager.show_reward(AdManager.reward_id)
 	pass
 
-
-func _on_Next_pressed():
-	SoundController.touch_sound()
-	GameInstance.is_reload = false
-	GameInstance.is_play = true
-	GameInstance.display_level += 1
-	type = "next"
-	if AdManager.is_inter_ready:
-		AdManager.show_inter(AdManager.inter_id)
-	else:
-		$WinPopup.visible = false
-		get_tree().reload_current_scene()
+func _on_Theme_pressed():
+	if !GameInstance.is_popup :
+		SoundController.touch_sound()
+		GameInstance.is_play = false;
+		GameInstance.is_popup = true;
+		$ThemePopup.visible = true
 
 func _on_Setting_pressed():
-	SoundController.touch_sound()
-	GameInstance.is_play = false;
-	$SettingPopup.visible = true
+	if !GameInstance.is_popup :
+		SoundController.touch_sound()
+		GameInstance.is_play = false;
+		GameInstance.is_popup = true;
+		$SettingPopup.set_visible(true)
 
-func _on_Theme_pressed():
-	SoundController.touch_sound()
-	GameInstance.is_play = false;
-	$ThemePopup.visible = true
-
-
-func _on_Select_pressed():
-	SoundController.touch_sound()
-	GameInstance.is_play = false;
-	$ThemePopup.visible = true
-
-
-func _on_ClosePopup_pressed():
-	SoundController.touch_sound()
-	GameInstance.is_play = true;
-	$ThemePopup.visible = false
-
-
-func _on_Sound_pressed():
-	SoundController.touch_sound()
-	Global.is_sound_on = !Global.is_sound_on
-	if sound_on.visible:
-		sound_on.visible = false
-		sound_off.visible = true
-	else:
-		sound_on.visible = true
-		sound_off.visible = false
-		
-
-func _on_Replay_pressed():
-	SoundController.touch_sound()
-	GameInstance.is_reload = true
-	GameInstance.is_play = true
-	get_tree().reload_current_scene()
-
-
-func _on_Back_pressed():
-	SoundController.touch_sound()
-	type = "back"
-	if AdManager.is_inter_ready:
-		AdManager.show_inter(AdManager.inter_id)
-	else:
-		SceneManager.transition(SceneManager.main_menu_scene)
-	
 func _on_inter_close():
 	if type == "next":
 		$WinPopup.visible = false

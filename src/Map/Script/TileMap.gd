@@ -93,7 +93,7 @@ func clear_map():
 		suggest_line.path.erase(origin_array[i])
 		yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
 	yield(get_tree().create_timer(0.7), "timeout")
-	Global.save_current_level(GameInstance.display_level)
+	GameInstance.save_current_level(GameInstance.display_level)
 	suggest_line.is_win = true
 	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
 	

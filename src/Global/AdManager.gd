@@ -29,7 +29,7 @@ func load_reward():
 	applovin_max.loadRewardedVideo(reward_id, self.get_instance_id())
 	
 func show_inter(id):
-	if abs(OS.get_ticks_msec() - Global.ad_time_last_show) >= Global.time_interval and is_inter_ready:
+	if abs(OS.get_ticks_msec() - GameInstance.ad_time_last_show) >= GameInstance.time_interval and is_inter_ready:
 		applovin_max.showInterstitial(id)
 	else:
 		emit_signal("on_interstitial_close")
@@ -46,7 +46,7 @@ func _on_interstitial_loaded(id):
 	is_inter_ready = true
 
 func _on_interstitial_close(id):
-	Global.ad_time_last_show = OS.get_ticks_msec()
+	GameInstance.ad_time_last_show = OS.get_ticks_msec()
 	emit_signal("on_interstitial_close")
 	_on_Node_on_interstitial_close()
 	is_inter_ready = false
