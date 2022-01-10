@@ -1,4 +1,4 @@
-#Fri Jan 07 17:59:22 ICT 2022
-base.0=E\:\\Project\\DrawLiner\\android\\build\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Tue Jan 11 00:22:38 ICT 2022
+base.0=D\:\\git\\Android\\LineDrawer\\android\\build\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

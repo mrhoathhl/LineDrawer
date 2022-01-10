@@ -7,7 +7,7 @@ var bg_file = "user://userdata.json"
 var diffcult = "Easy"
 var ad_time_last_show = 0
 var time_interval = 20000
-var check_connection
+var theme = load("res://src/Assets/Textures/Background/bg1.png")
 
 var rng = RandomNumberGenerator.new()
 var is_reload = false
@@ -20,47 +20,56 @@ const itemBackground = {
 	0: {
 		"itemName": "bg1",
 		"itemIcon": "res://src/Assets/Textures/Background/icon1.png",
-		"status": true
+		"status": true,
+		"isSelected": true
 	},
 	1: {
 		"itemName": "bg2",
 		"itemIcon": "res://src/Assets/Textures/Background/icon2.png",
-		"status": false
+		"status": false,
+		"isSelected": false
 	},
 	2: {
 		"itemName": "bg3",
 		"itemIcon": "res://src/Assets/Textures/Background/icon3.png",
-		"status": false
+		"status": true,
+		"isSelected": false
 	},
 	3: {
 		"itemName": "bg4",
 		"itemIcon": "res://src/Assets/Textures/Background/icon4.png",
-		"status": false
+		"status": false,
+		"isSelected": false
 	},
 	4: {
 		"itemName": "bg5",
 		"itemIcon": "res://src/Assets/Textures/Background/icon5.png",
-		"status": false
+		"status": false,
+		"isSelected": false
 	},
 	5: {
 		"itemName": "bg6",
 		"itemIcon": "res://src/Assets/Textures/Background/icon6.png",
-		"status": false
+		"status": false,
+		"isSelected": false
 	},
 	6: {
 		"itemName": "bg7",
 		"itemIcon": "res://src/Assets/Textures/Background/icon7.png",
-		"status": false
+		"status": false,
+		"isSelected": false
 	},
 	7: {
 		"itemName": "bg8",
 		"itemIcon": "res://src/Assets/Textures/Background/icon8.png",
-		"status": false
+		"status": false,
+		"isSelected": false
 	},
 	8: {
 		"itemName": "bg9",
 		"itemIcon": "res://src/Assets/Textures/Background/icon9.png",
-		"status": false
+		"status": false,
+		"isSelected": false
 	}
 };
 
@@ -97,6 +106,9 @@ func load_bg():
 		
 	var json := to_json(data)
 	list_background = JSON.parse(json).result
+	for key in list_background:
+		if key.isSelected:
+			theme = load("res://src/Assets/Textures/Background/" + key.itemName + ".png")
 	pass
 
 func save_bg():

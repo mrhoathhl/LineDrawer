@@ -9,6 +9,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$HBoxContainer/Background.texture = GameInstance.theme
 	AdManager.connect("on_interstitial_close", self, "_on_inter_close")
 	pass
 

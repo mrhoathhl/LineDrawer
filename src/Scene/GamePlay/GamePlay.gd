@@ -14,12 +14,12 @@ func _init():
 	else:
 		level = level_back_up.instance()
 	
-	
-	
 func _ready():
 	$LevelNumber.text = "Level " + str(GameInstance.display_level)
-	#add_child(level)
-		
+	$LevelContainer.add_child(level)
+	
+	$HBoxContainer/Background.texture = GameInstance.theme
+	$ThemePopup.connect("on_change_theme", self, "_on_background_change")
 	AdManager.connect("on_interstitial_close", self, "_on_inter_close")
 	AdManager.connect("on_reward_close", self, "_on_reward_close")
 	AdManager.connect("on_reward_rewarded", self, "_on_reward_rewarded")
@@ -45,6 +45,8 @@ func _on_GamePlayScene_on_hint_click():
 
 func _on_Hint_pressed():
 	SoundController.touch_sound()
+	emit_signal("on_hint_click")
+	_on_GamePlayScene_on_hint_click()
 	if AdManager.is_reward_ready:
 		type = "hint"
 		AdManager.show_reward(AdManager.reward_id)
@@ -80,6 +82,11 @@ func _on_inter_close():
 		SceneManager.transition(SceneManager.main_menu_scene)
 	
 func _on_reward_close():
+	pass
+	
+func _on_background_change(type):
+	GameInstance.theme = load("res://src/Assets/Textures/Background/" + type + ".png")
+	$HBoxContainer/Background.texture = GameInstance.theme
 	pass
 
 func _on_reward_rewarded():

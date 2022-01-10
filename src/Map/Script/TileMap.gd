@@ -32,7 +32,7 @@ func _ready():
 		origin_array.append(new_pos)
 		#grid is dictionary, make data array for each cell
 		grid[new_pos] = ["empty", null]
-		
+	
 	#define reference with group
 	start_point = get_tree().get_nodes_in_group('StartPoint')[0]
 	suggest_line = get_tree().get_nodes_in_group('Suggest')[0]
@@ -59,7 +59,8 @@ func _process(delta):
 		cursor =  map_to_world(tgt_cell) + Vector2(0, 15)
 	else:
 		cursor = Vector2() #unable it
-#features
+		
+		
 func _input(event):
 	if !suggest_line.is_win && GameInstance.is_play:
 		if event is InputEventMouseMotion or event is InputEvent:
@@ -98,11 +99,13 @@ func clear_map():
 	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
 	
 func _on_hint_click():
+	print("hint")
 	var tile_left = origin_array.size() - suggest_line.path.size()
 	if tile_left > 0:
-		for i in range(0, tile_left, 1):
-			var path = path_finder.search_point(cursor)
-			yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
+		for i in range(suggest_line.path.size(), origin_array.size(), 1):
+			var path = path_finder.search_point(origin_array[i])
+			suggest_line.path = path
+			yield(get_tree().create_timer(1), "timeout")
 	pass
 	
 func get_brick_pos() -> Vector2:

@@ -35,7 +35,6 @@ func _on_Replay_pressed():
 	GameInstance.is_play = true
 	get_tree().reload_current_scene()
 
-
 func _on_Back_pressed():
 	SoundController.touch_sound()
 	type = "back"
@@ -47,8 +46,5 @@ func _on_Back_pressed():
 func _on_CloseSettingPopup_pressed():
 	SoundController.touch_sound()
 	GameInstance.is_play = true;
-	self.visible = false
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	GameInstance.is_popup = false
+	visible = false
