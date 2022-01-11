@@ -8,39 +8,39 @@ var _fba = null
 # User property names: sign_up_method (str)
 
 func _ready():
-    if(Engine.has_singleton("FirebaseAnalytics")):
-        _fba = Engine.get_singleton("FirebaseAnalytics")
-        print('FirebaseAnalytics plugin inited!')
-    elif type_exists('FirebaseAnalytics'):
-        _fba = ClassDB.instance('FirebaseAnalytics')
-        print('FirebaseAnalytics plugin inited!')
+	if(Engine.has_singleton("FirebaseAnalytics")):
+		_fba = Engine.get_singleton("FirebaseAnalytics")
+		print('FirebaseAnalytics plugin inited!')
+	elif type_exists('FirebaseAnalytics'):
+		_fba = ClassDB.instance('FirebaseAnalytics')
+		print('FirebaseAnalytics plugin inited!')
 
 func screen(name, screen_class='Godot'):
-    # log game screen
-    if _fba != null:
-        _fba.logEvent('screen', {'name': name, 'class': screen_class})
+	# log game screen
+	if _fba != null:
+		_fba.logEvent('screen', {'name': name, 'class': screen_class})
 
 func setUserId(id: String) -> void:
-    if _fba != null:
-        _fba.setUserId(id)
+	if _fba != null:
+		_fba.setUserId(id)
 
 func logEvent(event, params = {}):
-    if _fba != null:
-        if params == null:
-            params = {}
-        _fba.logEvent(event, params)
+	if _fba != null:
+		if params == null:
+			params = {}
+		_fba.logEvent(event, params)
 
 func userProperties(props):
-    # set user properties
-    if _fba != null:
-        for prop in props:
-            _fba.setUserProperty(prop, var2str(props[prop]))
+	# set user properties
+	if _fba != null:
+		for prop in props:
+			_fba.setUserProperty(prop, var2str(props[prop]))
 
 func start_checkout(item_id, item_name, item_category, price=0, currency='USD'):
-    if _fba != null:
-        _fba.logEvent('add_to_cart', {'item_id': item_id, 'name': item_name, 'item_category': item_category, 'quantity': 1})
-        _fba.logEvent('begin_checkout', {'value': price, 'currency': currency})
+	if _fba != null:
+		_fba.logEvent('add_to_cart', {'item_id': item_id, 'name': item_name, 'item_category': item_category, 'quantity': 1})
+		_fba.logEvent('begin_checkout', {'value': price, 'currency': currency})
 
 func revenue(price, quantity, product, currency='USD', signature='', receipt=''):
-    if _fba != null:
-        _fba.logEvent('ecommerce_purchase', {'value': price, 'currency': currency})
+	if _fba != null:
+		_fba.logEvent('ecommerce_purchase', {'value': price, 'currency': currency})

@@ -33,10 +33,12 @@ func _on_Replay_pressed():
 	SoundController.touch_sound()
 	GameInstance.is_reload = true
 	GameInstance.is_play = true
+	GameInstance.is_popup = false
 	get_tree().reload_current_scene()
 
 func _on_Back_pressed():
 	SoundController.touch_sound()
+	GameInstance.is_popup = false
 	type = "back"
 	if AdManager.is_inter_ready:
 		AdManager.show_inter(AdManager.inter_id)

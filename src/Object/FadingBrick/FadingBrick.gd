@@ -67,3 +67,7 @@ func get_fading_block():
 		$"135".visible = false
 		$"120".visible = true
 	
+
+
+func _on_Tween_tween_completed(object, key):
+	pass # Replace with function body.

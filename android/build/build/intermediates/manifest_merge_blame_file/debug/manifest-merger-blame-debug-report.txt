@@ -9,130 +9,130 @@
 9        android:targetSdkVersion="30" />
 10
 11    <supports-screens
-11-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:12:5-16:40
+11-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:12:5-16:40
 12        android:largeScreens="true"
-12-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:15:9-36
+12-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:15:9-36
 13        android:normalScreens="true"
-13-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:14:9-37
+13-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:14:9-37
 14        android:smallScreens="true"
-14-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:13:9-36
+14-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:13:9-36
 15        android:xlargeScreens="true" />
-15-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:16:9-37
+15-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:16:9-37
 16
 17    <uses-feature
-17-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:10:5-78
+17-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:10:5-78
 18        android:glEsVersion="0x00030000"
-18-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:10:19-51
+18-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:10:19-51
 19        android:required="true" />
-19-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:10:52-75
+19-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:10:52-75
 20
 21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-21-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:11:5-79
-21-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:11:22-76
+21-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:11:5-79
+21-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:11:22-76
 22    <uses-permission android:name="android.permission.INTERNET" />
-22-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:25:1-62
-22-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:25:18-60
+22-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:25:1-62
+22-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:25:18-60
 23    <uses-permission
-23-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:13:5-107
+23-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:13:5-107
 24        android:name="android.permission.READ_EXTERNAL_STORAGE"
-24-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:13:22-77
+24-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:13:22-77
 25        android:maxSdkVersion="29" />
-25-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:13:78-104
+25-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:13:78-104
 26    <uses-permission android:name="android.permission.VIBRATE" />
-26-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:14:5-66
-26-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:14:22-63
+26-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:14:5-66
+26-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:14:22-63
 27    <uses-permission android:name="android.permission.WAKE_LOCK" />
-27-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:15:5-68
-27-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:15:22-65
+27-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:15:5-68
+27-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:15:22-65
 28    <uses-permission
-28-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:16:5-108
+28-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:16:5-108
 29        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-29-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:16:22-78
+29-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:16:22-78
 30        android:maxSdkVersion="29" />
-30-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:16:79-105
+30-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:16:79-105
 31
 32    <instrumentation
-32-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:17:5-22:58
+32-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:17:5-22:58
 33        android:name=".GodotInstrumentation"
-33-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:19:9-45
+33-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:19:9-45
 34        android:icon="@mipmap/icon"
-34-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:20:9-36
+34-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:20:9-36
 35        android:label="@string/godot_project_name_string"
-35-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:21:9-58
+35-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:21:9-58
 36        android:targetPackage="com.minigame.drawliner" />
-36-->D:\git\Android\LineDrawer\android\build\src\debug\AndroidManifest.xml:22:9-55
+36-->E:\Project\DrawLiner\android\build\src\debug\AndroidManifest.xml:22:9-55
 37
 38    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-38-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:13:5-81
-38-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:13:22-78
+38-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:13:5-81
+38-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:13:22-78
 39
 40    <uses-feature android:name="android.hardware.location.network" />
-40-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:15:5-70
-40-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:15:19-67
+40-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:15:5-70
+40-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:15:19-67
 41
 42    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-42-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:26:5-110
-42-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:26:22-107
+42-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:26:5-110
+42-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:26:22-107
 43    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-43-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:26:5-82
-43-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:26:22-79
+43-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:26:5-82
+43-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:26:22-79
 44
 45    <application
-45-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:33:5-83:19
+45-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:5-83:19
 46        android:allowBackup="false"
-46-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:33:68-95
+46-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:68-95
 47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-47-->[androidx.core:core:1.2.0] C:\Users\Celestial\.gradle\caches\transforms-3\562fea77bf328e809873b5e8d901ac89\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
+47-->[androidx.core:core:1.2.0] C:\Users\mrhoa\.gradle\caches\transforms-3\562fea77bf328e809873b5e8d901ac89\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
 48        android:debuggable="true"
 49        android:hardwareAccelerated="true"
-49-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:18:9-43
+49-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:18:9-43
 50        android:hasFragileUserData="false"
-50-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:33:118-152
+50-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:118-152
 51        android:icon="@mipmap/icon"
-51-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:33:238-265
+51-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:238-265
 52        android:isGame="true"
-52-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:33:96-117
+52-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:96-117
 53        android:label="@string/godot_project_name_string"
-53-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:33:18-67
+53-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:18-67
 54        android:networkSecurityConfig="@xml/network_security_config"
-54-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:19:9-69
+54-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:19:9-69
 55        android:requestLegacyExternalStorage="true" >
-55-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:33:153-197
+55-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:33:153-197
 56        <activity
-56-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:55:9-77:20
+56-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:55:9-77:20
 57            android:name="com.godot.game.GodotApp"
-57-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:56:13-37
+57-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:56:13-37
 58            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
-58-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:62:13-141
+58-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:62:13-141
 59            android:excludeFromRecents="false"
-59-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:60:13-47
+59-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:60:13-47
 60            android:label="@string/godot_project_name_string"
-60-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:57:13-62
+60-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:57:13-62
 61            android:launchMode="singleTask"
-61-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:59:13-44
+61-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:59:13-44
 62            android:resizeableActivity="false"
-62-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:63:13-47
-63            android:screenOrientation="portrait"
-63-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:61:13-50
+62-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:63:13-47
+63            android:screenOrientation="userPortrait"
+63-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:61:13-50
 64            android:theme="@style/GodotAppSplashTheme" >
-64-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:58:13-55
+64-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:58:13-55
 65            <intent-filter>
-65-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:69:13-76:29
+65-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:69:13-76:29
 66                <action android:name="android.intent.action.MAIN" />
-66-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:70:17-69
-66-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:70:25-66
+66-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:70:17-69
+66-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:70:25-66
 67
 68                <category android:name="android.intent.category.LAUNCHER" />
-68-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:71:17-77
-68-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:71:27-74
+68-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:71:17-77
+68-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:71:27-74
 69
 70                <!--
 71                Enable access to OpenXR on Oculus mobile devices, no-op on other Android
 72                platforms.
 73                -->
 74                <category android:name="com.oculus.intent.category.VR" />
-74-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:75:17-74
-74-->D:\git\Android\LineDrawer\android\build\AndroidManifest.xml:75:27-71
+74-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:75:17-74
+74-->E:\Project\DrawLiner\android\build\AndroidManifest.xml:75:27-71
 75            </intent-filter>
 76        </activity>
 77        <!-- Records the version of the Godot editor used for building -->
@@ -140,15 +140,15 @@
 79            android:name="org.godotengine.editor.version"
 80            android:value="3.4.2.stable" /> <!-- Records the version of the Godot library -->
 81        <meta-data
-81-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:19:9-21:44
+81-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:19:9-21:44
 82            android:name="org.godotengine.library.version"
-82-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:20:13-59
+82-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:20:13-59
 83            android:value="3.4.2.stable" />
-83-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:21:13-41
+83-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:21:13-41
 84
 85        <service android:name="org.godotengine.godot.GodotDownloaderService" />
-85-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:9-80
-85-->[godot-lib.debug.aar] C:\Users\Celestial\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:18-77
+85-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:9-80
+85-->[godot-lib.debug.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a6222595770660aac8484dca0a203727\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:18-77
 86        <!--
 87    Plugin metadata:
 88    - In the `android:name` attribute, the `org.godotengine.plugin.v1` prefix
@@ -159,17 +159,17 @@
 93    initializer.
 94        -->
 95        <meta-data
-95-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:30:9-32:66
+95-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:30:9-32:66
 96            android:name="org.godotengine.plugin.v1.AppLovinMax"
-96-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:31:13-65
+96-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:31:13-65
 97            android:value="ru.mobilap.applovinmax.AppLovinMax" />
-97-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:32:13-63
+97-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:32:13-63
 98        <meta-data
-98-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:33:9-35:36
+98-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:33:9-35:36
 99            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-99-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:34:13-69
+99-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:34:13-69
 100            android:value="true" />
-100-->[AppLovinMax.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:35:13-33
+100-->[AppLovinMax.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\983090ac2d768f41f6c0afcade6078be\transformed\jetified-AppLovinMax.release\AndroidManifest.xml:35:13-33
 101        <!--
 102    Plugin metadata:
 103    - In the `android:name` attribute, the `org.godotengine.plugin.v1` prefix
@@ -180,11 +180,11 @@
 108    initializer.
 109        -->
 110        <meta-data
-110-->[FirebaseAnalytics.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\a8d04e2a1906fab9b59499a68fc16e1b\transformed\jetified-FirebaseAnalytics.release\AndroidManifest.xml:24:9-26:78
+110-->[FirebaseAnalytics.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a8d04e2a1906fab9b59499a68fc16e1b\transformed\jetified-FirebaseAnalytics.release\AndroidManifest.xml:24:9-26:78
 111            android:name="org.godotengine.plugin.v1.FirebaseAnalytics"
-111-->[FirebaseAnalytics.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\a8d04e2a1906fab9b59499a68fc16e1b\transformed\jetified-FirebaseAnalytics.release\AndroidManifest.xml:25:13-71
+111-->[FirebaseAnalytics.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a8d04e2a1906fab9b59499a68fc16e1b\transformed\jetified-FirebaseAnalytics.release\AndroidManifest.xml:25:13-71
 112            android:value="ru.mobilap.firebaseanalytics.FirebaseAnalytics" />
-112-->[FirebaseAnalytics.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\a8d04e2a1906fab9b59499a68fc16e1b\transformed\jetified-FirebaseAnalytics.release\AndroidManifest.xml:26:13-75
+112-->[FirebaseAnalytics.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\a8d04e2a1906fab9b59499a68fc16e1b\transformed\jetified-FirebaseAnalytics.release\AndroidManifest.xml:26:13-75
 113        <!--
 114    Plugin metadata:
 115    - In the `android:name` attribute, the `org.godotengine.plugin.v1` prefix
@@ -195,247 +195,247 @@
 120    initializer.
 121        -->
 122        <meta-data
-122-->[FirebaseRemoteConfig.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\febfb13a3d9728b53064681699f74a0b\transformed\jetified-FirebaseRemoteConfig.release\AndroidManifest.xml:24:9-26:84
+122-->[FirebaseRemoteConfig.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\febfb13a3d9728b53064681699f74a0b\transformed\jetified-FirebaseRemoteConfig.release\AndroidManifest.xml:24:9-26:84
 123            android:name="org.godotengine.plugin.v1.FirebaseRemoteConfig"
-123-->[FirebaseRemoteConfig.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\febfb13a3d9728b53064681699f74a0b\transformed\jetified-FirebaseRemoteConfig.release\AndroidManifest.xml:25:13-74
+123-->[FirebaseRemoteConfig.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\febfb13a3d9728b53064681699f74a0b\transformed\jetified-FirebaseRemoteConfig.release\AndroidManifest.xml:25:13-74
 124            android:value="ru.mobilap.firebaseremoteconfig.FirebaseRemoteConfig" />
-124-->[FirebaseRemoteConfig.release.aar] C:\Users\Celestial\.gradle\caches\transforms-3\febfb13a3d9728b53064681699f74a0b\transformed\jetified-FirebaseRemoteConfig.release\AndroidManifest.xml:26:13-81
+124-->[FirebaseRemoteConfig.release.aar] C:\Users\mrhoa\.gradle\caches\transforms-3\febfb13a3d9728b53064681699f74a0b\transformed\jetified-FirebaseRemoteConfig.release\AndroidManifest.xml:26:13-81
 125
 126        <receiver
-126-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:29:9-33:20
+126-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:29:9-33:20
 127            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-127-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:30:13-85
+127-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:30:13-85
 128            android:enabled="true"
-128-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:31:13-35
+128-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:31:13-35
 129            android:exported="false" >
-129-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:32:13-37
+129-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:32:13-37
 130        </receiver>
 131
 132        <service
-132-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:35:9-38:40
+132-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:35:9-38:40
 133            android:name="com.google.android.gms.measurement.AppMeasurementService"
-133-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:36:13-84
+133-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:36:13-84
 134            android:enabled="true"
-134-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:37:13-35
+134-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:37:13-35
 135            android:exported="false" />
-135-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:38:13-37
+135-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:38:13-37
 136        <service
-136-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:39:9-43:72
+136-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:39:9-43:72
 137            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-137-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:40:13-87
+137-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:40:13-87
 138            android:enabled="true"
-138-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:41:13-35
+138-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:41:13-35
 139            android:exported="false"
-139-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:42:13-37
+139-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:42:13-37
 140            android:permission="android.permission.BIND_JOB_SERVICE" />
-140-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:43:13-69
+140-->[com.google.android.gms:play-services-measurement:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\56948a54f76241da8190b2e708f53b37\transformed\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:43:13-69
 141        <service
-141-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:27:9-33:19
+141-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:27:9-33:19
 142            android:name="com.google.firebase.components.ComponentDiscoveryService"
-142-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:28:13-84
+142-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:28:13-84
 143            android:directBootAware="true"
-143-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+143-->[com.google.firebase:firebase-common:19.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
 144            android:exported="false" >
-144-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:29:13-37
+144-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:29:13-37
 145            <meta-data
-145-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:30:13-32:85
+145-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:30:13-32:85
 146                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-146-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:31:17-139
+146-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:31:17-139
 147                android:value="com.google.firebase.components.ComponentRegistrar" />
-147-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\Celestial\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:32:17-82
+147-->[com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\mrhoa\.gradle\caches\transforms-3\136f85629b0a8a4ce01017b95068cc31\transformed\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:32:17-82
 148            <meta-data
-148-->[com.google.firebase:firebase-config:19.1.1] C:\Users\Celestial\.gradle\caches\transforms-3\8ef7543d7899f2b212ffca8bb18b924e\transformed\jetified-firebase-config-19.1.1\AndroidManifest.xml:32:13-34:85
+148-->[com.google.firebase:firebase-config:19.1.1] C:\Users\mrhoa\.gradle\caches\transforms-3\8ef7543d7899f2b212ffca8bb18b924e\transformed\jetified-firebase-config-19.1.1\AndroidManifest.xml:32:13-34:85
 149                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
-149-->[com.google.firebase:firebase-config:19.1.1] C:\Users\Celestial\.gradle\caches\transforms-3\8ef7543d7899f2b212ffca8bb18b924e\transformed\jetified-firebase-config-19.1.1\AndroidManifest.xml:33:17-117
+149-->[com.google.firebase:firebase-config:19.1.1] C:\Users\mrhoa\.gradle\caches\transforms-3\8ef7543d7899f2b212ffca8bb18b924e\transformed\jetified-firebase-config-19.1.1\AndroidManifest.xml:33:17-117
 150                android:value="com.google.firebase.components.ComponentRegistrar" />
-150-->[com.google.firebase:firebase-config:19.1.1] C:\Users\Celestial\.gradle\caches\transforms-3\8ef7543d7899f2b212ffca8bb18b924e\transformed\jetified-firebase-config-19.1.1\AndroidManifest.xml:34:17-82
+150-->[com.google.firebase:firebase-config:19.1.1] C:\Users\mrhoa\.gradle\caches\transforms-3\8ef7543d7899f2b212ffca8bb18b924e\transformed\jetified-firebase-config-19.1.1\AndroidManifest.xml:34:17-82
 151            <meta-data
-151-->[com.google.firebase:firebase-abt:19.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\9ac61c324d8ad0587291890974bdc234\transformed\jetified-firebase-abt-19.0.1\AndroidManifest.xml:13:13-15:85
+151-->[com.google.firebase:firebase-abt:19.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\9ac61c324d8ad0587291890974bdc234\transformed\jetified-firebase-abt-19.0.1\AndroidManifest.xml:13:13-15:85
 152                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
-152-->[com.google.firebase:firebase-abt:19.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\9ac61c324d8ad0587291890974bdc234\transformed\jetified-firebase-abt-19.0.1\AndroidManifest.xml:14:17-109
+152-->[com.google.firebase:firebase-abt:19.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\9ac61c324d8ad0587291890974bdc234\transformed\jetified-firebase-abt-19.0.1\AndroidManifest.xml:14:17-109
 153                android:value="com.google.firebase.components.ComponentRegistrar" />
-153-->[com.google.firebase:firebase-abt:19.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\9ac61c324d8ad0587291890974bdc234\transformed\jetified-firebase-abt-19.0.1\AndroidManifest.xml:15:17-82
+153-->[com.google.firebase:firebase-abt:19.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\9ac61c324d8ad0587291890974bdc234\transformed\jetified-firebase-abt-19.0.1\AndroidManifest.xml:15:17-82
 154            <meta-data
-154-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:32:13-34:85
+154-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:32:13-34:85
 155                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-155-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:33:17-96
+155-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:33:17-96
 156                android:value="com.google.firebase.components.ComponentRegistrar" />
-156-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:34:17-82
+156-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:34:17-82
 157            <meta-data
-157-->[com.google.firebase:firebase-crashlytics:17.2.1] C:\Users\Celestial\.gradle\caches\transforms-3\57e05e054a4ef1d60de4acd3909ec288\transformed\jetified-firebase-crashlytics-17.2.1\AndroidManifest.xml:16:13-18:85
+157-->[com.google.firebase:firebase-crashlytics:17.2.1] C:\Users\mrhoa\.gradle\caches\transforms-3\57e05e054a4ef1d60de4acd3909ec288\transformed\jetified-firebase-crashlytics-17.2.1\AndroidManifest.xml:16:13-18:85
 158                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
-158-->[com.google.firebase:firebase-crashlytics:17.2.1] C:\Users\Celestial\.gradle\caches\transforms-3\57e05e054a4ef1d60de4acd3909ec288\transformed\jetified-firebase-crashlytics-17.2.1\AndroidManifest.xml:17:17-115
+158-->[com.google.firebase:firebase-crashlytics:17.2.1] C:\Users\mrhoa\.gradle\caches\transforms-3\57e05e054a4ef1d60de4acd3909ec288\transformed\jetified-firebase-crashlytics-17.2.1\AndroidManifest.xml:17:17-115
 159                android:value="com.google.firebase.components.ComponentRegistrar" />
-159-->[com.google.firebase:firebase-crashlytics:17.2.1] C:\Users\Celestial\.gradle\caches\transforms-3\57e05e054a4ef1d60de4acd3909ec288\transformed\jetified-firebase-crashlytics-17.2.1\AndroidManifest.xml:18:17-82
+159-->[com.google.firebase:firebase-crashlytics:17.2.1] C:\Users\mrhoa\.gradle\caches\transforms-3\57e05e054a4ef1d60de4acd3909ec288\transformed\jetified-firebase-crashlytics-17.2.1\AndroidManifest.xml:18:17-82
 160            <meta-data
-160-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\Celestial\.gradle\caches\transforms-3\6f957ca456faf76099a4e92b50af1b9e\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:17:13-19:85
+160-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\mrhoa\.gradle\caches\transforms-3\6f957ca456faf76099a4e92b50af1b9e\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:17:13-19:85
 161                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-161-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\Celestial\.gradle\caches\transforms-3\6f957ca456faf76099a4e92b50af1b9e\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:18:17-127
+161-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\mrhoa\.gradle\caches\transforms-3\6f957ca456faf76099a4e92b50af1b9e\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:18:17-127
 162                android:value="com.google.firebase.components.ComponentRegistrar" />
-162-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\Celestial\.gradle\caches\transforms-3\6f957ca456faf76099a4e92b50af1b9e\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:19:17-82
+162-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\mrhoa\.gradle\caches\transforms-3\6f957ca456faf76099a4e92b50af1b9e\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:19:17-82
 163        </service>
 164
 165        <receiver
-165-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:37:9-44:20
+165-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:37:9-44:20
 166            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-166-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:38:13-78
+166-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:38:13-78
 167            android:exported="true"
-167-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:39:13-36
+167-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:39:13-36
 168            android:permission="com.google.android.c2dm.permission.SEND" >
-168-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:40:13-73
+168-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:40:13-73
 169            <intent-filter>
-169-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:41:13-43:29
+169-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:41:13-43:29
 170                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-170-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:42:17-81
-170-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:42:25-78
+170-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:42:17-81
+170-->[com.google.firebase:firebase-iid:20.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c67f84f8604621ecf3ece1de7cdb1854\transformed\jetified-firebase-iid-20.0.1\AndroidManifest.xml:42:25-78
 171            </intent-filter>
 172        </receiver>
 173
 174        <provider
-174-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
+174-->[com.google.firebase:firebase-common:19.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
 175            android:name="com.google.firebase.provider.FirebaseInitProvider"
-175-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
+175-->[com.google.firebase:firebase-common:19.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
 176            android:authorities="com.minigame.drawliner.firebaseinitprovider"
-176-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
+176-->[com.google.firebase:firebase-common:19.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
 177            android:directBootAware="true"
-177-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+177-->[com.google.firebase:firebase-common:19.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
 178            android:exported="false"
-178-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
+178-->[com.google.firebase:firebase-common:19.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
 179            android:initOrder="100" />
-179-->[com.google.firebase:firebase-common:19.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
+179-->[com.google.firebase:firebase-common:19.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\c2c5851d812047d1f3dfdc6e8a3985b6\transformed\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
 180
 181        <activity
-181-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Celestial\.gradle\caches\transforms-3\4572f395ab6e0dc87b8238149d72cdbd\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+181-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mrhoa\.gradle\caches\transforms-3\4572f395ab6e0dc87b8238149d72cdbd\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
 182            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-182-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Celestial\.gradle\caches\transforms-3\4572f395ab6e0dc87b8238149d72cdbd\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+182-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mrhoa\.gradle\caches\transforms-3\4572f395ab6e0dc87b8238149d72cdbd\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
 183            android:exported="false"
-183-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Celestial\.gradle\caches\transforms-3\4572f395ab6e0dc87b8238149d72cdbd\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+183-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mrhoa\.gradle\caches\transforms-3\4572f395ab6e0dc87b8238149d72cdbd\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
 184            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-184-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Celestial\.gradle\caches\transforms-3\4572f395ab6e0dc87b8238149d72cdbd\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+184-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\mrhoa\.gradle\caches\transforms-3\4572f395ab6e0dc87b8238149d72cdbd\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
 185        <activity
-185-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:15:9-19:50
+185-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:15:9-19:50
 186            android:name="com.applovin.adview.AppLovinInterstitialActivity"
-186-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:16:13-76
+186-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:16:13-76
 187            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
-187-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:17:13-98
+187-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:17:13-98
 188            android:hardwareAccelerated="true"
-188-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:18:13-47
+188-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:18:13-47
 189            android:screenOrientation="behind" />
-189-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:19:13-47
+189-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:19:13-47
 190        <activity
-190-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:20:9-26:50
+190-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:20:9-26:50
 191            android:name="com.applovin.adview.AppLovinFullscreenActivity"
-191-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:21:13-74
+191-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:21:13-74
 192            android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-192-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:22:13-129
+192-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:22:13-129
 193            android:exported="false"
-193-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:23:13-37
+193-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:23:13-37
 194            android:hardwareAccelerated="true"
-194-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:24:13-47
+194-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:24:13-47
 195            android:launchMode="singleTop"
-195-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:25:13-43
+195-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:25:13-43
 196            android:screenOrientation="behind" />
-196-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:26:13-47
+196-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:26:13-47
 197        <activity
-197-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:27:9-29:84
+197-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:27:9-29:84
 198            android:name="com.applovin.sdk.AppLovinWebViewActivity"
-198-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:28:13-68
+198-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:28:13-68
 199            android:configChanges="keyboardHidden|orientation|screenSize|uiMode" />
-199-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:29:13-81
+199-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:29:13-81
 200        <activity
-200-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:30:9-33:87
+200-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:30:9-33:87
 201            android:name="com.applovin.mediation.MaxDebuggerActivity"
-201-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:31:13-70
+201-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:31:13-70
 202            android:configChanges="keyboardHidden|orientation|screenSize"
-202-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:32:13-74
+202-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:32:13-74
 203            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-203-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:33:13-84
+203-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:33:13-84
 204        <activity
-204-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:34:9-37:87
+204-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:34:9-37:87
 205            android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
-205-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:35:13-76
+205-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:35:13-76
 206            android:configChanges="keyboardHidden|orientation|screenSize"
-206-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:36:13-74
+206-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:36:13-74
 207            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-207-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:37:13-84
+207-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:37:13-84
 208        <activity
-208-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:38:9-41:87
+208-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:38:9-41:87
 209            android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
-209-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:39:13-77
+209-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:39:13-77
 210            android:configChanges="keyboardHidden|orientation|screenSize"
-210-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:40:13-74
+210-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:40:13-74
 211            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-211-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:41:13-84
+211-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:41:13-84
 212        <activity
-212-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:42:9-45:87
+212-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:42:9-45:87
 213            android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
-213-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:43:13-81
+213-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:43:13-81
 214            android:configChanges="keyboardHidden|orientation|screenSize"
-214-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:44:13-74
+214-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:44:13-74
 215            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-215-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:45:13-84
+215-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:45:13-84
 216        <activity
-216-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:46:9-49:87
+216-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:46:9-49:87
 217            android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
-217-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:47:13-82
+217-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:47:13-82
 218            android:configChanges="keyboardHidden|orientation|screenSize"
-218-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:48:13-74
+218-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:48:13-74
 219            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-219-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:49:13-84
+219-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:49:13-84
 220
 221        <service
-221-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:51:9-54:44
+221-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:51:9-54:44
 222            android:name="com.applovin.impl.sdk.utils.AppKilledService"
-222-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:52:13-72
+222-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:52:13-72
 223            android:exported="false"
-223-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:53:13-37
+223-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:53:13-37
 224            android:stopWithTask="false" />
-224-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:54:13-41
+224-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:54:13-41
 225        <service
-225-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:55:9-58:44
+225-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:55:9-58:44
 226            android:name="com.applovin.impl.adview.activity.FullscreenAdService"
-226-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:56:13-81
+226-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:56:13-81
 227            android:exported="false"
-227-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:57:13-37
+227-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:57:13-37
 228            android:stopWithTask="false" />
-228-->[com.applovin:applovin-sdk:10.0.1] C:\Users\Celestial\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:58:13-41
+228-->[com.applovin:applovin-sdk:10.0.1] C:\Users\mrhoa\.gradle\caches\transforms-3\1aba90c2d22fa92e798c5d022cde44b4\transformed\jetified-applovin-sdk-10.0.1\AndroidManifest.xml:58:13-41
 229
 230        <meta-data
-230-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Celestial\.gradle\caches\transforms-3\c1d8ef94043b1764f9817cc9a1e1c338\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+230-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mrhoa\.gradle\caches\transforms-3\c1d8ef94043b1764f9817cc9a1e1c338\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
 231            android:name="com.google.android.gms.version"
-231-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Celestial\.gradle\caches\transforms-3\c1d8ef94043b1764f9817cc9a1e1c338\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+231-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mrhoa\.gradle\caches\transforms-3\c1d8ef94043b1764f9817cc9a1e1c338\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
 232            android:value="@integer/google_play_services_version" />
-232-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Celestial\.gradle\caches\transforms-3\c1d8ef94043b1764f9817cc9a1e1c338\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+232-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\mrhoa\.gradle\caches\transforms-3\c1d8ef94043b1764f9817cc9a1e1c338\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
 233
 234        <service
-234-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:29:9-35:19
+234-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:29:9-35:19
 235            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-235-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:30:13-103
+235-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:30:13-103
 236            android:exported="false" >
-236-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:31:13-37
+236-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:31:13-37
 237            <meta-data
-237-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:32:13-34:39
+237-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:32:13-34:39
 238                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-238-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:33:17-94
+238-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:33:17-94
 239                android:value="cct" />
-239-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\Celestial\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:34:17-36
+239-->[com.google.android.datatransport:transport-backend-cct:2.3.1] C:\Users\mrhoa\.gradle\caches\transforms-3\0925e830798b2b088dba5bb9c7dca6c6\transformed\jetified-transport-backend-cct-2.3.1\AndroidManifest.xml:34:17-36
 240        </service>
 241        <service
-241-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Celestial\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:26:9-30:19
+241-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\mrhoa\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:26:9-30:19
 242            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-242-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Celestial\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:27:13-117
+242-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\mrhoa\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:27:13-117
 243            android:exported="false"
-243-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Celestial\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:28:13-37
+243-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\mrhoa\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:28:13-37
 244            android:permission="android.permission.BIND_JOB_SERVICE" >
-244-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Celestial\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:29:13-69
+244-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\mrhoa\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:29:13-69
 245        </service>
 246
 247        <receiver
-247-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Celestial\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:32:9-34:40
+247-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\mrhoa\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:32:9-34:40
 248            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-248-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Celestial\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:33:13-132
+248-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\mrhoa\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:33:13-132
 249            android:exported="false" />
-249-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\Celestial\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:34:13-37
+249-->[com.google.android.datatransport:transport-runtime:2.2.4] C:\Users\mrhoa\.gradle\caches\transforms-3\eb9f680e5f771e11bf8f1db5734bb6cc\transformed\jetified-transport-runtime-2.2.4\AndroidManifest.xml:34:13-37
 250    </application>
 251
 252</manifest>

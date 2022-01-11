@@ -9,6 +9,7 @@ signal on_hint_click
 func _init():
 	GameInstance.is_play = true;
 	var next_level = load("res://src/Map/Level/" + GameInstance.diffcult + "/" + GameInstance.diffcult + str(get_level()) + ".tscn")
+	print(get_level())
 	if next_level != null:
 		level = next_level.instance()
 	else:
@@ -27,17 +28,13 @@ func _ready():
 func get_level() -> int:
 	if !GameInstance.is_reload:
 		GameInstance.is_reload = false
-		var next_level = GameInstance.current_level + 1
-		print(next_level)
-		if next_level >= GameInstance.total_level:
-			GameInstance.current_level = 1
-			return  1
+		if GameInstance.display_level >= GameInstance.total_level:
+			GameInstance.display_level = 1
+			return GameInstance.display_level
 		else:
-			GameInstance.current_level = next_level
-			return next_level
+			return GameInstance.display_level
 	else:
-		print("net")
-		return GameInstance.current_level
+		return GameInstance.display_level
 	return 1
 	
 func _on_GamePlayScene_on_hint_click():

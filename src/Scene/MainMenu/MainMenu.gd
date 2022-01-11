@@ -1,39 +1,30 @@
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-#onready var admob = Admobs
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$HBoxContainer/Background.texture = GameInstance.theme
 	AdManager.connect("on_interstitial_close", self, "_on_inter_close")
 	pass
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-
 func _on_Ease_pressed():
+	GameInstance.display_level = GameInstance.list_level.Easy
 	change_scene("Easy")
 
 func _on_Medium_pressed():
+	GameInstance.display_level = GameInstance.list_level.Medium
 	change_scene("Medium")
 
 func _on_Hard_pressed():
+	GameInstance.display_level = GameInstance.list_level.Hard
 	change_scene("Hard")
 
 func _on_Expert_pressed():
+	GameInstance.display_level = GameInstance.list_level.Expert
 	change_scene("Expert")
 
 func _on_Professor_pressed():
-	change_scene("Professor")
+	GameInstance.display_level = GameInstance.list_level.Pro
+	change_scene("Pro")
 	
 func change_scene(diff):
 	GameInstance.diffcult = diff

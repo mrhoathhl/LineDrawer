@@ -16,7 +16,7 @@
 [ext_resource path="res://src/Assets/Textures/Text/levelPass.png" type="Texture" id=14]
 [ext_resource path="res://src/Assets/Textures/Button/easy 2.png" type="Texture" id=15]
 [ext_resource path="res://src/Assets/Textures/Button/easy.png" type="Texture" id=16]
-[ext_resource path="res://src/Assets/Textures/Background/icon.png" type="Texture" id=17]
+[ext_resource path="res://src/Assets/Textures/Icon/icon10.png" type="Texture" id=17]
 [ext_resource path="res://src/Assets/Textures/Background/sun_ray.png" type="Texture" id=18]
 [ext_resource path="res://src/Scene/GamePlay/ThemeSelector.gd" type="Script" id=19]
 [ext_resource path="res://src/Scene/GamePlay/SettingPopup.gd" type="Script" id=20]
@@ -159,7 +159,6 @@ extra_spacing_bottom = 20
 font_data = ExtResource( 3 )
 
 [node name="GamePlayScene" type="Control" groups=["GamePlay"]]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
@@ -307,7 +306,7 @@ __meta__ = {
 }
 
 [node name="BlurBackground" type="Panel" parent="ThemePopup"]
-modulate = Color( 0.258824, 0.258824, 0.258824, 0.443137 )
+modulate = Color( 0, 0, 0, 0.666667 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -538.0
@@ -323,9 +322,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -500.0
-margin_top = -637.5
+margin_top = -645.0
 margin_right = 500.0
-margin_bottom = 637.5
+margin_bottom = 737.0
 custom_styles/panel = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -357,13 +356,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -431.0
-margin_top = -446.5
-margin_right = 431.0
-margin_bottom = 345.5
+margin_left = -425.0
+margin_top = -460.5
+margin_right = 425.0
+margin_bottom = 370.5
 rect_pivot_offset = Vector2( 10, 0 )
-custom_constants/vseparation = 250
-custom_constants/hseparation = 270
+custom_constants/vseparation = 270
+custom_constants/hseparation = 265
 columns = 3
 __meta__ = {
 "_edit_use_anchors_": false
@@ -414,7 +413,7 @@ __meta__ = {
 }
 
 [node name="BlurBackground" type="Panel" parent="SettingPopup"]
-modulate = Color( 0.258824, 0.258824, 0.258824, 0.443137 )
+modulate = Color( 0, 0, 0, 0.666667 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -538.0
@@ -555,7 +554,7 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="WinPopup"]
-modulate = Color( 1, 1, 1, 0.584314 )
+modulate = Color( 0, 0, 0, 0.666667 )
 light_mask = 4097
 material = SubResource( 14 )
 anchor_right = 1.0
@@ -618,15 +617,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="on_hint_click" from="." to="." method="_on_GamePlayScene_on_hint_click"]
 [connection signal="pressed" from="Control/Setting" to="." method="_on_Setting_pressed"]
 [connection signal="pressed" from="Control/Theme" to="." method="_on_Theme_pressed"]
 [connection signal="pressed" from="Option/Hint" to="." method="_on_Hint_pressed"]
 [connection signal="pressed" from="Option/Skip" to="." method="_on_Skip_pressed"]
 [connection signal="on_change_theme" from="ThemePopup" to="ThemePopup" method="_on_ThemePopup_on_change_theme"]
+[connection signal="visibility_changed" from="ThemePopup" to="ThemePopup" method="_on_ThemePopup_visibility_changed"]
 [connection signal="pressed" from="ThemePopup/Panel/CloseThemePopup" to="ThemePopup" method="_on_CloseThemePopup_pressed"]
 [connection signal="pressed" from="ThemePopup/Panel/Select" to="ThemePopup" method="_on_Select_pressed"]
 [connection signal="pressed" from="SettingPopup/Panel/Control/CloseSettingPopup" to="SettingPopup" method="_on_CloseSettingPopup_pressed"]
 [connection signal="pressed" from="SettingPopup/Panel/Control/GridContainer/Back" to="SettingPopup" method="_on_Back_pressed"]
 [connection signal="pressed" from="SettingPopup/Panel/Control/GridContainer/Replay" to="SettingPopup" method="_on_Replay_pressed"]
 [connection signal="pressed" from="SettingPopup/Panel/Control/GridContainer/Sound" to="SettingPopup" method="_on_Sound_pressed"]
-[connection signal="pressed" from="WinPopup/Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="WinPopup/Next" to="WinPopup" method="_on_Next_pressed"]

@@ -68,7 +68,7 @@ func _input(event):
 				var path = path_finder.search_point(cursor)
 				if size_pos != path.size():
 					SoundController.tap_sound()
-					Input.vibrate_handheld(50)
+					Input.vibrate_handheld(30)
 					size_pos = path.size()
 				suggest_line.path = path
 				if path.size() == grid.size():
@@ -83,6 +83,7 @@ func clear_map():
 		ring.transform.origin = origin_array[i] + brick_pos
 		add_child(ring)
 		yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
+		
 	for i in range(0, origin_array.size(), 1):
 		var tile = world_to_map(origin_array[i])
 		set_cell(tile.x, tile.y, -1)
@@ -94,12 +95,10 @@ func clear_map():
 		suggest_line.path.erase(origin_array[i])
 		yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
 	yield(get_tree().create_timer(0.7), "timeout")
-	GameInstance.save_current_level(GameInstance.display_level)
 	suggest_line.is_win = true
 	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
 	
 func _on_hint_click():
-	print("hint")
 	var tile_left = origin_array.size() - suggest_line.path.size()
 	if tile_left > 0:
 		for i in range(suggest_line.path.size(), origin_array.size(), 1):
@@ -112,9 +111,9 @@ func get_brick_pos() -> Vector2:
 	if GameInstance.diffcult == "Easy":
 		return Vector2(107, 90)
 	elif GameInstance.diffcult == "Medium":
-		return Vector2(89, 68)
+		return Vector2(89, 72)
 	elif GameInstance.diffcult == "Hard":
-		return Vector2(76, 57)
+		return Vector2(76, 59)
 	elif GameInstance.diffcult == "Expert":
 		return Vector2(68, 47)
 	else:
