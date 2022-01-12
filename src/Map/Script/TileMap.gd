@@ -15,6 +15,8 @@ var brick_pos
 var origin_array = []
 var tween_scale_value = [1.4, 1.7]
 var size_pos;
+	#minimum distance between cells
+var next
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -65,6 +67,7 @@ func _input(event):
 	if !suggest_line.is_win && GameInstance.is_play:
 		if event is InputEventMouseMotion or event is InputEvent:
 			if grid.has(cursor):
+				print("next node", cursor)
 				var path = path_finder.search_point(cursor)
 				if size_pos != path.size():
 					SoundController.tap_sound()
@@ -99,22 +102,53 @@ func clear_map():
 	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
 	
 func _on_hint_click():
-	var tile_left = origin_array.size() - suggest_line.path.size()
-	if tile_left > 0:
-		for i in range(suggest_line.path.size(), origin_array.size(), 1):
-			var path = path_finder.search_point(origin_array[i])
+	var tile_left = origin_array.size() - suggest_line.path.size() - 1
+	if tile_left > 3:
+		print(suggest_line.path.size())
+		for i in range(0, 2, 1):
+			var path = path_finder.search_point(get_neighbors(suggest_line.path[suggest_line.path.size() - 1]))
 			suggest_line.path = path
-			yield(get_tree().create_timer(1), "timeout")
+			yield(get_tree().create_timer(0.3), "timeout")
 	pass
 	
+func get_neighbors(pos):
+	
+	#array to hold all possible neighbours of current 'pos'
+	var neighbors
+	
+	#vector directions
+	var up = Vector2(0, 1); 
+	var down = Vector2(0, -1)
+	var right = Vector2(1, 0); 
+	var left = Vector2(-1, 0)
+	
+	#array of possible neighbors, yet to be validated
+	var check = [up,down,right,left] #only horizontal movement
+#	var check = [up,down,right,left,w,a,s,d] #with diagonal movement
+	#if neighbour exists in grid and is "empty", append
+	for neighbor in check:
+		neighbor = neighbor * next + pos
+		print(neighbor)
+		if grid.has(neighbor):
+			if path_finder.check_valid_move(pos, neighbor) and !suggest_line.path.has(neighbor):
+				return neighbor
+	
+	#return array
+	return null
+
 func get_brick_pos() -> Vector2:
 	if GameInstance.diffcult == "Easy":
+		next =  Vector2(216, 216)
 		return Vector2(107, 90)
 	elif GameInstance.diffcult == "Medium":
+		next = Vector2(180, 180)
 		return Vector2(89, 72)
 	elif GameInstance.diffcult == "Hard":
+		next = Vector2(154, 154)
 		return Vector2(76, 59)
 	elif GameInstance.diffcult == "Expert":
+		next = Vector2(135, 135)
 		return Vector2(68, 47)
 	else:
+		next = Vector2(120, 120) 
 		return Vector2(60, 40)

@@ -16,7 +16,7 @@
 [ext_resource path="res://src/Assets/Textures/Text/levelPass.png" type="Texture" id=14]
 [ext_resource path="res://src/Assets/Textures/Button/easy 2.png" type="Texture" id=15]
 [ext_resource path="res://src/Assets/Textures/Button/easy.png" type="Texture" id=16]
-[ext_resource path="res://src/Assets/Textures/Icon/icon10.png" type="Texture" id=17]
+[ext_resource path="res://src/Assets/Textures/Icon/icon9.png" type="Texture" id=17]
 [ext_resource path="res://src/Assets/Textures/Background/sun_ray.png" type="Texture" id=18]
 [ext_resource path="res://src/Scene/GamePlay/ThemeSelector.gd" type="Script" id=19]
 [ext_resource path="res://src/Scene/GamePlay/SettingPopup.gd" type="Script" id=20]
@@ -215,13 +215,10 @@ position = Vector2( 925, 40 )
 normal = ExtResource( 28 )
 
 [node name="LevelContainer" type="Control" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -20.0
-margin_right = 20.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Option" type="Control" parent="."]
@@ -570,18 +567,28 @@ __meta__ = {
 position = Vector2( 542, 385 )
 texture = ExtResource( 14 )
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="WinPopup"]
-position = Vector2( 541, 969 )
+[node name="Control" type="Control" parent="WinPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="WinPopup/Control"]
 scale = Vector2( 0.782222, 0.782222 )
 amount = 1
 texture = ExtResource( 18 )
 gravity = Vector2( 0, 0 )
 angular_velocity = 100.0
 
-[node name="Icon" type="Sprite" parent="WinPopup"]
-position = Vector2( 356, 780 )
+[node name="Icon" type="Sprite" parent="WinPopup/Control"]
 texture = ExtResource( 17 )
-centered = false
 
 [node name="Next" type="Button" parent="WinPopup"]
 anchor_left = 0.5

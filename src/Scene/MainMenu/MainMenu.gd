@@ -2,6 +2,7 @@ extends Control
 
 func _ready():
 	$HBoxContainer/Background.texture = GameInstance.theme
+	AdManager.show_banner()
 	AdManager.connect("on_interstitial_close", self, "_on_inter_close")
 	pass
 

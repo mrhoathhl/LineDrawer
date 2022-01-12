@@ -61,6 +61,7 @@ func _on_CloseThemePopup_pressed():
 func _on_reward_rewarded_theme():
 	remove_all_child()
 	theme_buy.get_child(1).visible = false
+	theme_buy.get_child(2).visible = false
 	GameInstance.list_data.themes[0][theme_buy.item.item_key].status = true
 	GameInstance.save_bg()
 	_on_ThemePopup_visibility_changed()
@@ -101,6 +102,7 @@ func _on_ThemePopup_visibility_changed():
 			
 			if !item.status:
 				item_slot.setItem(ItemClass.new(item_key, item_name, locked, status, is_selected));
+				item_slot.setItem(ItemClass.new(item_key, "video", load("res://src/Assets/Textures/Button/WatchADS2.png"), status, is_selected));
 			if item.isSelected:
 				current_theme = key
 				item_slot.setItem(ItemClass.new(item_key, "select", load("res://src/Assets/Textures/Background/select.png"), status, is_selected));

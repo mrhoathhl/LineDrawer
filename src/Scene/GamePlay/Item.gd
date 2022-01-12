@@ -21,4 +21,6 @@ func _init(_key, _item_name, _item_texture, _status, _is_selected):
 		rect_position = Vector2(48, 50)
 	elif _item_name == "select":
 		rect_position = Vector2(-20, -20)
+	elif _item_name == "video":
+		rect_position = Vector2(-20, -20)
 	

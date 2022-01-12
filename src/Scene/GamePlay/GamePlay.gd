@@ -42,8 +42,6 @@ func _on_GamePlayScene_on_hint_click():
 
 func _on_Hint_pressed():
 	SoundController.touch_sound()
-	emit_signal("on_hint_click")
-	_on_GamePlayScene_on_hint_click()
 	if AdManager.is_reward_ready:
 		type = "hint"
 		AdManager.show_reward(AdManager.reward_id)

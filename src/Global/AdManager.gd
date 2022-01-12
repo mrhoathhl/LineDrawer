@@ -18,7 +18,8 @@ var reward_id = "4a6fc8f6d0c264e3"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	applovin_max.loadInterstitial(inter_id, self.get_instance_id())
+	print("ready load ad")
+	print(applovin_max.loadInterstitial(inter_id, self.get_instance_id()))
 	applovin_max.loadBanner(banner_id, false, self.get_instance_id())
 	applovin_max.loadRewardedVideo(reward_id, self.get_instance_id())
 
@@ -27,6 +28,9 @@ func load_inter():
 	
 func load_reward():
 	applovin_max.loadRewardedVideo(reward_id, self.get_instance_id())
+	
+func show_banner():
+	applovin_max.showBanner(banner_id)
 	
 func show_inter(id):
 	if abs(OS.get_ticks_msec() - GameInstance.ad_time_last_show) >= GameInstance.time_interval and is_inter_ready:
@@ -43,6 +47,7 @@ func show_reward(id):
 		_on_Node_on_reward_close()
 		
 func _on_interstitial_loaded(id):
+	print("inter loaded")
 	is_inter_ready = true
 
 func _on_interstitial_close(id):
@@ -53,10 +58,12 @@ func _on_interstitial_close(id):
 	load_inter()
 	
 func _on_interstitial_failed_to_load(id, error):
+	print("inter load failed")
 	is_inter_ready = false
 	load_inter()
 	
 func _on_rewarded_video_ad_loaded(id):
+	print("reward loaded")
 	is_reward_ready = true
 	
 func _on_rewarded_video_ad_failed_to_load(id):

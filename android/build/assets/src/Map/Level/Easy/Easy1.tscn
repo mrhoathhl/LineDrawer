@@ -21,7 +21,7 @@
 0/shapes = [  ]
 0/z_index = 0
 
-[node name="Level2" type="Control"]
+[node name="Level" type="Control"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -540.0
