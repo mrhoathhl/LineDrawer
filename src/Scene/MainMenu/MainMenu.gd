@@ -25,7 +25,7 @@ func _on_Expert_pressed():
 
 func _on_Professor_pressed():
 	GameInstance.display_level = GameInstance.list_level.Pro
-	change_scene("Pro")
+	change_scene("Professor")
 	
 func change_scene(diff):
 	GameInstance.diffcult = diff

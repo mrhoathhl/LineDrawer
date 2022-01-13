@@ -8,16 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node",
-"class": "AdMob",
-"language": "GDScript",
-"path": "res://admob-lib/admob.gd"
-} ]
-_global_script_class_icons={
-"AdMob": "res://admob-lib/icon.png"
-}
-
 [AppLovin]
 
 SdkKey="iVth1Xns1vXaWlDJGqmE995884znPLc6rUpt1ai2TFc--qHFe2ToBZwKeu53DiA2C-vDTcF0ss_rfH5JJZ5V80"
@@ -33,7 +23,7 @@ Python="C:/Users/mrhoa/AppData/Local/Programs/Python/Python310/python.exe"
 
 [application]
 
-config/name="Draw Liner"
+config/name="One Liner"
 run/main_scene="res://src/Scene/MainMenu/MainMenu.tscn"
 boot_splash/image="res://icon.png"
 boot_splash/fullsize=false
@@ -41,13 +31,13 @@ boot_splash/bg_color=Color( 0.137255, 0.192157, 0.243137, 1 )
 
 [autoload]
 
+applovin_max="*res://scripts/applovin_max.gd"
+fba="res://scripts/fba.gd"
 SceneManager="*res://src/Global/SceneManager.tscn"
+AdManager="*res://src/Global/AdManager.tscn"
+remote_config="res://scripts/remote_config.gd"
 GameInstance="*res://src/Global/Global.tscn"
 SoundController="*res://src/Global/SoundController.tscn"
-AdManager="*res://src/Global/AdManager.tscn"
-remote_config="*res://scripts/remote_config.gd"
-fba="*res://scripts/fba.gd"
-applovin_max="*res://scripts/applovin_max.gd"
 
 [display]
 

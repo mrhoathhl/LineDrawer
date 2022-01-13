@@ -4,7 +4,6 @@ extends Control
 onready var sound_on = get_node("/root/GamePlayScene/SettingPopup/Panel/Control/GridContainer/Sound/SoundOn")
 onready var sound_off = get_node("/root/GamePlayScene/SettingPopup/Panel/Control/GridContainer/Sound/SoundOff")
 
-var type
 func _ready():
 	if GameInstance.is_sound_on:
 		sound_on.visible = true
@@ -13,11 +12,7 @@ func _ready():
 		sound_on.visible = false
 		sound_off.visible = true
 	pass # Replace with function body.
-
-func set_visible(status: bool):
-	visible = status
 	
-
 func _on_Sound_pressed():
 	SoundController.touch_sound()
 	GameInstance.is_sound_on = !GameInstance.is_sound_on
@@ -39,7 +34,7 @@ func _on_Replay_pressed():
 func _on_Back_pressed():
 	SoundController.touch_sound()
 	GameInstance.is_popup = false
-	type = "back"
+	GameInstance.type = "back"
 	if AdManager.is_inter_ready:
 		AdManager.show_inter(AdManager.inter_id)
 	else:

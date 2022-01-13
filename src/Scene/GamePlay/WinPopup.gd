@@ -20,6 +20,7 @@ func _on_Next_pressed():
 	GameInstance.display_level += 1
 	save_current_level()
 	if AdManager.is_inter_ready:
+		GameInstance.type = "next"
 		AdManager.show_inter(AdManager.inter_id)
 	else:
 		visible = false
@@ -35,7 +36,7 @@ func save_current_level():
 	elif GameInstance.diffcult == "Expert":
 		GameInstance.list_data.levels[0].Expert = GameInstance.display_level
 	else:
-		GameInstance.list_data.levels[0].Pro = GameInstance.display_level
+		GameInstance.list_data.levels[0].Professor = GameInstance.display_level
 	GameInstance.save_bg()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

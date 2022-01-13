@@ -9,6 +9,7 @@ signal on_interstitial_close
 signal on_reward_close
 signal on_reward_rewarded
 
+var time_stamp = 0
 var is_inter_ready = false;
 var is_reward_ready = false;
 var scene_path = ""
@@ -59,7 +60,9 @@ func _on_interstitial_close(id):
 	
 func _on_interstitial_failed_to_load(id, error):
 	print("inter load failed")
+	time_stamp += 1
 	is_inter_ready = false
+	yield(get_tree().create_timer(time_stamp), "timeout")
 	load_inter()
 	
 func _on_rewarded_video_ad_loaded(id):

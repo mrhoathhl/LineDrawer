@@ -67,7 +67,6 @@ func _input(event):
 	if !suggest_line.is_win && GameInstance.is_play:
 		if event is InputEventMouseMotion or event is InputEvent:
 			if grid.has(cursor):
-				print("next node", cursor)
 				var path = path_finder.search_point(cursor)
 				if size_pos != path.size():
 					SoundController.tap_sound()
@@ -102,10 +101,10 @@ func clear_map():
 	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
 	
 func _on_hint_click():
-	var tile_left = origin_array.size() - suggest_line.path.size() - 1
-	if tile_left > 3:
+	var tile_left = origin_array.size() - suggest_line.path.size()
+	if tile_left > 4:
 		print(suggest_line.path.size())
-		for i in range(0, 2, 1):
+		for i in range(0, 4, 1):
 			var path = path_finder.search_point(get_neighbors(suggest_line.path[suggest_line.path.size() - 1]))
 			suggest_line.path = path
 			yield(get_tree().create_timer(0.3), "timeout")
@@ -124,6 +123,7 @@ func get_neighbors(pos):
 	
 	#array of possible neighbors, yet to be validated
 	var check = [up,down,right,left] #only horizontal movement
+	check.shuffle()
 #	var check = [up,down,right,left,w,a,s,d] #with diagonal movement
 	#if neighbour exists in grid and is "empty", append
 	for neighbor in check:

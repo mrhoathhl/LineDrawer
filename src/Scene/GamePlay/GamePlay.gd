@@ -3,7 +3,6 @@ extends Control
 
 var level
 var level_back_up = load("res://src/Map/Level/"+ GameInstance.diffcult + "/" + GameInstance.diffcult + "1.tscn")
-var type
 signal on_hint_click
 
 func _init():
@@ -28,7 +27,7 @@ func _ready():
 func get_level() -> int:
 	if !GameInstance.is_reload:
 		GameInstance.is_reload = false
-		if GameInstance.display_level >= GameInstance.total_level:
+		if GameInstance.display_level > GameInstance.total_level:
 			GameInstance.display_level = 1
 			return GameInstance.display_level
 		else:
@@ -43,7 +42,7 @@ func _on_GamePlayScene_on_hint_click():
 func _on_Hint_pressed():
 	SoundController.touch_sound()
 	if AdManager.is_reward_ready:
-		type = "hint"
+		GameInstance.type = "hint"
 		AdManager.show_reward(AdManager.reward_id)
 	pass
 	
@@ -51,7 +50,7 @@ func _on_Hint_pressed():
 func _on_Skip_pressed():
 	SoundController.touch_sound()
 	if AdManager.is_reward_ready:
-		type = "skip"
+		GameInstance.type = "skip"
 		AdManager.show_reward(AdManager.reward_id)
 	pass
 
@@ -70,7 +69,7 @@ func _on_Setting_pressed():
 		$SettingPopup.set_visible(true)
 
 func _on_inter_close():
-	if type == "next":
+	if GameInstance.type == "next":
 		$WinPopup.visible = false
 		get_tree().reload_current_scene()
 	else:
@@ -86,8 +85,11 @@ func _on_background_change(type):
 
 func _on_reward_rewarded():
 	print("reward close")
-	if type == "hint":
+	if GameInstance.type == "hint":
 		emit_signal("on_hint_click")
 		_on_GamePlayScene_on_hint_click()
-	elif type == "skip":
+	elif GameInstance.type == "skip":
+		GameInstance.is_reload = false
+		GameInstance.is_play = true
+		GameInstance.display_level += 1
 		get_tree().reload_current_scene()
