@@ -18,7 +18,7 @@ func _on_Next_pressed():
 	GameInstance.is_reload = false
 	GameInstance.is_play = true
 	GameInstance.display_level += 1
-	save_current_level()
+	get_parent().save_current_level()
 	if AdManager.is_inter_ready:
 		GameInstance.type = "next"
 		AdManager.show_inter(AdManager.inter_id)

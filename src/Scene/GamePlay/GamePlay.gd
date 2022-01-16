@@ -44,6 +44,8 @@ func _on_Hint_pressed():
 	if AdManager.is_reward_ready:
 		GameInstance.type = "hint"
 		AdManager.show_reward(AdManager.reward_id)
+	else:
+		call_deferred("show_toast", "Reward Show Fail!!!")
 	pass
 	
 
@@ -52,6 +54,8 @@ func _on_Skip_pressed():
 	if AdManager.is_reward_ready:
 		GameInstance.type = "skip"
 		AdManager.show_reward(AdManager.reward_id)
+	else:
+		call_deferred("show_toast", "Reward Show Fail!!!")
 	pass
 
 func _on_Theme_pressed():
@@ -71,6 +75,10 @@ func _on_Setting_pressed():
 func _on_inter_close():
 	if GameInstance.type == "next":
 		$WinPopup.visible = false
+		GameInstance.is_reload = false
+		GameInstance.is_play = true
+		GameInstance.display_level += 1
+		save_current_level()
 		get_tree().reload_current_scene()
 	else:
 		SceneManager.transition(SceneManager.main_menu_scene)
@@ -78,6 +86,24 @@ func _on_inter_close():
 func _on_reward_close():
 	pass
 	
+func show_toast(message: String):
+	var toast = Toast.new(message, Toast.LENGTH_SHORT)
+	get_node("/root").add_child(toast)
+	toast.show()
+	
+func save_current_level():
+	if GameInstance.diffcult == "Easy":	
+		GameInstance.list_data.levels[0].Easy = GameInstance.display_level
+	elif GameInstance.diffcult == "Medium":
+		GameInstance.list_data.levels[0].Medium = GameInstance.display_level
+	elif GameInstance.diffcult == "Hard":
+		GameInstance.list_data.levels[0].Hard = GameInstance.display_level
+	elif GameInstance.diffcult == "Expert":
+		GameInstance.list_data.levels[0].Expert = GameInstance.display_level
+	else:
+		GameInstance.list_data.levels[0].Professor = GameInstance.display_level
+	GameInstance.save_bg()
+
 func _on_background_change(type):
 	GameInstance.theme = load("res://src/Assets/Textures/Background/" + type + ".png")
 	$HBoxContainer/Background.texture = GameInstance.theme

@@ -36,15 +36,24 @@ func get_item_click(_item : ItemClass, pos: Vector2, _slot: ItemSlotClass):
 		SoundController.touch_sound()
 		if AdManager.is_reward_ready:
 			AdManager.show_reward(AdManager.reward_id)
+		else:
+			get_parent().show_toast("Reward Show Fail!!!")
 		pass
 	
 func _on_Select_pressed():
 	SoundController.touch_sound()
-	if item_selected != null:
+	if item_selected != null && item_selected.item_key != current_theme:
 		selected.visible = true
 		selected_default.get_child(2).visible = false
-		emit_signal("on_change_theme", item_selected.item_name)
-		_on_ThemePopup_on_change_theme(item_selected.item_name)
+		var name
+		print(item_selected.item_name)
+		if item_selected.item_name.length() > 8:
+			name = item_selected.item_name.split("_")[1]
+			print(name)
+		else:
+			name = item_selected.item_name
+		emit_signal("on_change_theme", name)
+		_on_ThemePopup_on_change_theme(name)
 		GameInstance.list_data.themes[0][current_theme].isSelected = false
 		GameInstance.list_data.themes[0][item_selected.item_key].isSelected = true
 		selected.transform.origin = ring.transform.origin
@@ -99,15 +108,15 @@ func _on_ThemePopup_visibility_changed():
 			
 			item_slot.connect("gui_input", self, "slot_gui_input", [item_slot]);
 			background_grid.add_child(item_slot);
-			
 			if !item.status:
 				item_slot.setItem(ItemClass.new(item_key, item_name, locked, status, is_selected));
-				item_slot.setItem(ItemClass.new(item_key, "video", load("res://src/Assets/Textures/Button/WatchADS2.png"), status, is_selected));
+				item_slot.setItem(ItemClass.new(item_key, "video_" + item_name, load("res://src/Assets/Textures/Button/WatchADS2.png"), status, is_selected));
 			if item.isSelected:
+				item_selected = item_slot.item
 				current_theme = key
-				item_slot.setItem(ItemClass.new(item_key, "select", load("res://src/Assets/Textures/Background/select.png"), status, is_selected));
-				item_slot.setItem(ItemClass.new(item_key, "Selected", load("res://src/Assets/Textures/Background/Selected.png"), status, is_selected));
-
+				item_slot.setItem(ItemClass.new(item_key, "select_" + item_name, load("res://src/Assets/Textures/Background/select.png"), status, is_selected));
+				item_slot.setItem(ItemClass.new(item_key, "Selected_" + item_name, load("res://src/Assets/Textures/Background/Selected.png"), status, is_selected));
+				
 				selected_default = item_slot
 		background_grid.add_child(selected)
 		background_grid.add_child(ring)

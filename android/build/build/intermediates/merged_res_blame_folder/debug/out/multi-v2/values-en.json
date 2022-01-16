@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Project\\DrawLiner\\android\\build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
+            "outputFile": "D:\\git\\Android\\LineDrawer\\android\\build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
             "map": [
                 {
-                    "source": "E:\\Project\\DrawLiner\\android\\build\\res\\values-en\\godot_project_name_string.xml",
+                    "source": "D:\\git\\Android\\LineDrawer\\android\\build\\res\\values-en\\godot_project_name_string.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "1",

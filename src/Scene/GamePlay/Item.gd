@@ -17,10 +17,14 @@ func _init(_key, _item_name, _item_texture, _status, _is_selected):
 	texture = _item_texture;
 	self.item_status = _status;
 	self.is_selected = _is_selected;
-	if _item_name == "Selected":
+	var name = _item_name
+	if _item_name.length() > 8:
+		name = _item_name.split("_")[0]
+		
+	if name == "Selected":
 		rect_position = Vector2(48, 50)
-	elif _item_name == "select":
+	elif name == "select":
 		rect_position = Vector2(-20, -20)
-	elif _item_name == "video":
+	elif name == "video":
 		rect_position = Vector2(-20, -20)
 	
