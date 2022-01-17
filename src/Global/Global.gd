@@ -6,6 +6,7 @@ var diffcult = "Easy"
 var ad_time_last_show = 0
 var time_interval = 20000
 var theme = load("res://src/Assets/Textures/Background/bg1.png")
+var icon = load("res://src/Assets/Textures/Background/bg1_icon.png")
 var type
 var is_reload = false
 var is_play = true
@@ -15,7 +16,7 @@ var list_background : Dictionary
 var list_level : Dictionary
 var list_data : Dictionary
 
-const default_data = {"themes":[{"0":{"isSelected":true,"itemIcon":"res://src/Assets/Textures/Background/icon1.png","itemName":"bg1","status":true},"1":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/icon2.png","itemName":"bg2","status":true},"2":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/icon3.png","itemName":"bg3","status":true},"3":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/icon4.png","itemName":"bg4","status":false},"4":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/icon5.png","itemName":"bg5","status":false},"5":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/icon6.png","itemName":"bg6","status":false},"6":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/icon7.png","itemName":"bg7","status":false},"7":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/icon8.png","itemName":"bg8","status":false},"8":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/icon9.png","itemName":"bg9","status":false}}],"levels":[{"Easy":1,"Medium":1,"Hard":1,"Expert":1,"Professor":1}]}
+const default_data = {"themes":[{"0":{"isSelected":true,"itemIcon":"res://src/Assets/Textures/Background/bg1_icon.png","itemName":"bg1","status":true},"1":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Backgroundbg2_icon.png","itemName":"bg2","status":true},"2":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/bg3_icon.png","itemName":"bg3","status":true},"3":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/bg4_icon.png","itemName":"bg4","status":false},"4":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/bg5_icon.png","itemName":"bg5","status":false},"5":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/bg6_icon.png","itemName":"bg6","status":false},"6":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/bg7_icon.png","itemName":"bg7","status":false},"7":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/bg8_icon.png","itemName":"bg8","status":false},"8":{"isSelected":false,"itemIcon":"res://src/Assets/Textures/Background/bg9_icon.png","itemName":"bg9","status":false}}],"levels":[{"Easy":1,"Medium":1,"Hard":1,"Expert":1,"Professor":1}]}
 
 func _ready():
 	pass
@@ -38,6 +39,8 @@ func load_bg():
 	for key in list_background:
 		if list_background[key].isSelected:
 			theme = load("res://src/Assets/Textures/Background/" + list_background[key].itemName + ".png")
+			icon = load("res://src/Assets/Textures/Background/" + list_background[key].itemName + "_icon.png")
+			
 
 func save_bg():
 	var file = File.new()

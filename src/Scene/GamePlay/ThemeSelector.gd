@@ -73,6 +73,7 @@ func _on_reward_rewarded_theme():
 	theme_buy.get_child(2).visible = false
 	GameInstance.list_data.themes[0][theme_buy.item.item_key].status = true
 	GameInstance.save_bg()
+	print("get")
 	_on_ThemePopup_visibility_changed()
 
 func remove_all_child():
@@ -104,18 +105,18 @@ func _on_ThemePopup_visibility_changed():
 			var item_texture = item.itemIcon;
 			var status = item.status;
 			var is_selected = item.isSelected;
-			item_slot.setItem(ItemClass.new(item_key, item_name, load(item_texture), status, is_selected));
+			item_slot.setItem(ItemClass.new(item_key, item_name, load(item_texture), status, is_selected, null));
 			
 			item_slot.connect("gui_input", self, "slot_gui_input", [item_slot]);
 			background_grid.add_child(item_slot);
 			if !item.status:
-				item_slot.setItem(ItemClass.new(item_key, item_name, locked, status, is_selected));
-				item_slot.setItem(ItemClass.new(item_key, "video_" + item_name, load("res://src/Assets/Textures/Button/WatchADS2.png"), status, is_selected));
+				item_slot.setItem(ItemClass.new(item_key, item_name, locked, status, is_selected, null));
+				item_slot.setItem(ItemClass.new(item_key, "video_" + item_name, load("res://src/Assets/Textures/Button/WatchADS2.png"), status, is_selected, null));
 			if item.isSelected:
 				item_selected = item_slot.item
 				current_theme = key
-				item_slot.setItem(ItemClass.new(item_key, "select_" + item_name, load("res://src/Assets/Textures/Background/select.png"), status, is_selected));
-				item_slot.setItem(ItemClass.new(item_key, "Selected_" + item_name, load("res://src/Assets/Textures/Background/Selected.png"), status, is_selected));
+				item_slot.setItem(ItemClass.new(item_key, "select_" + item_name, load("res://src/Assets/Textures/Background/select.png"), status, is_selected, null));
+				item_slot.setItem(ItemClass.new(item_key, "Selected_" + item_name, load("res://src/Assets/Textures/Background/Selected.png"), status, is_selected, null));
 				
 				selected_default = item_slot
 		background_grid.add_child(selected)

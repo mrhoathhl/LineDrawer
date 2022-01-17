@@ -49,6 +49,7 @@ func _ready():
 
 	label.set("custom_colors/font_color", style.fontColor);
 	label.text = labelText;
+	
 	match style.position:
 		ToastStyle.Position.Bottom:
 			if style.toastType == ToastStyle.Type.Float:

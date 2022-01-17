@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Scene/LevelSelect/LevelSelectScene.gd" type="Script" id=1]
+[ext_resource path="res://src/Assets/Textures/Background/bg.png" type="Texture" id=2]
+[ext_resource path="res://src/Assets/Textures/Button/setting.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="Theme" id=2]
+VScrollBar/styles/scroll = SubResource( 1 )
+
+[node name="LevelSelectScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -540.0
+margin_right = 540.0
+margin_bottom = 2571.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 540, 1285.5 )
+texture = ExtResource( 2 )
+
+[node name="Setting" type="TouchScreenButton" parent="."]
+position = Vector2( 30, 40 )
+normal = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 200.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -455.0
+margin_right = 455.0
+margin_bottom = 1920.0
+theme = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ListLevel" type="GridContainer" parent="Control/ScrollContainer"]
+custom_constants/vseparation = 220
+custom_constants/hseparation = 200
+columns = 4

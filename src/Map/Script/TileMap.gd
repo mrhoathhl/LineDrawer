@@ -34,7 +34,7 @@ func _ready():
 		origin_array.append(new_pos)
 		#grid is dictionary, make data array for each cell
 		grid[new_pos] = ["empty", null]
-	
+	print(origin_array)
 	#define reference with group
 	start_point = get_tree().get_nodes_in_group('StartPoint')[0]
 	suggest_line = get_tree().get_nodes_in_group('Suggest')[0]
@@ -74,6 +74,7 @@ func _input(event):
 					size_pos = path.size()
 				suggest_line.path = path
 				if path.size() == grid.size():
+					print("pass", suggest_line.path)
 					GameInstance.is_play = false
 					yield(get_tree().create_timer(.2), "timeout")
 					SoundController.next_sound()
@@ -98,7 +99,11 @@ func clear_map():
 		yield(get_tree().create_timer(1.0 / origin_array.size()), "timeout")
 	yield(get_tree().create_timer(0.7), "timeout")
 	suggest_line.is_win = true
-	get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
+	
+	if GameInstance.display_level == 50:
+		get_parent().get_parent().get_parent().get_node("PassMode").visible = true
+	else:
+		get_parent().get_parent().get_parent().get_node("WinPopup").visible = true
 	
 func _on_hint_click():
 	var tile_left = origin_array.size() - suggest_line.path.size()

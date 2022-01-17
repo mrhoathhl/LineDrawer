@@ -6,7 +6,6 @@ func _ready():
 	AdManager.connect("on_interstitial_close", self, "_on_inter_close")
 	pass
 
-
 func _on_Ease_pressed():
 	GameInstance.display_level = GameInstance.list_level.Easy
 	change_scene("Easy")
@@ -32,7 +31,7 @@ func change_scene(diff):
 	if AdManager.is_inter_ready:
 		AdManager.show_inter(AdManager.inter_id)
 	else:
-		SceneManager.transition(SceneManager.game_play_scene)
+		SceneManager.transition(SceneManager.select_level_scene)
 
 func _on_inter_close():
-	SceneManager.transition(SceneManager.game_play_scene)
+	SceneManager.transition(SceneManager.select_level_scene)

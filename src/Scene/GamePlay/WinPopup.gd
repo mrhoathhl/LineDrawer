@@ -20,7 +20,10 @@ func _on_Next_pressed():
 	GameInstance.display_level += 1
 	get_parent().save_current_level()
 	if AdManager.is_inter_ready:
-		GameInstance.type = "next"
+		if GameInstance.display_level == 50:
+			GameInstance.type = "pass"
+		else:
+			GameInstance.type = "next"
 		AdManager.show_inter(AdManager.inter_id)
 	else:
 		visible = false

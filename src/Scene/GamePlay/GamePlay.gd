@@ -80,6 +80,8 @@ func _on_inter_close():
 		GameInstance.display_level += 1
 		save_current_level()
 		get_tree().reload_current_scene()
+	elif GameInstance.type == "pass":
+		SceneManager.transition(SceneManager.main_menu_scene)
 	else:
 		SceneManager.transition(SceneManager.main_menu_scene)
 	
@@ -88,7 +90,7 @@ func _on_reward_close():
 	
 func show_toast(message: String):
 	var toast = Toast.new(message, Toast.LENGTH_SHORT)
-	get_node("/root").add_child(toast)
+	add_child(toast)
 	toast.show()
 	
 func save_current_level():
